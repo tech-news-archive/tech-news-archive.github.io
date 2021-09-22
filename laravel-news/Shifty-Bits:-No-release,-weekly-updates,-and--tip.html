@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<!--[if gte mso 15]>
+  <xml>
+      <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+  </xml>
+  <![endif]--><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laravel Shift Newsletter</title>
+<style>
+    body {
+      font-family: Helvetica,Arial,sans-serif;
+      font-size: 16px;
+      color:#333333;
+    }
+    a {
+      color: #f4645f;
+      text-decoration: underline;
+    }
+    hr {
+      border-top: 1px dashed #888;
+      margin: 2em 0;
+    }
+    p, ul {
+      margin-bottom:1em;
+      line-height:1.5em;
+    }
+    h2 {
+      color:#444;
+      font-family:'Helvetica Neue',sans-serif;
+      font-weight:600;
+      font-size:20px;
+      line-height:1.5;
+      margin-top:2em;
+    }
+  </style>
+</head>
+<body style="font-family: Helvetica,Arial,sans-serif; font-size: 16px; color: #333333;">
+<div style="max-width:600px;margin:0 0 0 1em;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">Heyo! JMac here again in the weekly newsletter with highlights from the Laravel patch release, Shift updates, and a 🔥 tip.</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Laravel</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Dries is out, so there is no Laravel release today.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Weekly Journal</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Last week Jess and I continued to make tweaks to existing Shifts. Of note was the automatic conversion of the <a href="https://laravel.com/docs/5.1/controllers#implicit-controllers" style="color: #f4645f; text-decoration: underline;">implicit controllers</a> way back in Laravel 5.1. Previously, Shift directed you to <a href="https://github.com/themsaid/laravel-routes-publisher" style="color: #f4645f; text-decoration: underline;">a package from Mohamed</a>. I had wanted to incorporate this into Shift for some time, and kind of missed the window. Nevertheless, the <em>Laravel 5.2 Shift</em> and <em>Laravel 5.3 Shift</em> both now automate converting these routes.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I also had some <a href="https://laravelshift.com/human-shifts" style="color: #f4645f; text-decoration: underline;">Human Shifts</a> come in for upgrading multiple outdated Laravel applications. As always, this gave me an opportunity to use Shift myself. So I've been making more small tweaks from things I noticed during these, as well as a live stream I did last week <a href="https://www.youtube.com/watch?v=KSqpABOk1cc" style="color: #f4645f; text-decoration: underline;">upgrading from Laravel 5.8 to Laravel 8.x</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Jess and I also paired up last Thursday to quickly build an <a href="https://twitter.com/laravelshift/status/1438579218166788099" style="color: #f4645f; text-decoration: underline;"><code>optional</code> to null safe conversion task</a>. This is currently available in the <a href="https://laravelshift.com/workbench" style="color: #f4645f; text-decoration: underline;">cloud-based Workbench</a>, and will be included in the next update to the desktop app tomorrow.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This week Jess is focusing on making some updates to the <a href="https://laravelshift.com/laravel-test-generator" style="color: #f4645f; text-decoration: underline;">Tests Generator</a>. After which, we will also update it to add an option for generating Pest tests.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This week I am focusing mostly on finishing the Human Shifts. I'm also going to revisit the <a href="https://laravelshift.com/convert-lumen-to-laravel" style="color: #f4645f; text-decoration: underline;">Lumen to Laravel Converter</a>. This has received more usage lately. Many developers who adopted Lumen are probably realizing that <a href="https://jasonmccreary.me/articles/lumen-is-dead-long-live-lumen/" style="color: #f4645f; text-decoration: underline;">Lumen is dead</a>. Or, said another way, Laravel's modern features and advancements have made Lumen obsolete.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">🔥 Tip</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">After watching Laracon and, of course, seeing it in the weekly updates, it has been on my list to use the new <a href="https://laravel.com/docs/8.x/eloquent#pruning-models" style="color: #f4645f; text-decoration: underline;">model pruning</a> feature.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This appealed to me for Shift as it suffers the same data issue as any e-commerce system - abandon carts.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I dedicated some time yesterday morning, but had everything built and deployed in 20 minutes. I literally copied the example snippets from the documentation with one small tweak to the query:</p>
+<pre><code>public function prunable()
+{
+    return static::where('created_at', '&lt;=', now()-&gt;subMonth())
+        -&gt;where('status', Status::CREATED);
+}
+</code></pre>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Running this manually in production removed almost 4000 records for incomplete Shifts.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This will be automated by the scheduler moving forward and help keep the database clean. This is not something I would've built myself or <em>needed</em> to do. But if the framework provides it, why not use it. 🔥</p>
+
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">As always, I welcome your feedback. <a href="https://laravelshift.com/" style="color: #f4645f; text-decoration: underline;">Keep Shifting!</a></p>
+
+<p style="margin-bottom: 1em; line-height: 1.5em;">~ JMac</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Don't want to receive these updates? No problem, simply <a href="https://laravelshift.com/mailcoach/unsubscribe/c54bdd24-145c-42fe-a238-d0ba0eee4961/38590ef8-5d6c-4554-9fa7-9fb51fe0f6ca" style="color: #f4645f; text-decoration: underline;">unsubscribe</a> or sign into Shift and <a href="https://laravelshift.com/account/preferences" style="color: #f4645f; text-decoration: underline;">update your preferences</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Proudly sent with <em>Mailcoach</em> from Louisville, Kentucky.</p>
+</div>
+<img width="1px" height="1px" alt="" src="http://email.mg.laravelshift.com/o/eJwNzMENwyAMAMBpyjNyMA7xg2FsbFKk0kg0atZvb4CzgjGxh16w5gbsgllMYctpddhFWWLFuIo-Enzu3q7l8LdPudzCsxA2irRFU2N1oGiwKxGr8gqYLMwyZNZz9u_4B8eQ_lrqOX4uFCRC"></body>
+</html>
+
