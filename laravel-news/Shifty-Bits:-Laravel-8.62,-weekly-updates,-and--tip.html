@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+<!--[if gte mso 15]>
+  <xml>
+      <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+  </xml>
+  <![endif]--><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laravel Shift Newsletter</title>
+<style>
+    body {
+      font-family: Helvetica,Arial,sans-serif;
+      font-size: 16px;
+      color:#333333;
+    }
+    a {
+      color: #f4645f;
+      text-decoration: underline;
+    }
+    hr {
+      border-top: 1px dashed #888;
+      margin: 2em 0;
+    }
+    p, ul {
+      margin-bottom:1em;
+      line-height:1.5em;
+    }
+    h2 {
+      color:#444;
+      font-family:'Helvetica Neue',sans-serif;
+      font-weight:600;
+      font-size:20px;
+      line-height:1.5;
+      margin-top:2em;
+    }
+  </style>
+</head>
+<body style="font-family: Helvetica,Arial,sans-serif; font-size: 16px; color: #333333;">
+<div style="max-width:600px;margin:0 0 0 1em;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">Heyo! JMac here again in the weekly newsletter with highlights from the Laravel patch release, Shift updates, and a 🔥 tip.</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Laravel 8.62</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">No release last week means lots of new features this week, bringing us to Laravel <strong>8.62.0</strong>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Here are the highlights:</p>
+<ul style="margin-bottom: 1em; line-height: 1.5em;">
+<li>Add support for singular <code>Wormhole</code> method names in <a href="https://github.com/laravel/framework/pull/38815" style="color: #f4645f; text-decoration: underline;">#38815</a>
+</li>
+<li>Dispatch events when maintenance mode is enabled and disabled in <a href="https://github.com/laravel/framework/pull/38826" style="color: #f4645f; text-decoration: underline;">#38826</a>
+</li>
+<li>Allow request input to be retrieved as a collection in <a href="https://github.com/laravel/framework/pull/38832" style="color: #f4645f; text-decoration: underline;">#38832</a>
+</li>
+<li>Allow index.blade.php views for anonymous components in <a href="https://github.com/laravel/framework/pull/38847" style="color: #f4645f; text-decoration: underline;">#38847</a>
+</li>
+<li>Add <code>assertNotSoftDeleted</code> in <a href="https://github.com/laravel/framework/pull/38886" style="color: #f4645f; text-decoration: underline;">#38886</a>
+</li>
+<li>Add new <code>RefreshDatabaseLazily</code> testing trait in <a href="https://github.com/laravel/framework/pull/38861" style="color: #f4645f; text-decoration: underline;">#38861</a>
+</li>
+<li>Add <code>--pretend</code> for <code>model:prune</code> command in <a href="https://github.com/laravel/framework/pull/38945" style="color: #f4645f; text-decoration: underline;">#38945</a>
+</li>
+<li>Make <code>PendingMail</code> <em>conditionable</em> in <a href="https://github.com/laravel/framework/pull/38942" style="color: #f4645f; text-decoration: underline;">#38942</a>
+</li>
+<li>Add <code>--pest</code> when using the <code>make:test</code> command in <a href="https://github.com/laravel/framework/pull/38966" style="color: #f4645f; text-decoration: underline;">#38966</a>
+</li>
+</ul>
+<p style="margin-bottom: 1em; line-height: 1.5em;">You may review the <a href="https://github.com/laravel/framework/compare/v8.61.0...v8.62.0" style="color: #f4645f; text-decoration: underline;">full branch diff on GitHub</a> for a complete list of changes.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This version bump and update is automated for subscribers to a <a href="https://laravelshift.com/shifty-plans" style="color: #f4645f; text-decoration: underline;">Shifty Plan</a>. If you don't have one of those, be sure to bump your constraint and run <code>composer update</code> to get the latest features.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Weekly Journal</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Last week Jess made several improvements to the <a href="https://laravelshift.com/laravel-test-generator" style="color: #f4645f; text-decoration: underline;">Tests Generator</a>. It now does an even better job of setting up your tests with additional factories and fake data by analyzing your controller actions.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">We also resolved some bugs which arose from recent changes in Laravel. Most notably the way the middleware is listed. This broke some automation such as setting up an authenticated user and prefixing the <code>actingAs</code> to requests. I ended up opening <a href="https://github.com/laravel/framework/pull/38953" style="color: #f4645f; text-decoration: underline;">a PR parsing middleware into an array</a> which was merged in today’s release.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Last week I focused mostly on finishing the <a href="https://laravelshift.com/human-shifts" style="color: #f4645f; text-decoration: underline;">Human Shifts</a> which came in. All but one are now in review. I hope to finish the remaining one early next week.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">In the process, I had the opportunity to use the <a href="https://laravelshift.com/convert-lumen-to-laravel" style="color: #f4645f; text-decoration: underline;">Lumen to Laravel Converter</a>. I spent the end of last week also improving the automation for this Shift as well. This hadn’t really been updated in a few years. So is was missing some of the latest coding practices and core files.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Despite the improved automation I plan to keep this Shift just $5. In fact, I teased Taylor about making it free if he would kill Lumen. 😈</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;"><a href="https://twitter.com/taylorotwell/status/1441101127496323080" style="color: #f4645f; text-decoration: underline;">He also gets a lot of questions about Lumen</a>. It's no secret I think Lumen is dead. But it seems we both agree there's just no need to chose it over Laravel anymore.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This week Jess and I are going to update the <em>Tests Generator</em> to output Pest tests. As noted before, I believe Pest will continue to gain adoption. So I'd like this Shift to have the option of generating Pest tests, instead of PHPUnit classes.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">🔥 Tip</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I find whenever I use <code>explode</code>, I often use <code>array_filter</code>. This ensures any empty items in the array are removed.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I've grown used to, but still appreciate the flags I can pass to <code>preg_split</code>:</p>
+<pre><code>$values = preg_split(
+    '/,/',
+    $delimited_string,
+    -1,
+    PREG_SPLIT_NO_EMPTY
+);
+</code></pre>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Despite the regex and defaulting the limit parameter, it allows me to split and filter with one function. With PHP 8, I may use named arguments to improve the readability. 🔥</p>
+<pre><code>$values = preg_split(
+    '/,/',
+    $delimited_string,
+    flags: PREG_SPLIT_NO_EMPTY
+);
+</code></pre>
+
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">As always, I welcome your feedback. <a href="https://laravelshift.com/" style="color: #f4645f; text-decoration: underline;">Keep Shifting!</a></p>
+
+<p style="margin-bottom: 1em; line-height: 1.5em;">~ JMac</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Don't want to receive these updates? No problem, simply <a href="https://laravelshift.com/mailcoach/unsubscribe/c54bdd24-145c-42fe-a238-d0ba0eee4961/412c5d3b-2e95-464b-88a8-60d992ef4a53" style="color: #f4645f; text-decoration: underline;">unsubscribe</a> or sign into Shift and <a href="https://laravelshift.com/account/preferences" style="color: #f4645f; text-decoration: underline;">update your preferences</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Proudly sent with <em>Mailcoach</em> from Louisville, Kentucky.</p>
+</div>
+<img width="1px" height="1px" alt="" src="http://email.mg.laravelshift.com/o/eJwNzEsOwyAMBcDTlGXE7znygsPYYFKk0kg0aq-fzgGmlRQzmxsFvfLujbuZaPAwRs07qyXSEKCP7D-_0a_tsLctuay5ZxHBrtJUQIEAijGhU2eoehCiW2XKquca3_kPjinjtdVz3kTMJF4"></body>
+</html>
+
