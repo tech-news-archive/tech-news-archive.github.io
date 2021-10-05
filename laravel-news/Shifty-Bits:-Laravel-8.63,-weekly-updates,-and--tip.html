@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+<!--[if gte mso 15]>
+  <xml>
+      <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+  </xml>
+  <![endif]--><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laravel Shift Newsletter</title>
+<style>
+    body {
+      font-family: Helvetica,Arial,sans-serif;
+      font-size: 16px;
+      color:#333333;
+    }
+    a {
+      color: #f4645f;
+      text-decoration: underline;
+    }
+    hr {
+      border-top: 1px dashed #888;
+      margin: 2em 0;
+    }
+    p, ul {
+      margin-bottom:1em;
+      line-height:1.5em;
+    }
+    h2 {
+      color:#444;
+      font-family:'Helvetica Neue',sans-serif;
+      font-weight:600;
+      font-size:20px;
+      line-height:1.5;
+      margin-top:2em;
+    }
+  </style>
+</head>
+<body style="font-family: Helvetica,Arial,sans-serif; font-size: 16px; color: #333333;">
+<div style="max-width:600px;margin:0 0 0 1em;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">Heyo! JMac here again in the weekly newsletter with highlights from the Laravel patch release, Shift updates, and a 🔥 tip.</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Laravel 8.63</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Couple fixes and new methods this week, which brings us to Laravel <strong>8.63.0</strong>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Here are the highlights:</p>
+<ul style="margin-bottom: 1em; line-height: 1.5em;">
+<li>Fix castable value object not serialized correctly in <a href="https://github.com/laravel/framework/pull/39020" style="color: #f4645f; text-decoration: underline;">#39020</a>
+</li>
+<li>Fix casting to string on PHP 8.1 in <a href="https://github.com/laravel/framework/pull/39033" style="color: #f4645f; text-decoration: underline;">#39033</a>
+</li>
+<li>Handle empty address for Mail in <a href="https://github.com/laravel/framework/pull/39035" style="color: #f4645f; text-decoration: underline;">#39035</a>
+</li>
+<li>Add missing singular <code>minute()</code> call in <a href="https://github.com/laravel/framework/pull/39050" style="color: #f4645f; text-decoration: underline;">#39050</a>
+</li>
+<li>Only allow a single <code>User-Agent</code> header for HTTP client in <a href="https://github.com/laravel/framework/pull/39085" style="color: #f4645f; text-decoration: underline;">#39085</a>
+</li>
+</ul>
+<p style="margin-bottom: 1em; line-height: 1.5em;">You may review the <a href="https://github.com/laravel/framework/compare/v8.62.0...v8.63.0" style="color: #f4645f; text-decoration: underline;">full branch diff on GitHub</a> for a complete list of changes.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This version bump and update is automated for subscribers to a <a href="https://laravelshift.com/shifty-plans" style="color: #f4645f; text-decoration: underline;">Shifty Plan</a>. If you don't have one of those, be sure to bump your constraint and run <code>composer update</code> to get the latest features.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Also of note this week is <a href="https://twitter.com/laravelphp/status/1445019209017270272" style="color: #f4645f; text-decoration: underline;">Vapor now supports Octane</a>.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Weekly Journal</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Last week Jess and I made a few more improvements to the <a href="https://laravelshift.com/laravel-test-generator" style="color: #f4645f; text-decoration: underline;">Tests Generator</a>. Mainly adding and strengthening the generated assertions.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Once those were in place <a href="https://www.youtube.com/watch?v=NB6H2SHgDVs" style="color: #f4645f; text-decoration: underline;">we paired up</a> on generating tests with the Pest framework instead of the PHPUnit. This will happen automatically if Shift detects a <code>pestphp/pest</code> dependency for the project. Otherwise it will continue to generate PHPUnit test classes.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I spent a little more time on the remaining <a href="https://laravelshift.com/human-shifts" style="color: #f4645f; text-decoration: underline;">Human Shifts</a>. I also bump my <a href="https://github.com/jasonmccreary/laravel-test-assertions" style="color: #f4645f; text-decoration: underline;">additional test assertions package</a> to <code>2.0</code>. This removes the conflicts with Laravel's native <code>assertNotSoftDeleted</code> and adopts my new <a href="https://github.com/jasonmccreary/laravel-test-assertions#support-policy" style="color: #f4645f; text-decoration: underline;">Support Policy</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Friday I spent most of the day resolving the LetsEncrypt root certificate expiration. I chronicled the saga <a href="https://twitter.com/gonedark/status/1443933608943759361" style="color: #f4645f; text-decoration: underline;">on Twitter</a>. <strong>tl;dr</strong>, this was a combination of issues with Electron and the certificate. I ultimately ended up purchasing a new SSL certificate to resolve the issue.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Jess will focus on bumping the Electron version for the <a href="https://laravelshift.com/workbench" style="color: #f4645f; text-decoration: underline;">Workbench desktop app</a> so it has the patch as well.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This week we will continue to focus on <a href="https://github.com/laravel-shift/workbench-issues/issues" style="color: #f4645f; text-decoration: underline;">Workbench issues</a>. These piled up a bit more than I liked while we finished other work. So we'll be squashing all the open bugs this week.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">We also had an idea for another new Shift. I hope to try to have a beta ready by end of October.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">On a personal note, I'm taking the next two weeks off. It is our wedding this Saturday, followed by a short honeymoon next week. Then immediately followed by <a href="https://www.longhornphp.com/" style="color: #f4645f; text-decoration: underline;">LonghornPHP</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I actually bought a ticket to this conference as I have been feeling a bit isolated lately. Normally conferences are my opportunity to <em>geek out</em> and be social. With in-person conferences starting back and seeing the <em>Laracations</em> on Twitter, I was having some FOMO.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Despite being immediately after my honeymoon, I am going to go as I was asked to fill in for a talk last minute. So it'll be nice to not only see fellow devs in person, but also speak.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Bringing it back to Shift, while I will answer support emails next week, I will not send out this newsletter. This will end my streak of sending these out every week for over a year.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">🔥 Tip</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">It's no secret I'm a fan of regular expressions. A good portion of Shift still uses them over parsing the abstract syntax tree simply for the fact that I am faster at them.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">For example, an <a href="https://github.com/laravel-shift/workbench-issues/issues/45" style="color: #f4645f; text-decoration: underline;">edge case was reported</a> for the Workbench where it replaced the Route <code>name</code> with the new tuple syntax.</p>
+<pre><code class="language-php">Route::get('/event/{event}', 'EventController@show')-&gt;name('events@show');</code></pre>
+<p style="margin-bottom: 1em; line-height: 1.5em;">While uncommon, you can apparently use this syntax. So I updated the regular expression which checks for this <em>action string syntax</em> to use a <a href="https://www.regular-expressions.info/lookaround.html#lookbehind" style="color: #f4645f; text-decoration: underline;">negative lookbehind</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">In this case, making sure that the string is not an argument within a <code>name</code> call.</p>
+<pre><code class="language-txt">/(?&lt;!name\()([\'"])([\w\\\\]+)@(\w+)\1/</code></pre>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This is undoubtedly line noise. And it's not 100%. But this one-liner has otherwise proper converted thousands of applications. Yet another example of YAGNI and the power of regex. 🔥</p>
+
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">As always, I welcome your feedback. <a href="https://laravelshift.com/" style="color: #f4645f; text-decoration: underline;">Keep Shifting!</a></p>
+
+<p style="margin-bottom: 1em; line-height: 1.5em;">~ JMac</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Don't want to receive these updates? No problem, simply <a href="https://laravelshift.com/mailcoach/unsubscribe/c54bdd24-145c-42fe-a238-d0ba0eee4961/3623c53a-ceeb-4b8a-b185-35fa530990d0" style="color: #f4645f; text-decoration: underline;">unsubscribe</a> or sign into Shift and <a href="https://laravelshift.com/account/preferences" style="color: #f4645f; text-decoration: underline;">update your preferences</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Proudly sent with <em>Mailcoach</em> from Louisville, Kentucky.</p>
+</div>
+<img width="1px" height="1px" alt="" src="http://email.mg.laravelshift.com/o/eJwNzMENwyAMBdBpyjEiBJv4wDAGf1Kk0kg0atZv3wDP8haiwPUsCQZtRlSIxBgqHJtKEq621_SI_nP3di0H3ph6wdwzb6RBEVes4BICU_NSUgk7zDbP4mYeOus5-3f8g2Nofy31HD9heSTd"></body>
+</html>
+
