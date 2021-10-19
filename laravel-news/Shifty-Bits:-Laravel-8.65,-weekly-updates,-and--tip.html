@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+<!--[if gte mso 15]>
+  <xml>
+      <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+  </xml>
+  <![endif]--><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laravel Shift Newsletter</title>
+<style>
+    body {
+      font-family: Helvetica,Arial,sans-serif;
+      font-size: 16px;
+      color:#333333;
+    }
+    a {
+      color: #f4645f;
+      text-decoration: underline;
+    }
+    hr {
+      border-top: 1px dashed #888;
+      margin: 2em 0;
+    }
+    p, ul {
+      margin-bottom:1em;
+      line-height:1.5em;
+    }
+    h2 {
+      color:#444;
+      font-family:'Helvetica Neue',sans-serif;
+      font-weight:600;
+      font-size:20px;
+      line-height:1.5;
+      margin-top:2em;
+    }
+  </style>
+</head>
+<body style="font-family: Helvetica,Arial,sans-serif; font-size: 16px; color: #333333;">
+<div style="max-width:600px;margin:0 0 0 1em;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">Heyo! JMac here again in the weekly newsletter with highlights from the Laravel patch release, Shift updates, and a 🔥 tip.</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Laravel 8.65</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Since I missed last week, I'm going to cover the changes in both the <strong>8.64.0</strong> and <strong>8.65.0</strong> release.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Here are the highlights:</p>
+<ul style="margin-bottom: 1em; line-height: 1.5em;">
+<li>Add <code>reduceMany</code> to Collection in <a href="https://github.com/laravel/framework/pull/39078" style="color: #f4645f; text-decoration: underline;">#39078</a>
+</li>
+<li>Add <code>stripTags</code> to Stringable in <a href="https://github.com/laravel/framework/pull/39098" style="color: #f4645f; text-decoration: underline;">#39098</a>
+</li>
+<li>Add <code>getOutput</code> to Console output in <a href="https://github.com/laravel/framework/pull/39099" style="color: #f4645f; text-decoration: underline;">#39099</a>
+</li>
+<li>Add <code>lang_path</code> helper function in <a href="https://github.com/laravel/framework/pull/39103" style="color: #f4645f; text-decoration: underline;">#39103</a>
+</li>
+<li>Add <code>@aware</code> blade directive in <a href="https://github.com/laravel/framework/pull/39100" style="color: #f4645f; text-decoration: underline;">#39100</a>
+</li>
+<li>Dispatch new <code>JobRetrying</code> event in <a href="https://github.com/laravel/framework/pull/39097" style="color: #f4645f; text-decoration: underline;">#39097</a>
+</li>
+<li>Add <code>throwIf</code> to Client Response in <a href="https://github.com/laravel/framework/pull/39148" style="color: #f4645f; text-decoration: underline;">#39148</a>
+</li>
+<li>Add <code>hasAny</code> to Collection in <a href="https://github.com/laravel/framework/pull/39155" style="color: #f4645f; text-decoration: underline;">#39155</a>
+</li>
+<li>Ability to validate multiple date formats in <a href="https://github.com/laravel/framework/pull/39170" style="color: #f4645f; text-decoration: underline;">#39170</a>
+</li>
+<li>Add gate policy callback in <a href="https://github.com/laravel/framework/pull/39185" style="color: #f4645f; text-decoration: underline;">#39185</a>
+</li>
+<li>Allow <em>Remember Me</em> cookie expiration to be overriden in <a href="https://github.com/laravel/framework/pull/39186" style="color: #f4645f; text-decoration: underline;">#39186</a>
+</li>
+<li>Add <code>--test</code> and <code>--pest</code> options to various make commands in <a href="https://github.com/laravel/framework/pull/38997" style="color: #f4645f; text-decoration: underline;">#38997</a>
+</li>
+<li>Add assertions for notifications sent on-demand in <a href="https://github.com/laravel/framework/pull/39203" style="color: #f4645f; text-decoration: underline;">#39203</a>
+</li>
+<li>Ability to retrieve a subset from <code>Request::collect</code> in <a href="https://github.com/laravel/framework/pull/39191" style="color: #f4645f; text-decoration: underline;">#39191</a>
+</li>
+<li>Add <code>assertRedirectContains</code> in <a href="https://github.com/laravel/framework/pull/39233" style="color: #f4645f; text-decoration: underline;">#39233</a>
+</li>
+<li>Add <code>headline</code> to Stringable in <a href="https://github.com/laravel/framework/pull/39174" style="color: #f4645f; text-decoration: underline;">#39174</a>
+</li>
+<li>Log deprecations instead of treating them as exceptions in <a href="https://github.com/laravel/framework/pull/39219" style="color: #f4645f; text-decoration: underline;">#39219</a>
+</li>
+</ul>
+<p style="margin-bottom: 1em; line-height: 1.5em;">You may review the <a href="https://github.com/laravel/framework/compare/v8.63.0...v8.65.0" style="color: #f4645f; text-decoration: underline;">full branch diff on GitHub</a> for a complete list of changes.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This version bump and update is automated for subscribers to a <a href="https://laravelshift.com/shifty-plans" style="color: #f4645f; text-decoration: underline;">Shifty Plan</a>. If you don't have one of those, be sure to bump your constraint and run <code>composer update</code> to get the latest features.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Weekly Journal</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Last week I was off for my honeymoon which provided some time away from the computer to relax in beautiful Sedona. I also doglegged the trip home by attending <a href="https://www.longhornphp.com/" style="color: #f4645f; text-decoration: underline;">LonghornPHP</a>. The conference allowed me to catch up with some devs, <a href="https://twitter.com/sawanruparel/status/1449084480086581251?s=20" style="color: #f4645f; text-decoration: underline;">including Taylor</a>, as well as give a talk on testing.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Testing seemed to have an increased focus at the conference. <a href="https://twitter.com/jclermont" style="color: #f4645f; text-decoration: underline;">Joel Clement</a> also gave a talk on tooling to improve code quality. Of course, the <a href="https://laravelshift.com/workbench" style="color: #f4645f; text-decoration: underline;">Shift Workbench</a> got an honorable mention alongside other tools like <em>PHP CS Fixer</em> and <em>PHPStan</em>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This is timely as last week Jess continued working on a new Shift to configure CI build. I hope to launch the MVP tomorrow, which will initially support GitHub via <a href="https://docs.github.com/en/actions" style="color: #f4645f; text-decoration: underline;">GitHub Actions</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">As this receives more usage, I plan to configure CI for Bitbucket and GitLab as well.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">As I noted in <a href="https://twitter.com/laravelshift/status/1450509550424150023?s=20" style="color: #f4645f; text-decoration: underline;">a Twitter thread</a>, I've been working on making the Shift experience more holistic. While upgrading is the main part, having tests and CI is the other part. The <a href="https://laravelshift.com/laravel-test-generator" style="color: #f4645f; text-decoration: underline;">Tests Generator</a> was the first step, the CI Generator is the next. Together these will give you more confidence when merging future Shifts by providing a nice green checkbox.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This week I will focus on launching the CI Generator and complete the remaining <a href="https://laravelshift.com/human-shifts" style="color: #f4645f; text-decoration: underline;">Human Shifts</a> from last week.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">🔥 Tip</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">As always, completing the Human Shifts gives me an opportunity to dog food Shift. I noticed something in the <a href="https://laravelshift.com/upgrade-laravel-4.2-to-laravel-5.0" style="color: #f4645f; text-decoration: underline;">Laravel 5.0 Shift</a> where some folders were not renamed according to PSR-4.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Seems like there's been a bug when nested folders were being renamed after the parent folder had already been renamed. Although I had logic in place to track renamed folders, there must have been some edge case.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">After review, it dawned on me that if I sorted the folders by depth, I would avoid any scenarios where I renamed the parent folder first.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">To do so, I had the opportunity to use PHP <a href="https://www.php.net/manual/en/function.usort.php" style="color: #f4645f; text-decoration: underline;"><code>usort</code></a>, as well as the <a href="https://www.php.net/manual/en/language.operators.comparison.php" style="color: #f4645f; text-decoration: underline;">spaceship operator</a> to compare path depths (with a unary negation for descending order). 🔥</p>
+<pre><code>usort($lowercase_directories, function ($a, $b) {
+    return -(substr_count($a, DIRECTORY_SEPARATOR) 
+        &lt;=&gt; substr_count($b, DIRECTORY_SEPARATOR));
+});
+</code></pre>
+
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">As always, I welcome your feedback. <a href="https://laravelshift.com/" style="color: #f4645f; text-decoration: underline;">Keep Shifting!</a></p>
+
+<p style="margin-bottom: 1em; line-height: 1.5em;">~ JMac</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Don't want to receive these updates? No problem, simply <a href="https://laravelshift.com/mailcoach/unsubscribe/c54bdd24-145c-42fe-a238-d0ba0eee4961/a80bbbc4-461b-45ee-bd48-830c31a9f59a" style="color: #f4645f; text-decoration: underline;">unsubscribe</a> or sign into Shift and <a href="https://laravelshift.com/account/preferences" style="color: #f4645f; text-decoration: underline;">update your preferences</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Proudly sent with <em>Mailcoach</em> from Louisville, Kentucky.</p>
+</div>
+<img width="1px" height="1px" alt="" src="http://email.mg.laravelshift.com/o/eJwNzEEOwyAMAMHXlGNkjAnlwGMwthOk0kg0ar9f9jxaKQEpq-sla_DA6iWJgD2jIXEgJEFetf1B8Pl1u7dD3zrrreLOws0LWTMA9HFpw1QZMGEkrxyzm2XU2a7Zv2MNjlH7a2vX-ANBNiRk"></body>
+</html>
+
