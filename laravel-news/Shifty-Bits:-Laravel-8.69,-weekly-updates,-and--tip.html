@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+<!--[if gte mso 15]>
+  <xml>
+      <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+  </xml>
+  <![endif]--><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laravel Shift Newsletter</title>
+<style>
+    body {
+      font-family: Helvetica,Arial,sans-serif;
+      font-size: 16px;
+      color:#333333;
+    }
+    a {
+      color: #f4645f;
+      text-decoration: underline;
+    }
+    hr {
+      border-top: 1px dashed #888;
+      margin: 2em 0;
+    }
+    p, ul {
+      margin-bottom:1em;
+      line-height:1.5em;
+    }
+    h2 {
+      color:#444;
+      font-family:'Helvetica Neue',sans-serif;
+      font-weight:600;
+      font-size:20px;
+      line-height:1.5;
+      margin-top:2em;
+    }
+  </style>
+</head>
+<body style="font-family: Helvetica,Arial,sans-serif; font-size: 16px; color: #333333;">
+<div style="max-width:600px;margin:0 0 0 1em;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">Heyo! JMac here again in the weekly newsletter with highlights from the Laravel patch release, Shift updates, and a 🔥 tip.</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Laravel 8.69</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Couple fixes and new features this week brings us to Laravel <strong>8.69</strong>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Here are the highlights:</p>
+<ul style="margin-bottom: 1em; line-height: 1.5em;">
+<li>Fix rate limiting unicode issue in <a href="https://github.com/laravel/framework/pull/39375" style="color: #f4645f; text-decoration: underline;">#39375</a>
+</li>
+<li>Fix <code>CURRENT_TIMESTAMP</code> as default when changing column in <a href="https://github.com/laravel/framework/pull/39377" style="color: #f4645f; text-decoration: underline;">#39377</a>
+</li>
+<li>Qualify aggregated column in <em>OneOfMany</em> subqueries in <a href="https://github.com/laravel/framework/pull/39387" style="color: #f4645f; text-decoration: underline;">#39387</a>
+</li>
+<li>Improve content negotiation for exception handling in <a href="https://github.com/laravel/framework/pull/39385" style="color: #f4645f; text-decoration: underline;">#39385</a>
+</li>
+<li>Make accept header comparison case-insensitive in <a href="https://github.com/laravel/framework/pull/39413" style="color: #f4645f; text-decoration: underline;">#39413</a>
+</li>
+<li>Add support for <code>SKIP LOCKED</code> to MariaDB in <a href="https://github.com/laravel/framework/pull/39396" style="color: #f4645f; text-decoration: underline;">#39396</a>
+</li>
+<li>Add custom <code>stringable</code> cast for Models in <a href="https://github.com/laravel/framework/pull/39410" style="color: #f4645f; text-decoration: underline;">#39410</a>
+</li>
+<li>Add <code>Enum</code> validation rule in <a href="https://github.com/laravel/framework/pull/39437" style="color: #f4645f; text-decoration: underline;">#39437</a>
+</li>
+<li>Add <code>Str::mask</code> for hiding portion of a string in <a href="https://github.com/laravel/framework/pull/39393" style="color: #f4645f; text-decoration: underline;">#39393</a>
+</li>
+<li>Allow using a callback in <code>Auth::attempt</code> in <a href="https://github.com/laravel/framework/pull/39420" style="color: #f4645f; text-decoration: underline;">#39420</a>
+</li>
+<li>Add success and failure command assertions in <a href="https://github.com/laravel/framework/pull/39435" style="color: #f4645f; text-decoration: underline;">#39435</a>
+</li>
+</ul>
+<p style="margin-bottom: 1em; line-height: 1.5em;">You may review the <a href="https://github.com/laravel/framework/compare/v8.68.0...v8.69.0" style="color: #f4645f; text-decoration: underline;">full branch diff on GitHub</a> for a complete list of changes.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This version bump and update is automated for subscribers to a <a href="https://laravelshift.com/shifty-plans" style="color: #f4645f; text-decoration: underline;">Shifty Plan</a>. If you don't have one of those, be sure to bump your constraint and run <code>composer update</code> to get the latest features.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Weekly Journal</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Last week and over the weekend I finished up all of the remaining <a href="https://laravelshift.com/human-shifts" style="color: #f4645f; text-decoration: underline;">Human Shifts</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I try to use the end of the month for "clean up" tasks. Most of the time this is fixing tiny boundary cases within Shift's automation. After all of the <em>Human Shifts</em> I had found nearly 50 tweaks.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">My process is pretty simply, take a screenshot and give it a filename that guides me in the right direction when I come back to it. I <a href="https://twitter.com/gonedark/status/1454441735183032322" style="color: #f4645f; text-decoration: underline;">shared this on Twitter</a>, as it's pretty much been my workflow since the beginning of Shift.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This morning, Jess and I merged the alpha version of the <em>Tailwind 3.x Shift</em> she had been working on. We're testing it out on <a href="https://laravelshift.com" style="color: #f4645f; text-decoration: underline;">laravelshift.com</a> and our blogs before releasing a public beta. Tailwind 3 is still in alpha, but should release later this month.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">So we're getting ahead of the game as we also expected PHP 8.1 to be released later this month as well. This week I'll build the marketing page for that and finalize the remaining tweaks I found during the <em>Human Shifts</em>.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">🔥 Tip</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Most of my existing projects still use <code>master</code> as the default branch name. A while back, GitHub and other services changed the default name to <code>main</code>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">While I have been changing this for existing projects by running:</p>
+<pre><code>git branch -M main
+git push -u origin main
+</code></pre>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I don't want to keep doing this for new projects. Especially as GitHub creates them with <code>main</code> in their web UI.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">To adopt <code>main</code> (or another branch name), you may configure the default branch name Git uses by running:</p>
+<pre><code>git config --global init.defaultBranch main
+</code></pre>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Now new projects created locally will follow the naming convention of those created via the web UI. 🔥</p>
+
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">As always, I welcome your feedback. <a href="https://laravelshift.com/" style="color: #f4645f; text-decoration: underline;">Keep Shifting!</a></p>
+
+<p style="margin-bottom: 1em; line-height: 1.5em;">~ JMac</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Don't want to receive these updates? No problem, simply <a href="https://laravelshift.com/mailcoach/unsubscribe/c54bdd24-145c-42fe-a238-d0ba0eee4961/e23cae08-90cb-4495-a8b0-345afbcf9449" style="color: #f4645f; text-decoration: underline;">unsubscribe</a> or sign into Shift and <a href="https://laravelshift.com/account/preferences" style="color: #f4645f; text-decoration: underline;">update your preferences</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Proudly sent with <em>Mailcoach</em> from Louisville, Kentucky.</p>
+</div>
+<img width="1px" height="1px" alt="" src="http://email.mg.laravelshift.com/o/eJwNzEsOwiAQANDTyLLBYXBgwWGG-VQSsQk2en37DvC0JcBqYTRM-RE5We-i2dyhiltm0CjiAHrD-PkNP7fd3rb4NA3PVnInIHDDcu9EiFIqKJKpXo9hWG3ykmON77yCffJ4bXLMP3rWJYA"></body>
+</html>
+
