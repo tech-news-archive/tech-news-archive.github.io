@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+<head>
+<!--[if gte mso 15]>
+  <xml>
+      <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+  </xml>
+  <![endif]--><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laravel Shift Newsletter</title>
+<style>
+    body {
+      font-family: Helvetica,Arial,sans-serif;
+      font-size: 16px;
+      color:#333333;
+    }
+    a {
+      color: #f4645f;
+      text-decoration: underline;
+    }
+    hr {
+      border-top: 1px dashed #888;
+      margin: 2em 0;
+    }
+    p, ul {
+      margin-bottom:1em;
+      line-height:1.5em;
+    }
+    h2 {
+      color:#444;
+      font-family:'Helvetica Neue',sans-serif;
+      font-weight:600;
+      font-size:20px;
+      line-height:1.5;
+      margin-top:2em;
+    }
+  </style>
+</head>
+<body style="font-family: Helvetica,Arial,sans-serif; font-size: 16px; color: #333333;">
+<div style="max-width:600px;margin:0 0 0 1em;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">Heyo! JMac here again in the weekly newsletter with highlights from the Laravel patch release, Shift updates, and a 🔥 tip.</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Laravel 8.70</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">New features this week gives us a minor version bump, with a fast-follow bumping the patch version. Together, this brings us to Laravel <strong>8.70.1</strong>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Here are the highlights:</p>
+<ul style="margin-bottom: 1em; line-height: 1.5em;">
+<li>Add <code>--requests</code> flag to <code>make:controller</code> and <code>make:model</code> in <a href="https://github.com/laravel/framework/pull/39120" style="color: #f4645f; text-decoration: underline;">#39120</a>
+</li>
+<li>Allow <em>Stringable</em> objects as middleware in <a href="https://github.com/laravel/framework/pull/39439" style="color: #f4645f; text-decoration: underline;">#39439</a>
+</li>
+<li>Add <code>js</code> helper in <a href="https://github.com/laravel/framework/pull/39389" style="color: #f4645f; text-decoration: underline;">#39389</a>
+</li>
+<li>Allow <code>can</code> to be chained onto route for quick authorization in <a href="https://github.com/laravel/framework/pull/39464" style="color: #f4645f; text-decoration: underline;">#39464</a>
+</li>
+<li>Enforce implicit route model scoping in <a href="https://github.com/laravel/framework/pull/39440" style="color: #f4645f; text-decoration: underline;">#39440</a>
+</li>
+<li>Publish <code>provider.stub</code> file in <a href="https://github.com/laravel/framework/pull/39491" style="color: #f4645f; text-decoration: underline;">#39491</a>
+</li>
+<li>Accept enums for insert, update, and where values in <a href="https://github.com/laravel/framework/pull/39492" style="color: #f4645f; text-decoration: underline;">#39492</a>
+</li>
+<li>Add missing flags to Redis <code>zadd</code> options list in <a href="https://github.com/laravel/framework/pull/39538" style="color: #f4645f; text-decoration: underline;">#39538</a>
+</li>
+<li>Add ability to use <code>withoutMiddleware</code> on route groups in <a href="https://github.com/laravel/framework/pull/39545" style="color: #f4645f; text-decoration: underline;">#39545</a>
+</li>
+</ul>
+<p style="margin-bottom: 1em; line-height: 1.5em;">You may review the <a href="https://github.com/laravel/framework/compare/v8.69.0...v8.70.1" style="color: #f4645f; text-decoration: underline;">full branch diff on GitHub</a> for a complete list of changes.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This version bump and update is automated for subscribers to a <a href="https://laravelshift.com/shifty-plans" style="color: #f4645f; text-decoration: underline;">Shifty Plan</a>. If you don't have one of those, be sure to bump your constraint and run <code>composer update</code> to get the latest features.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Weekly Journal</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">More <a href="https://laravelshift.com/human-shifts" style="color: #f4645f; text-decoration: underline;">Human Shifts</a> came in last week. I continued working on these as well as taking screenshots of any tweaks I felt could be automated. I fixed a few, but turned the rest into tasks.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I've enjoyed working on these <em>Human Shifts</em> lately. <em>"old apps"</em> connotes they are bad in some way. In reality, these apps are often quite successful and have stood the test of time.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This week, I still need to make the marketing page for the <em>Tailwind 3.x Shift</em>. Jess is still making tweaks to it as well as some of the other <a href="https://laravelshift.com/shifts?category=tailwind" style="color: #f4645f; text-decoration: underline;">Tailwind Shifts</a>. However, we're starting to switch focus back to the <a href="https://laravelshift.com/workbench" style="color: #f4645f; text-decoration: underline;">Workbench</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">With PHP 8.1 being released later this month, we want to build tasks which automate refactoring to the new language features.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">In the meantime, there are a handful of Laravel tasks we wanted to add. One of them deals with updating your test suite to utilize the new <a href="https://github.com/laravel/framework/pull/38861" style="color: #f4645f; text-decoration: underline;"><code>LazilyRefreshDatabase</code> trait</a>. Another deals with <a href="https://twitter.com/gonedark/status/1435611601491660810?s=20" style="color: #f4645f; text-decoration: underline;">prefixing Eloquent queries</a> with <code>query()</code>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Given all this work, I haven't had time to focus on the <a href="https://laravelshift.com" style="color: #f4645f; text-decoration: underline;">laravelshift.com</a> tasks. Originally Jess helped with these. But now her time is better spent helping me on Shifts and Workbench tasks.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">So, I'm opening some of this additional work to contract. Roughly 20 hours per month. Requirements are pretty straightforward: Laravel, Tailwind, Alpine.js, and speaks English.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Ideally, I'm looking for a junior/intermediate dev to balance budget with the learning experience. If you're interesting in some side work, please reply.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">🔥 Tip</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Continuing with the 🔥 tip from last week, here's another one relating to Git. I <a href="https://twitter.com/gonedark/status/1456290672294703112" style="color: #f4645f; text-decoration: underline;">tweeted this already</a>, but I'll share some additional options here.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I often find myself needing to view changes between a range of commits. For example, what changed in the framework between versions, what was added to the Workbench since the last release, or what files changed in the last 5 commits.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I can find out by passing a reference range to <code>git diff</code>:</p>
+<pre><code># all changes
+git diff v8.70.0..v8.70.1
+
+# list files which changed
+git diff --name-only v8.70.0..v8.70.1
+
+# list only test files which changed
+git diff --name-only v8.70.0..v8.70.1 -- tests
+</code></pre>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I may also pass a single, relative reference. In which case, Git shows changes from the tip of the current branch (<code>HEAD</code>) to that reference.</p>
+<pre><code># files changes in recent 5 commits
+git diff --name-only HEAD~5
+</code></pre>
+<p style="margin-bottom: 1em; line-height: 1.5em;">If you don't know the exact commit, you may use <em>times</em> with <code>git log</code> and <code>--since</code> (or <code>--before</code>).</p>
+<pre><code># changes in the last week
+git log --since="last week"
+</code></pre>
+
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">As always, I welcome your feedback. <a href="https://laravelshift.com/" style="color: #f4645f; text-decoration: underline;">Keep Shifting!</a></p>
+
+<p style="margin-bottom: 1em; line-height: 1.5em;">~ JMac</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Don't want to receive these updates? No problem, simply <a href="https://laravelshift.com/mailcoach/unsubscribe/c54bdd24-145c-42fe-a238-d0ba0eee4961/0acd42c2-b369-4e8d-bfae-05fa7a434e98" style="color: #f4645f; text-decoration: underline;">unsubscribe</a> or sign into Shift and <a href="https://laravelshift.com/account/preferences" style="color: #f4645f; text-decoration: underline;">update your preferences</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Proudly sent with <em>Mailcoach</em> from Louisville, Kentucky.</p>
+</div>
+<img width="1px" height="1px" alt="" src="http://email.mg.laravelshift.com/o/eJwNzEsOwiAQANDTyLIBZqCw4DDzo5KITbCx19d3gKcNIlZzo3lkygy1at3RagpqmSOUDgTelB_oP_fo13bY2xZdpu7ZdlShnLUAhVi6MHJJkaL0kHtI4FabtORc4zv_wTFpvDY55w8zGySK"></body>
+</html>
+
