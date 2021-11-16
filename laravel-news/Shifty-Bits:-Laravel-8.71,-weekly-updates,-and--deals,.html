@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+<!--[if gte mso 15]>
+  <xml>
+      <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+  </xml>
+  <![endif]--><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laravel Shift Newsletter</title>
+<style>
+    body {
+      font-family: Helvetica,Arial,sans-serif;
+      font-size: 16px;
+      color:#333333;
+    }
+    a {
+      color: #f4645f;
+      text-decoration: underline;
+    }
+    hr {
+      border-top: 1px dashed #888;
+      margin: 2em 0;
+    }
+    p, ul {
+      margin-bottom:1em;
+      line-height:1.5em;
+    }
+    h2 {
+      color:#444;
+      font-family:'Helvetica Neue',sans-serif;
+      font-weight:600;
+      font-size:20px;
+      line-height:1.5;
+      margin-top:2em;
+    }
+  </style>
+</head>
+<body style="font-family: Helvetica,Arial,sans-serif; font-size: 16px; color: #333333;">
+<div style="max-width:600px;margin:0 0 0 1em;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">Heyo! JMac here again in the weekly newsletter with highlights from the Laravel patch release, Shift updates, and a 🔥 tip.</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Laravel 8.71</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Mostly tweaks this week and a few new features which gives us a minor version bump to Laravel <strong>8.71.0</strong>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Here are the highlights:</p>
+<ul style="margin-bottom: 1em; line-height: 1.5em;">
+<li>Update <code>make:model --all</code> to also generate Form Request in <a href="https://github.com/laravel/framework/pull/39578" style="color: #f4645f; text-decoration: underline;">#39578</a>
+</li>
+<li>Allow assertion of multiple JSON validation errors in <a href="https://github.com/laravel/framework/pull/39568" style="color: #f4645f; text-decoration: underline;">#39568</a>
+</li>
+<li>Add <code>declined</code> and <code>declined_if</code> validation rules in <a href="https://github.com/laravel/framework/pull/39579" style="color: #f4645f; text-decoration: underline;">#39579</a>
+</li>
+<li>Introduce <code>@js</code> directive in <a href="https://github.com/laravel/framework/pull/39522" style="color: #f4645f; text-decoration: underline;">#39522</a>
+</li>
+<li>Update placeholders for stubs in <a href="https://github.com/laravel/framework/pull/39527" style="color: #f4645f; text-decoration: underline;">#39527</a>
+</li>
+<li>Enum casts accept backed values in <a href="https://github.com/laravel/framework/pull/39608" style="color: #f4645f; text-decoration: underline;">#39608</a>
+</li>
+<li>Add a method to removes all configured macros in <a href="https://github.com/laravel/framework/pull/39633" style="color: #f4645f; text-decoration: underline;">#39633</a>
+</li>
+</ul>
+<p style="margin-bottom: 1em; line-height: 1.5em;">You may review the <a href="https://github.com/laravel/framework/compare/v8.70.0...v8.71.0" style="color: #f4645f; text-decoration: underline;">full branch diff on GitHub</a> for a complete list of changes.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This version bump and update is automated for subscribers to a <a href="https://laravelshift.com/shifty-plans" style="color: #f4645f; text-decoration: underline;">Shifty Plan</a>. If you don't have one of those, be sure to bump your constraint and run <code>composer update</code> to get the latest features.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Weekly Journal</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Last week I launched the alpha version of the <a href="https://laravelshift.com/upgrade-tailwind-css-2-to-tailwind-css-3" style="color: #f4645f; text-decoration: underline;">Tailwind 3.x Shift</a>. I tested it out on a few internal projects, as well as a few projects in the wild. Everything looked good.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">So Monday I <a href="https://twitter.com/laravelshift/status/1460299632819548165?s=20" style="color: #f4645f; text-decoration: underline;">announced the beta</a> at the usual introductory $9 price. Use it to test out the Tailwind 3 alpha. Anyone who runs the <em>beta</em> is welcome to a free rerun once 3.0 is officially released.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Izzy was sick last week which ultimately made its way through our household. So by the weekend it was unfortunately my turn. The little time I did spend on the computer I used to run several of the <a href="https://laravelshift.com/workbench" style="color: #f4645f; text-decoration: underline;">Workbench tasks</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">All these Primarily tasks which focused on removing code or making it consistent with some of the modern conventions I've adopted, like: <em>Remove Dead Code</em>, <em>Remove Laravel DocBlocks</em>, <em>Format Test Cases</em>, and <em>Adopt Anonymous Migrations</em>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I like doing this from time to time. Maybe once a quarter or twice a year. Even though that may be infrequent, this tool is worthwhile to automate cleaning up thousands of lines of code in seconds.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This week Jess and I are going to focus on adding tasks for the upcoming release of PHP 8.1. There are several new features, but only a handful make sense to automate.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">So we'll focus on things like converting to the new Enums, adopting the array spread operator, and potentially <code>readonly</code> properties.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">🔥 Tip</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">No code this week. Instead, it's that time of year when I have some 🔥 deals.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">While I don't discount Shift very often (since the prices are already ridiculously low), I would like to promote the <em>Workbench</em> and the <em>Everything Plan</em>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">So get <a href="https://laravelshift.com/workbench" style="color: #f4645f; text-decoration: underline;">25% off a Workbench license</a> and <a href="https://laravelshift.com/shifty-plans" style="color: #f4645f; text-decoration: underline;">$400 off an Everything Plan</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I've also <a href="https://jasonmccreary.me/products/packages" style="color: #f4645f; text-decoration: underline;">bundled my courses</a> into several different deals. All of which offer better pricing than buying any of the individual courses directly. So why not get more for less.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Of course, if you are just missing one of my courses, email me for a holiday discount.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">All of these discounts are available until December 1.</p>
+
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">As always, I welcome your feedback. <a href="https://laravelshift.com/" style="color: #f4645f; text-decoration: underline;">Keep Shifting!</a></p>
+
+<p style="margin-bottom: 1em; line-height: 1.5em;">~ JMac</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Don't want to receive these updates? No problem, simply <a href="https://laravelshift.com/mailcoach/unsubscribe/c54bdd24-145c-42fe-a238-d0ba0eee4961/ef72fd20-604d-4c24-82af-2c61e988c1d0" style="color: #f4645f; text-decoration: underline;">unsubscribe</a> or sign into Shift and <a href="https://laravelshift.com/account/preferences" style="color: #f4645f; text-decoration: underline;">update your preferences</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Proudly sent with <em>Mailcoach</em> from Louisville, Kentucky.</p>
+</div>
+<img width="1px" height="1px" alt="" src="http://email.mg.laravelshift.com/o/eJwNzMsNwyAMANBpyjEi5mcfGMbGOEUKjUSjdv32DfC0BojU3aiozCmBNkiBCkVhBcLdomafA-oj-vd32L0d_dUX313ds4IJgAURStlKyRl7hETesIihF7fq5NWuNT7zHxyTx7m1a_4ADU4j6w"></body>
+</html>
+
