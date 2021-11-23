@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<!--[if gte mso 15]>
+  <xml>
+      <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+  </xml>
+  <![endif]--><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laravel Shift Newsletter</title>
+<style>
+    body {
+      font-family: Helvetica,Arial,sans-serif;
+      font-size: 16px;
+      color:#333333;
+    }
+    a {
+      color: #f4645f;
+      text-decoration: underline;
+    }
+    hr {
+      border-top: 1px dashed #888;
+      margin: 2em 0;
+    }
+    p, ul {
+      margin-bottom:1em;
+      line-height:1.5em;
+    }
+    h2 {
+      color:#444;
+      font-family:'Helvetica Neue',sans-serif;
+      font-weight:600;
+      font-size:20px;
+      line-height:1.5;
+      margin-top:2em;
+    }
+  </style>
+</head>
+<body style="font-family: Helvetica,Arial,sans-serif; font-size: 16px; color: #333333;">
+<div style="max-width:600px;margin:0 0 0 1em;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">Heyo! JMac here again in the weekly newsletter with highlights from the Laravel patch release, Shift updates, and a 🔥 tip.</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Laravel 8.73</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Lots of patch releases last week. Some of which included new features which were already merged. So we jump a few minor versions and have a patch this week bringing us to <strong>8.73.2</strong>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Here are the highlights:</p>
+<ul style="margin-bottom: 1em; line-height: 1.5em;">
+<li>Allow users to specify options for <code>migrate:fresh</code> when using <code>DatabaseMigration</code> trait in <a href="https://github.com/laravel/framework/pull/39637" style="color: #f4645f; text-decoration: underline;">#39637</a>
+</li>
+<li>Add support for <em>countables</em> to the Pluralizer in <a href="https://github.com/laravel/framework/pull/39641" style="color: #f4645f; text-decoration: underline;">#39641</a>
+</li>
+<li>Fix <code>assertSoftDeleted</code> and <code>assertNotSoftDeleted</code> in <a href="https://github.com/laravel/framework/pull/39673" style="color: #f4645f; text-decoration: underline;">#39673</a>
+</li>
+<li>Implement <code>lazyByIdDesc</code> in <a href="https://github.com/laravel/framework/pull/39646" style="color: #f4645f; text-decoration: underline;">#39646</a>
+</li>
+<li>Allow passing closure for TTL to <code>Cache::remember()</code> in <a href="https://github.com/laravel/framework/pull/39678" style="color: #f4645f; text-decoration: underline;">#39678</a>
+</li>
+<li>Add <code>.phar</code> to blocked PHP extensions in <a href="https://github.com/laravel/framework/pull/39666" style="color: #f4645f; text-decoration: underline;">#39666</a>
+</li>
+<li>Forget and clear a mocked/spied instance of an object in the container in <a href="https://github.com/laravel/framework/pull/39713" style="color: #f4645f; text-decoration: underline;">#39713</a>
+</li>
+</ul>
+<p style="margin-bottom: 1em; line-height: 1.5em;">You may review the <a href="https://github.com/laravel/framework/compare/v8.71.0...v8.73.2" style="color: #f4645f; text-decoration: underline;">full branch diff on GitHub</a> for a complete list of changes.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This version bump and update is automated for subscribers to a <a href="https://laravelshift.com/shifty-plans" style="color: #f4645f; text-decoration: underline;">Shifty Plan</a>. If you don't have one of those, be sure to bump your constraint and run <code>composer update</code> to get the latest features.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Weekly Journal</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Last week Jess and I continued working on the new PHP 8.1 tasks. Jess is taking the lead on these. However, I'm working on the task to convert <a href="https://stitcher.io/blog/new-in-php-81#new-in-initializers-rfc" style="color: #f4645f; text-decoration: underline;">constructor properties to the <code>new</code> initializers</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I plan to do more live streaming the first week of December. To get back in the swing, I <a href="https://www.youtube.com/watch?v=k01QDCn_RLo" style="color: #f4645f; text-decoration: underline;">recorded one last week</a>. I demoed building another free task to convert property access within Faker to method calls. Property access was deprecated in version 1.14. I started seeing notices in my test runner output. So it was time to clear that up.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I also finally upgraded to PHP CS Fixer version 3. I'd been putting this off for a while as it required not only changing all of Shift's configuration files, but upgrading the workers and Docker images. I planned on building a Shift to convert a PHP CS Fixer v2 configuration to v3. But it got deprioritized. In the meantime, I did update the gist for <a href="https://gist.github.com/laravel-shift/cab527923ed2a109dda047b97d53c200" style="color: #f4645f; text-decoration: underline;">Shift's Laravel code style configuration</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">If you are still running PHP CS Fixer v2, you will need to upgrade to v3 for Shift to continue honoring your code style. This is mostly a file name change. However, there are a <a href="https://github.com/FriendsOfPHP/PHP-CS-Fixer/blob/master/UPGRADE-v3.md" style="color: #f4645f; text-decoration: underline;">few dozen options which changed</a>. Of course, if I do finish the converter, I will announce it here and <a href="https://twitter.com/laravelshift" style="color: #f4645f; text-decoration: underline;">on Twitter</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">It's Thanksgiving this week in the US. This is my favorite holiday. I'll be roasting a turkey for the first time this year. Between the food comas, I will work to finish the PHP 8.1 tasks so we can launch them next week.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">A few <a href="https://laravelshift.com/human-shifts" style="color: #f4645f; text-decoration: underline;">Human Shifts</a> also came in. This is pretty common at the end of the year. So those will take up the rest of this week and likely spill over into next week.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">🔥 Deals</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Lots of deals flying around this week. Here's a quick (and final) reminder of the discounts I'm offering for my courses and Shift.</p>
+<ul style="margin-bottom: 1em; line-height: 1.5em;">
+<li>
+<a href="https://jasonmccreary.me/products/packages" style="color: #f4645f; text-decoration: underline;">Course Bundle Deals</a>
+</li>
+<li>
+<a href="https://laravelshift.com/workbench" style="color: #f4645f; text-decoration: underline;">25% off</a> a Shift Workbench license</li>
+<li>
+<a href="https://laravelshift.com/shifty-plans" style="color: #f4645f; text-decoration: underline;">$400 off</a> an <em>Everything Plan</em> subscription</li>
+</ul>
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">As always, I welcome your feedback. <a href="https://laravelshift.com/" style="color: #f4645f; text-decoration: underline;">Keep Shifting!</a></p>
+
+<p style="margin-bottom: 1em; line-height: 1.5em;">~ JMac</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Don't want to receive these updates? No problem, simply <a href="https://laravelshift.com/mailcoach/unsubscribe/c54bdd24-145c-42fe-a238-d0ba0eee4961/1e114bfe-8d47-4110-8266-ac77086273c3" style="color: #f4645f; text-decoration: underline;">unsubscribe</a> or sign into Shift and <a href="https://laravelshift.com/account/preferences" style="color: #f4645f; text-decoration: underline;">update your preferences</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Proudly sent with <em>Mailcoach</em> from Louisville, Kentucky.</p>
+</div>
+<img width="1px" height="1px" alt="" src="http://email.mg.laravelshift.com/o/eJwNzFEOwiAMANDTyOdSaIvjg8O00E4ScQkuen19B3i9YqJiYdRkwMqqwqwlIke32ExLxobKRjeC93f4tR32siWX9fCoOVtnQBVxEgOlvpNAuhO4Yt49rDpltXONz_wHx5Tx3No5f0hZJNE"></body>
+</html>
+
