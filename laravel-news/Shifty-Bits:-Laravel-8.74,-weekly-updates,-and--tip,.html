@@ -1,0 +1,113 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<!--[if gte mso 15]>
+  <xml>
+      <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+  </xml>
+  <![endif]--><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laravel Shift Newsletter</title>
+<style>
+    body {
+      font-family: Helvetica,Arial,sans-serif;
+      font-size: 16px;
+      color:#333333;
+    }
+    a {
+      color: #f4645f;
+      text-decoration: underline;
+    }
+    hr {
+      border-top: 1px dashed #888;
+      margin: 2em 0;
+    }
+    p, ul {
+      margin-bottom:1em;
+      line-height:1.5em;
+    }
+    h2 {
+      color:#444;
+      font-family:'Helvetica Neue',sans-serif;
+      font-weight:600;
+      font-size:20px;
+      line-height:1.5;
+      margin-top:2em;
+    }
+  </style>
+</head>
+<body style="font-family: Helvetica,Arial,sans-serif; font-size: 16px; color: #333333;">
+<div style="max-width:600px;margin:0 0 0 1em;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">Heyo! JMac here again in the weekly newsletter with highlights from the Laravel patch release, Shift updates, and a 🔥 tip.</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Laravel 8.74</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Lots of new features this week, so we get a minor version bump to Laravel <strong>8.74</strong>. Here are the highlights:</p>
+<ul style="margin-bottom: 1em; line-height: 1.5em;">
+<li>Add optional <code>exclude</code> parameter to <code>model:prune</code> in <a href="https://github.com/laravel/framework/pull/39749" style="color: #f4645f; text-decoration: underline;">#39749</a>
+</li>
+<li>Add <code>App::hasDebugModeEnabled()</code> to detect debug mode in <a href="https://github.com/laravel/framework/pull/39755" style="color: #f4645f; text-decoration: underline;">#39755</a>
+</li>
+<li>Add <code>fakeExcept</code> and <code>fakeExceptFor</code> methods to <code>Event</code> facade in <a href="https://github.com/laravel/framework/pull/39752" style="color: #f4645f; text-decoration: underline;">#39752</a>
+</li>
+<li>Add <code>aggregate</code> to Eloquent passthru in <a href="https://github.com/laravel/framework/pull/39772" style="color: #f4645f; text-decoration: underline;">#39772</a>
+</li>
+<li>Add <code>undot</code> to <code>Arr</code> and <code>Collection</code> classes in <a href="https://github.com/laravel/framework/pull/39729" style="color: #f4645f; text-decoration: underline;">#39729</a>
+</li>
+<li>Add <code>reverse</code> to <code>Str</code> class in <a href="https://github.com/laravel/framework/pull/39816" style="color: #f4645f; text-decoration: underline;">#39816</a>
+</li>
+<li>Ability to create <code>fulltext</code> indexes for MySQL in <a href="https://github.com/laravel/framework/pull/39821" style="color: #f4645f; text-decoration: underline;">#39821</a>
+</li>
+<li>Optimize the execution time of the <code>unique</code> method in <a href="https://github.com/laravel/framework/pull/39822" style="color: #f4645f; text-decoration: underline;">#39822</a>
+</li>
+</ul>
+<p style="margin-bottom: 1em; line-height: 1.5em;">You may review the <a href="https://github.com/laravel/framework/compare/v8.73.2...v8.74.0" style="color: #f4645f; text-decoration: underline;">full branch diff on GitHub</a> for a complete list of changes.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This version bump and update is automated for subscribers to a <a href="https://laravelshift.com/shifty-plans" style="color: #f4645f; text-decoration: underline;">Shifty Plan</a>. If you don't have one of those, be sure to bump your constraint and run <code>composer update</code> to get the latest features.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Weekly Journal</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Last week was my favorite holiday - Thanksgiving. Between all the families we celebrated four times. One of which I cooked myself. The turkey turned out great.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">In between I completed one of the <a href="https://laravelshift.com/human-shifts" style="color: #f4645f; text-decoration: underline;">Human Shifts</a> that came in. There's one more I'm finishing up this week.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I also continued to work on the PHP 8.1 tasks. Particularly the <code>new</code> in initializers. Jess is working on more tasks for PHP 8.1. I hope to release these later today. With that, the price will increase to $59. We're slowly working our way up to full price at $99.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Last Tuesday, Shift earned its 1 millionth dollar. I've been grinding it out for 6 years and finally reached $1,000,000 in revenue. I review the years, decisions, and personal struggles in this <a href="https://jasonmccreary.me/articles/grinding-to-million-dollar-revenue-saas/" style="color: #f4645f; text-decoration: underline;">massive 7500 word post</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I wanted to share it with the newsletter first as a small way to say thanks for helping Shift reach this milestone. It took the better part of yesterday to proofread and finalize the post. Which is why this went out a day late.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">🔥 Tip</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">In working on the <code>new</code> in initializers task, I learned a nuance of this feature - you may only use it with <a href="https://www.php.net/manual/en/language.oop5.decon.php#language.oop5.decon.constructor.promotion" style="color: #f4645f; text-decoration: underline;">promoted properties</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">For example, consider the following constructor:</p>
+<pre><code>class Foo
+{
+  private $bar;
+
+  public function __construct() {
+      $this-&gt;bar = new Bar();
+  }
+}
+</code></pre>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Could not become:</p>
+<pre><code>public function __construct($bar = new Bar()) {}
+</code></pre>
+<p style="margin-bottom: 1em; line-height: 1.5em;">It would need to be:</p>
+<pre><code>class Foo
+{
+  public function __construct(
+    private $bar = new Bar();
+  ) {}
+}
+</code></pre>
+<p style="margin-bottom: 1em; line-height: 1.5em;">The <em><code>new</code> in initializers</em> task will actually perform this two-step refactor for you by first running the <em>Property Promotion</em> task. So it will handle converting the example snippet. 🔥</p>
+
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">As always, I welcome your feedback. <a href="https://laravelshift.com/" style="color: #f4645f; text-decoration: underline;">Keep Shifting!</a></p>
+
+<p style="margin-bottom: 1em; line-height: 1.5em;">~ JMac</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Don't want to receive these updates? No problem, simply <a href="https://laravelshift.com/mailcoach/unsubscribe/c54bdd24-145c-42fe-a238-d0ba0eee4961/dc3f27d1-cc57-4473-ac39-c4d70d127164" style="color: #f4645f; text-decoration: underline;">unsubscribe</a> or sign into Shift and <a href="https://laravelshift.com/account/preferences" style="color: #f4645f; text-decoration: underline;">update your preferences</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Proudly sent with <em>Mailcoach</em> from Louisville, Kentucky.</p>
+</div>
+<img width="1px" height="1px" alt="" src="http://email.mg.laravelshift.com/o/eJwNzEsOwyAMBcDTlGUEmO-CwzjmOUUqjUSj5vrtHGB6Ix8qzGg1c0cqFuhcY8wkiUv2MVUAqvER7Oceem0H3lh8oZtnIyHr97B7ZTiqDmCrVGTP7ERVzWqTl5xrfOc_OCaP1ybn_AFjEyWJ"></body>
+</html>
+
