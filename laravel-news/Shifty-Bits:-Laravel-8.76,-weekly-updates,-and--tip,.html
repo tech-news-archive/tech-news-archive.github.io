@@ -1,0 +1,99 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<!--[if gte mso 15]>
+  <xml>
+      <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+  </xml>
+  <![endif]--><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laravel Shift Newsletter</title>
+<style>
+    body {
+      font-family: Helvetica,Arial,sans-serif;
+      font-size: 16px;
+      color:#333333;
+    }
+    a {
+      color: #f4645f;
+      text-decoration: underline;
+    }
+    hr {
+      border-top: 1px dashed #888;
+      margin: 2em 0;
+    }
+    p, ul {
+      margin-bottom:1em;
+      line-height:1.5em;
+    }
+    h2 {
+      color:#444;
+      font-family:'Helvetica Neue',sans-serif;
+      font-weight:600;
+      font-size:20px;
+      line-height:1.5;
+      margin-top:2em;
+    }
+  </style>
+</head>
+<body style="font-family: Helvetica,Arial,sans-serif; font-size: 16px; color: #333333;">
+<div style="max-width:600px;margin:0 0 0 1em;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">Heyo! JMac here again in the weekly newsletter with highlights from the Laravel patch release, Shift updates, and a 🔥 tip.</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Laravel 8.76</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Lots of features this week and some fast-follow patches brings us to Laravel <strong>8.76.2</strong>. Here are the highlights:</p>
+<ul style="margin-bottom: 1em; line-height: 1.5em;">
+<li>Fix <code>withTrashed</code> on routes check if <code>SoftDeletes</code> is used in Model in <a href="https://github.com/laravel/framework/pull/39958" style="color: #f4645f; text-decoration: underline;">#39958</a>
+</li>
+<li>Fix <code>model:prune --pretend</code> command for models with <code>SoftDeletes</code> in <a href="https://github.com/laravel/framework/pull/39991" style="color: #f4645f; text-decoration: underline;">#39991</a>
+</li>
+<li>Fix <code>SoftDeletes</code> force deletion sets "exists" property to <code>false</code> only when deletion succeeded in <a href="https://github.com/laravel/framework/pull/39987" style="color: #f4645f; text-decoration: underline;">#39987</a>
+</li>
+<li>Add possibility to customize child model route binding resolution in <a href="https://github.com/laravel/framework/pull/39929" style="color: #f4645f; text-decoration: underline;">#39929</a>
+</li>
+<li>Add <code>Response::reason()</code> in <a href="https://github.com/laravel/framework/pull/39972" style="color: #f4645f; text-decoration: underline;">#39972</a>
+</li>
+<li>Add <code>afterRefreshingDatabase</code> test method in <a href="https://github.com/laravel/framework/pull/39978" style="color: #f4645f; text-decoration: underline;">#39978</a>
+</li>
+<li>Add <code>unauthorized</code> and <code>forbidden</code> to <code>Response</code> in <a href="https://github.com/laravel/framework/pull/39979" style="color: #f4645f; text-decoration: underline;">#39979</a>
+</li>
+<li>Publish <code>view-component.stub</code> in <a href="https://github.com/laravel/framework/pull/40007" style="color: #f4645f; text-decoration: underline;">#40007</a>
+</li>
+<li>Add invisible modifier for MySQL columns in <a href="https://github.com/laravel/framework/pull/40002" style="color: #f4645f; text-decoration: underline;">#40002</a>
+</li>
+<li>Add <code>substrReplace</code> method to <code>Str</code> and Stringable in <a href="https://github.com/laravel/framework/pull/39988" style="color: #f4645f; text-decoration: underline;">#39988</a>
+</li>
+</ul>
+<p style="margin-bottom: 1em; line-height: 1.5em;">You may review the <a href="https://github.com/laravel/framework/compare/v8.75.0...v8.76.2" style="color: #f4645f; text-decoration: underline;">full branch diff on GitHub</a> for a complete list of changes.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This version bump and update is automated for subscribers to a <a href="https://laravelshift.com/shifty-plans" style="color: #f4645f; text-decoration: underline;">Shifty Plan</a>. If you don't have one of those, be sure to bump your constraint and run <code>composer update</code> to get the latest features.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Weekly Journal</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">We took our first little family vacation last week <a href="https://twitter.com/gonedark/status/1469063790817943559" style="color: #f4645f; text-decoration: underline;">to the beach</a>. We just got back yesterday. Which is why this newsletter is going out a day late.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Last week I continued <a href="https://www.youtube.com/watch?v=gMBDoQQLZSo&amp;list=PLmwAMIdrAmK5rH3SWvokHV8xI_0mauxDL&amp;index=62" style="color: #f4645f; text-decoration: underline;">live streaming</a> to build a new Laravel application from scratch. I plan to continue working on that more next week.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Jess made more tweaks to the <a href="https://laravelshift.com/upgrade-tailwind-css-2-to-tailwind-css-3" style="color: #f4645f; text-decoration: underline;">Tailwind 3.x Shift</a> after Tailwind 3 was officially released last Thursday. I deployed all those tweaks this morning. We plan to upgrade <a href="https://laravelshift.com/" style="color: #f4645f; text-decoration: underline;">laravelshift.com</a> to Tailwind 3 in our pairing session tomorrow.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Provided everything goes smoothly, we'll make some final tweaks. Then I will likely raise it to full price ($19), next Monday. So, if you're ready for Tailwind 3, <a href="https://laravelshift.com/upgrade-tailwind-css-2-to-tailwind-css-3" style="color: #f4645f; text-decoration: underline;">upgrade now</a> to take advantage of our introductory pricing.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">A few more <a href="https://laravelshift.com/human-shifts" style="color: #f4645f; text-decoration: underline;">Human Shifts</a> came in over the weekend. So I'll likely spend the rest of the week completing those. If I have any time left, I may look at a pesky bug I keep receiving when asserting two Eloquent collections in tests.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">🔥 Tip</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I noticed <a href="https://twitter.com/enunomaduro/status/1470755959479939084" style="color: #f4645f; text-decoration: underline;">this tweet from Nuno</a> removing the <code>server.php</code> file from Laravel applications.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This, of course, is something the <em>Laravel 9.x Shift</em> will automate provided it is not modified. Which brings me to the point of this tip, <strong>avoid modifying <em>core</em> files</strong>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I know I have beat this drum for a while. However, modifying core file greatly increases the pain of maintenance. Some modifications are worse than others, for example, overwriting Laravel methods, helpers, or <code>vendor</code> files (please don't).</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Even seemingly harmless modifications like those to files within a default Laravel application can increase pain. The config files are a prime example.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Shift goes a long way to soothe this. But ultimately, lessening the number of files included in a default Laravel application is the big win. I think (and hope) the removal of <code>server.php</code> is just the beginning. 🔥</p>
+
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">As always, I welcome your feedback. <a href="https://laravelshift.com/" style="color: #f4645f; text-decoration: underline;">Keep Shifting!</a></p>
+
+<p style="margin-bottom: 1em; line-height: 1.5em;">~ JMac</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Don't want to receive these updates? No problem, simply <a href="https://laravelshift.com/mailcoach/unsubscribe/c54bdd24-145c-42fe-a238-d0ba0eee4961/40d0ffcd-b8cc-4ce4-8796-f9670f3b8132" style="color: #f4645f; text-decoration: underline;">unsubscribe</a> or sign into Shift and <a href="https://laravelshift.com/account/preferences" style="color: #f4645f; text-decoration: underline;">update your preferences</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Proudly sent with <em>Mailcoach</em> from Louisville, Kentucky.</p>
+</div>
+<img width="1px" height="1px" alt="" src="http://email.mg.laravelshift.com/o/eJwNzEsOgyAQANDT1KVBZgqy4DDzVRKpCTX1-nX_8rRCxGJTq2jCqyslC7oQZPe0AqOENzjkkF4Yvnfza97sY4Mu02mvrEUiY3YQTsxLMjAmx2AarTxk1E5DztF-_Qm2Tu2Y5ex_eiwl1A"></body>
+</html>
+
