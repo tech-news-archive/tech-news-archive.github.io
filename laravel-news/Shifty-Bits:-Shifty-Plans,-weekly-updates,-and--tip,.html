@@ -1,0 +1,78 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<!--[if gte mso 15]>
+  <xml>
+      <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+  </xml>
+  <![endif]--><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laravel Shift Newsletter</title>
+<style>
+    body {
+      font-family: Helvetica,Arial,sans-serif;
+      font-size: 16px;
+      color:#333333;
+    }
+    a {
+      color: #f4645f;
+      text-decoration: underline;
+    }
+    hr {
+      border-top: 1px dashed #888;
+      margin: 2em 0;
+    }
+    p, ul {
+      margin-bottom:1em;
+      line-height:1.5em;
+    }
+    h2 {
+      color:#444;
+      font-family:'Helvetica Neue',sans-serif;
+      font-weight:600;
+      font-size:20px;
+      line-height:1.5;
+      margin-top:2em;
+    }
+  </style>
+</head>
+<body style="font-family: Helvetica,Arial,sans-serif; font-size: 16px; color: #333333;">
+<div style="max-width:600px;margin:0 0 0 1em;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">Heyo! JMac here again in the weekly newsletter with highlights from the Laravel patch release, Shift updates, and a 🔥 tip.</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">No Release</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">No release today with the holiday week and most of the Laravel team traveling.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">With Laravel 9 releasing in January, now is the best time to subscribe to a <a href="https://laravelshift.com/shifty-plans" style="color: #f4645f; text-decoration: underline;">Shifty Plan</a>. Especially if you are still running Laravel 7 or below. This is because both plans include the latest Laravel Shift. Currently, that is the <a href="https://laravelshift.com/upgrade-laravel-7-to-laravel-8" style="color: #f4645f; text-decoration: underline;">Laravel 8.x Shift</a>. On January 25th, it will become the <em>Laravel 9.x Shift</em>. By subscribing now, you may run them both with your plan.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">You'll also receive a PR any time there is a Laravel release, plus an exclusive "mid-release" Shift with changes to core files.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Weekly Journal</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Last week Jess and I made more tweaks to the <a href="https://laravelshift.com/upgrade-tailwind-css-2-to-tailwind-css-3" style="color: #f4645f; text-decoration: underline;">Tailwind 3.x Shift</a>. This is actually getting more initial use than the other <em>Tailwind Shifts</em>. So seems like they're growing.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">We also paired for the last time in 2021. We focused on refactoring the testing layer. We're at a point where we do more <a href="https://www.sitepen.com/blog/snapshot-testing-benefits-and-drawbacks" style="color: #f4645f; text-decoration: underline;">snapshot testing</a> for Shift. It's easier to make <em>before</em> and <em>after</em> snippets.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Currently, we still have to mock a lot calls in order to manipulate the I/O and use the snapshots. Our goal is to lessen this mocking, ideally only arranging the <em>before</em> snapshot and asserting the <em>after</em>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">The rest of the week I continued to <a href="https://www.youtube.com/watch?v=g3s-abGJbeA&amp;list=PLmwAMIdrAmK5rH3SWvokHV8xI_0mauxDL&amp;index=66" style="color: #f4645f; text-decoration: underline;">live stream</a> building <em>Project A</em>. I got it to a place where I could demo to Ashley on Christmas.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I plan to continue working on it to finish the core features. Then after that, it'll be up to Ashley if she would like to launch it. Otherwise, it was fun to build a Laravel application from scratch, and prove I'm a good developer. 😉</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This week I'll continue refactoring Shift's testing layer. I recently contracted <a href="https://twitter.com/100r0bh" style="color: #f4645f; text-decoration: underline;">Saurabh Mahajan</a> to help maintain <a href="laravelshift.com" style="color: #f4645f; text-decoration: underline;">laravelshift.com</a> now that Jess is working more on Shift. He's been crushing it, so I also need to spend some time merging the open PRs.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">🔥 Tip</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Going back to Shift's testing layer, it actually uses facades. In fact, it's all one big <code>Shift</code> facade. Much like <code>Carbon</code>, it contains dozens of methods that individual classes use to automate changes.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Using a single facade makes it super easy on implementation side. However, it has caused some issues from the testing side.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">We could change the testing layer. But instead, we'll likely break out some of the aspects within <code>Shift</code> into additional facades. For example, a <code>File</code> facade.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This should allow us to mock lower-level file I/O without having to mock each of the <code>Shift</code> calls. This would also create a more integration (or real-world) test.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">The takeaway here is not so much the testing strategies as it is to <strong>use what you know</strong>. Something I talk more about in <a href="https://baselaravel.com/" style="color: #f4645f; text-decoration: underline;">BaseLaravel</a>. Doing so provides familiarity and continuity. In this case, using facades allows me to test Shift the same way I test <a href="https://laravelshift.com" style="color: #f4645f; text-decoration: underline;">laravelshift.com</a>. 🔥</p>
+
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">As always, I welcome your feedback. <a href="https://laravelshift.com/" style="color: #f4645f; text-decoration: underline;">Keep Shifting!</a></p>
+
+<p style="margin-bottom: 1em; line-height: 1.5em;">~ JMac</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Don't want to receive these updates? No problem, simply <a href="https://laravelshift.com/mailcoach/unsubscribe/c54bdd24-145c-42fe-a238-d0ba0eee4961/4195322c-6d70-447c-a962-9252c31ac4fd" style="color: #f4645f; text-decoration: underline;">unsubscribe</a> or sign into Shift and <a href="https://laravelshift.com/account/preferences" style="color: #f4645f; text-decoration: underline;">update your preferences</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Proudly sent with <em>Mailcoach</em> from Louisville, Kentucky.</p>
+</div>
+<img width="1px" height="1px" alt="" src="http://email.mg.laravelshift.com/o/eJwNzMENwyAMAMBpyjMiYBt4MIyxTYpUGolG7frNDXBaY4BiblTs1AIqphsWII3UGGI2KdIk7g_wn9_o13bY2xZfpu5Zk0nsPnBJezfglDqozxmtMRGpuVUnLznX-M47OCaP1ybn_AMbSSR7"></body>
+</html>
+
