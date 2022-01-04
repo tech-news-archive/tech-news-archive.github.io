@@ -1,0 +1,96 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<!--[if gte mso 15]>
+  <xml>
+      <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+  </xml>
+  <![endif]--><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laravel Shift Newsletter</title>
+<style>
+    body {
+      font-family: Helvetica,Arial,sans-serif;
+      font-size: 16px;
+      color:#333333;
+    }
+    a {
+      color: #f4645f;
+      text-decoration: underline;
+    }
+    hr {
+      border-top: 1px dashed #888;
+      margin: 2em 0;
+    }
+    p, ul {
+      margin-bottom:1em;
+      line-height:1.5em;
+    }
+    h2 {
+      color:#444;
+      font-family:'Helvetica Neue',sans-serif;
+      font-weight:600;
+      font-size:20px;
+      line-height:1.5;
+      margin-top:2em;
+    }
+  </style>
+</head>
+<body style="font-family: Helvetica,Arial,sans-serif; font-size: 16px; color: #333333;">
+<div style="max-width:600px;margin:0 0 0 1em;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">Heyo! JMac here again in the weekly newsletter with highlights from the Laravel patch release, Shift updates, and a 🔥 tip.</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Laravel 8.78</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Even though it has been two weeks since the last release, not necessarily double the features in this week's release for Laravel <strong>8.78</strong>. Still, some nice additions though.</p>
+<ul style="margin-bottom: 1em; line-height: 1.5em;">
+<li>Add <code>schedule:clear-mutex</code> command in <a href="https://github.com/laravel/framework/pull/40135" style="color: #f4645f; text-decoration: underline;">#40135</a>
+</li>
+<li>Ability to define extra default password rules in <a href="https://github.com/laravel/framework/pull/40137" style="color: #f4645f; text-decoration: underline;">#40137</a>
+</li>
+<li>Add <code>Request::mergeIfMissing</code> in <a href="https://github.com/laravel/framework/pull/40116" style="color: #f4645f; text-decoration: underline;">#40116</a>
+</li>
+<li>Improve support for custom Doctrine column types in <a href="https://github.com/laravel/framework/pull/40119" style="color: #f4645f; text-decoration: underline;">#40119</a>
+</li>
+<li>Add multiple lines at once for <code>SimpleMessage</code> in <a href="https://github.com/laravel/framework/pull/40147" style="color: #f4645f; text-decoration: underline;">#40147</a>
+</li>
+<li>Clear recorded calls when calling <code>Http::fake()</code> in <a href="https://github.com/laravel/framework/pull/40194" style="color: #f4645f; text-decoration: underline;">#40194</a>
+</li>
+<li>Add <code>Bus::assertBatchCount</code> in <a href="https://github.com/laravel/framework/pull/40217" style="color: #f4645f; text-decoration: underline;">#40217</a>
+</li>
+<li>Add ability to customize JSON options on <code>JsonResource</code> response in <a href="https://github.com/laravel/framework/pull/40208" style="color: #f4645f; text-decoration: underline;">#40208</a>
+</li>
+</ul>
+<p style="margin-bottom: 1em; line-height: 1.5em;">You may review the <a href="https://github.com/laravel/framework/compare/v8.77.0...v8.78.0" style="color: #f4645f; text-decoration: underline;">full branch diff on GitHub</a> for a complete list of changes.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This version bump and update is automated for subscribers to a <a href="https://laravelshift.com/shifty-plans" style="color: #f4645f; text-decoration: underline;">Shifty Plan</a>. If you don't have one of those, be sure to bump your constraint and run <code>composer update</code> to get the latest features.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Weekly Journal</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Last week I finished merging the open PRs for all of the Shift repositories. In addition, I opened some new issues and prioritized existing issues. Starting next week our focus will be preparing for the Laravel 9 release later this month.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Unfortunately last week our household tested positive for Covid. This was likely contracted during our Christmas visits. We knew the risks with the new Omicron variant. But we had not been around family for the holidays since before Izzy was born. We're fully vaccinated, so fortunately symptoms have been pretty mild. We'll continue our quarantine until the end of the week.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I did have enough energy yesterday to complete the new snapshot testing for Shift. I proved the strategy last week, but wanted to add some custom assertions for an even better developer experience. If you're interested in more details, I posted this <a href="https://twitter.com/gonedark/status/1476558603213492230" style="color: #f4645f; text-decoration: underline;">thread on Twitter</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Ideally I'll get this merged later today. Then with the rest of the week, I'll continue refactoring Shift and Jess will tweak the <a href="https://laravelshift.com/shifts?category=tailwind" style="color: #f4645f; text-decoration: underline;">Tailwind Shifts</a> based on recent feedback.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">🔥 Tip</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I though this change Taylor made in one of the recent patch releases was interesting:</p>
+<pre><code>- return ! $this-&gt;contains($key, $operator, $value);
++ return ! $this-&gt;contains(...func_get_args());
+</code></pre>
+<p style="margin-bottom: 1em; line-height: 1.5em;">To me, the original code seemed to better communicate the arguments. I was curious why spread the arguments passed instead of explicitly passing them.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">So I asked Taylor and he pointed out that by spreading the arguments it would call the underlying method with the same number of arguments. This mattered since the underlying method behaved differently based on the arguments it received.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">So spreading the arguments allowed the underlying method to behave as if it had been called directly. 🔥</p>
+
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">As always, I welcome your feedback. <a href="https://laravelshift.com/" style="color: #f4645f; text-decoration: underline;">Keep Shifting!</a></p>
+
+<p style="margin-bottom: 1em; line-height: 1.5em;">~ JMac</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Don't want to receive these updates? No problem, simply <a href="https://laravelshift.com/mailcoach/unsubscribe/c54bdd24-145c-42fe-a238-d0ba0eee4961/71b523d3-a559-4fca-a093-20b5f8fac476" style="color: #f4645f; text-decoration: underline;">unsubscribe</a> or sign into Shift and <a href="https://laravelshift.com/account/preferences" style="color: #f4645f; text-decoration: underline;">update your preferences</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Proudly sent with <em>Mailcoach</em> from Louisville, Kentucky.</p>
+</div>
+<img width="1px" height="1px" alt="" src="http://email.mg.laravelshift.com/o/eJwNzFEOwjAIANDT2M-lQNnKRw-DwGYT65K66PX1HeB5IywSqTeDnVasIfUuSMYbsHJFI2FQ9HIr-f3t-7Uc8YqpV3h6tIyFVUWI1dyZwcBltewbMoF6mm3otHP2z_gHx9D-XOwcP-W3I5M"></body>
+</html>
+
