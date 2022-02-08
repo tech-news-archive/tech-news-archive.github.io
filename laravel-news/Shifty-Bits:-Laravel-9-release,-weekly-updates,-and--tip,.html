@@ -1,0 +1,75 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<!--[if gte mso 15]>
+  <xml>
+      <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+  </xml>
+  <![endif]--><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laravel Shift Newsletter</title>
+<style>
+    body {
+      font-family: Helvetica,Arial,sans-serif;
+      font-size: 16px;
+      color:#333333;
+    }
+    a {
+      color: #f4645f;
+      text-decoration: underline;
+    }
+    hr {
+      border-top: 1px dashed #888;
+      margin: 2em 0;
+    }
+    p, ul {
+      margin-bottom:1em;
+      line-height:1.5em;
+    }
+    h2 {
+      color:#444;
+      font-family:'Helvetica Neue',sans-serif;
+      font-weight:600;
+      font-size:20px;
+      line-height:1.5;
+      margin-top:2em;
+    }
+  </style>
+</head>
+<body style="font-family: Helvetica,Arial,sans-serif; font-size: 16px; color: #333333;">
+<div style="max-width:600px;margin:0 0 0 1em;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">Heyo! JMac here again in the weekly newsletter with highlights from the Laravel patch release, Shift updates, and a 🔥 tip.</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Laravel 9.0</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Today we have a new major release - <strong>Laravel 9</strong>. This has been labeled a <em>maintenance release</em> as it bumps to PHP 8, Symfony 6, and Flysystem 3.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">However, there are lots of changes and new features in Laravel 9. You may read about the highlights in the <a href="https://laravel.com/docs/master/releases#laravel-9" style="color: #f4645f; text-decoration: underline;">Release Notes</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Not included in the <em>Release Notes</em> are all the changes in Laravel 8.x over the last 15 months. These include things like <a href="https://laravel-news.com/laravel-anonymous-migrations" style="color: #f4645f; text-decoration: underline;">anonymous migrations</a>, guessing model factories, and changes to nearly every core file.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">So whether you upgrade manually, run the <a href="https://laravelshift.com/upgrade-laravel-8-to-laravel-9" style="color: #f4645f; text-decoration: underline;">Laravel 9.x Shift</a> individually, or save with a <a href="https://laravelshift.com/shifty-plans" style="color: #f4645f; text-decoration: underline;">Shifty Plan</a>, be sure to upgrade to Laravel 9.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Weekly Journal</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I continued to make some small tweaks to the <a href="https://laravelshift.com/upgrade-laravel-8-to-laravel-9" style="color: #f4645f; text-decoration: underline;">Laravel 9.x Shift</a> last week. However, for the most part, Laravel 9 hasn't made many additions since our beta release.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I also finalized the automated PRs for the most used Laravel packages. <a href="https://twitter.com/laravelshift/status/1490709249491714050" style="color: #f4645f; text-decoration: underline;">Over 200 in total</a>. A few dozen have already been merged and even more coming across this morning.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Since everything was in a good place, I took some time over the weekend to finally build a Git script I always wanted - <code>git trim</code>. For years I used noisy, compound commands. But none of them really did all the cleanup I wanted. <a href="https://github.com/jasonmccreary/git-trim" style="color: #f4645f; text-decoration: underline;">git trim</a> is a single command to quickly remove merged, pruned, untracked, or stale branches.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Jess and I also record another episode for <a href="https://basecodefieldguide.com/podcast/44-frictionless-testing/" style="color: #f4645f; text-decoration: underline;">The BaseCode Podcast</a>. We discuss the friction and motivation for rewriting Shift's testing layer.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Once everything is launched and stable for the Laravel 9 release, I'm going to hop in the car and head to a Laracon viewing party. It's a few hours drive. So it'll give me time to decompress and catch up on some podcasts.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">🔥 Tip</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Nuno tweeted something over the weekend which <a href="https://twitter.com/gonedark/status/1490343311860768768" style="color: #f4645f; text-decoration: underline;">I echoed</a> and want to reiterate here.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Don't worry so much about design patterns or best practices. <a href="https://www.youtube.com/watch?v=rpE3Z62FHaY" style="color: #f4645f; text-decoration: underline;">YAGNI</a>. This isn't to say you shouldn't learn them. More that you don't have to stress about applying them. Just write code. 🔥</p>
+
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">As always, I welcome your feedback. <a href="https://laravelshift.com/" style="color: #f4645f; text-decoration: underline;">Keep Shifting!</a></p>
+
+<p style="margin-bottom: 1em; line-height: 1.5em;">~ JMac</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Don't want to receive these updates? No problem, simply <a href="https://laravelshift.com/mailcoach/unsubscribe/c54bdd24-145c-42fe-a238-d0ba0eee4961/4de72de8-e2fb-42f0-965c-4450428eec35" style="color: #f4645f; text-decoration: underline;">unsubscribe</a> or sign into Shift and <a href="https://laravelshift.com/account/preferences" style="color: #f4645f; text-decoration: underline;">update your preferences</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Proudly sent with <em>Mailcoach</em> from Louisville, Kentucky.</p>
+</div>
+<img width="1px" height="1px" alt="" src="http://email.mg.laravelshift.com/o/eJwNzMENwyAMAMBpyjNysI2dB8OAcVKk0kg0atZvb4BrGSNtHnpet4SG6AatMmlEYGXGCpSkRtUHwefu-7Uc_vZZLm_hmd1ZUHQ1AgcgauggEdWt7EkohZlHmXbO_h3_4BilvxY7xw-2eSLc"></body>
+</html>
+
