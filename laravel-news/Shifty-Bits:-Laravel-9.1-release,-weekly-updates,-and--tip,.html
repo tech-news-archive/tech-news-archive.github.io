@@ -1,0 +1,109 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<!--[if gte mso 15]>
+  <xml>
+      <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+  </xml>
+  <![endif]--><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laravel Shift Newsletter</title>
+<style>
+    body {
+      font-family: Helvetica,Arial,sans-serif;
+      font-size: 16px;
+      color:#333333;
+    }
+    a {
+      color: #f4645f;
+      text-decoration: underline;
+    }
+    hr {
+      border-top: 1px dashed #888;
+      margin: 2em 0;
+    }
+    p, ul {
+      margin-bottom:1em;
+      line-height:1.5em;
+    }
+    h2 {
+      color:#444;
+      font-family:'Helvetica Neue',sans-serif;
+      font-weight:600;
+      font-size:20px;
+      line-height:1.5;
+      margin-top:2em;
+    }
+  </style>
+</head>
+<body style="font-family: Helvetica,Arial,sans-serif; font-size: 16px; color: #333333;">
+<div style="max-width:600px;margin:0 0 0 1em;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">Heyo! JMac here again in the weekly newsletter with highlights from the Laravel patch release, Shift updates, and a 🔥 tip.</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Laravel 9.1</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Lots of fixes in this week's release of <strong>Laravel 9.1</strong> given the major release last Tuesday. However, I'm going to focus on the new features added.</p>
+<ul style="margin-bottom: 1em; line-height: 1.5em;">
+<li>Add <code>@disabled</code> Blade directive in <a href="https://github.com/laravel/framework/pull/40900" style="color: #f4645f; text-decoration: underline;">#40900</a>
+</li>
+<li>Allows TLS encryption to use a different port in <a href="https://github.com/laravel/framework/pull/40943" style="color: #f4645f; text-decoration: underline;">#40943</a>
+</li>
+<li>Catch suppressed deprecation logs in <a href="https://github.com/laravel/framework/pull/40942" style="color: #f4645f; text-decoration: underline;">#40942</a>
+</li>
+<li>Add support for passing array for <code>Route::group</code> in <a href="https://github.com/laravel/framework/pull/40945" style="color: #f4645f; text-decoration: underline;">#40945</a>
+</li>
+<li>Put the error message at the bottom of the exceptions in <a href="https://github.com/laravel/framework/pull/40886" style="color: #f4645f; text-decoration: underline;">#40886</a>
+</li>
+<li>Add <code>firstOr()</code> to <code>BelongsToMany</code> relation in <a href="https://github.com/laravel/framework/pull/40828" style="color: #f4645f; text-decoration: underline;">#40828</a>
+</li>
+<li>Ability to use <code>uniqueFor</code> in jobs in <a href="https://github.com/laravel/framework/pull/40974" style="color: #f4645f; text-decoration: underline;">#40974</a>
+</li>
+<li>Add filtering of <code>route:list</code> by domain in <a href="https://github.com/laravel/framework/pull/40970" style="color: #f4645f; text-decoration: underline;">#40970</a>
+</li>
+<li>Add <code>dropForeignIdFor</code> migration method in <a href="https://github.com/laravel/framework/pull/40950" style="color: #f4645f; text-decoration: underline;">#40950</a>
+</li>
+<li>Add <code>Str::excerpt</code> in <a href="https://github.com/laravel/framework/pull/41000" style="color: #f4645f; text-decoration: underline;">#41000</a>
+</li>
+<li>Add <code>make:model --morph</code> to generate <code>MorphPivot</code> model in <a href="https://github.com/laravel/framework/pull/41011" style="color: #f4645f; text-decoration: underline;">#41011</a>
+</li>
+</ul>
+<p style="margin-bottom: 1em; line-height: 1.5em;">You may review the <a href="https://github.com/laravel/framework/compare/v9.0.0...v9.1.0" style="color: #f4645f; text-decoration: underline;">full branch diff on GitHub</a> for a complete list of changes.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This version bump and update is automated for subscribers to a <a href="https://laravelshift.com/shifty-plans" style="color: #f4645f; text-decoration: underline;">Shifty Plan</a>. If you don't have one of those, be sure to bump your constraint and run <code>composer update</code> to get the latest features.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Weekly Journal</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Last week was incredibly busy. Not only was the <a href="https://twitter.com/laravelshift/status/1491095816995545089" style="color: #f4645f; text-decoration: underline;">release of Laravel 9</a> on Tuesday, but <a href="https://laracon.net/" style="color: #f4645f; text-decoration: underline;">Laracon Online</a> was Wednesday. In the absence of the in-person conference, I like going to a viewing party. There's one <a href="https://twitter.com/jacobbennett?lang=en" style="color: #f4645f; text-decoration: underline;">Jacob Bennett</a> hosts in Illinois. It's about a 4 hour drive. But it's good to hang with other devs like <a href="https://twitter.com/mattstypa" style="color: #f4645f; text-decoration: underline;">Matt Stypa</a>, <a href="https://twitter.com/iamkevinmckee" style="color: #f4645f; text-decoration: underline;">Kevin McKee</a>, <a href="https://twitter.com/jordonbrill" style="color: #f4645f; text-decoration: underline;">Jordon Brill</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Since the Shift feedback emails are on a two weekday delay, I didn't start receiving them until Thursday and Friday. So I spent both of those days patching some of the edge cases which were reported and improving automation.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">As always, the largest issue was package compatibility. I continued using Shift to automated more compatibility PRs. I also noticed more of the original PR‘s getting merged. I think at this point most of the popular packages support Laravel 9.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">To that point, I normally wait a week myself. Unless it's a really small project. I did upgrade <a href="https://basecodefieldguide.com/" style="color: #f4645f; text-decoration: underline;">BaseCode</a> as I know I don't use many packages within that project. Using Shift, the <a href="https://www.youtube.com/watch?v=rZEy5klrLJA" style="color: #f4645f; text-decoration: underline;">Laravel 9 upgrade took 14 minutes and 59 seconds</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I plan to do another live stream this week to upgrade another one of my projects. I'll also start on all of the <a href="https://laravelshift.com/human-shifts" style="color: #f4645f; text-decoration: underline;">Human Shifts</a> coming in for projects which follow LTS. Silly enterprise, <a href="https://medium.com/@jasonmccreary/laravel-lts-is-a-trap-97b1d1103961" style="color: #f4645f; text-decoration: underline;">LTS is a trap</a>. 😉</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">🔥 Tip</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">In tracking down one of the bugs in Shift, I needed a way to determine the line in a file given a character offset.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Now there's all sorts of fancy one-liner commands out on StackOverflow. But thinking about the problem naively the algorithm is roughly:</p>
+<pre><code>// Get substring from 0 to offset
+// Count line breaks within substring
+// Add one
+</code></pre>
+<p style="margin-bottom: 1em; line-height: 1.5em;">After using PHP for over 20 years, I know it's a scripting language at heart. As such, anytime I come across one of these problems I scroll through PHP's native <a href="https://www.php.net/manual/en/ref.array.php" style="color: #f4645f; text-decoration: underline;">array</a> and <a href="https://www.php.net/manual/en/ref.strings.php" style="color: #f4645f; text-decoration: underline;">string</a> functions.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">More often than not, I find the exact function I need. In this case <code>substr_count</code>. The end result is a one-liner even the StackOverflow answers didn't have 🔥</p>
+<pre><code>public function lineForCharacter(int $offset)
+{
+    return substr_count($this-&gt;content, PHP_EOL, 0, $offset) + 1;
+}
+</code></pre>
+
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">As always, I welcome your feedback. <a href="https://laravelshift.com/" style="color: #f4645f; text-decoration: underline;">Keep Shifting!</a></p>
+
+<p style="margin-bottom: 1em; line-height: 1.5em;">~ JMac</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Don't want to receive these updates? No problem, simply <a href="https://laravelshift.com/mailcoach/unsubscribe/c54bdd24-145c-42fe-a238-d0ba0eee4961/eb41c3fd-f5d6-49fb-ba35-e2c1faaa1980" style="color: #f4645f; text-decoration: underline;">unsubscribe</a> or sign into Shift and <a href="https://laravelshift.com/account/preferences" style="color: #f4645f; text-decoration: underline;">update your preferences</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Proudly sent with <em>Mailcoach</em> from Louisville, Kentucky.</p>
+</div>
+<img width="1px" height="1px" alt="" src="http://email.mg.laravelshift.com/o/eJwNzMsNwyAMANBpyjEK-AM-MIxjnBSpNBKN2vWbAd5rFRKKh16dKGdpEJOlskVggoi-iWGBXUkfuH5-fb-Ww98-9fIWnnXlYijRQJS5EDTgjDelkjObS5h16LRz9u-4g2Nofy12jj_KmSLQ"></body>
+</html>
+
