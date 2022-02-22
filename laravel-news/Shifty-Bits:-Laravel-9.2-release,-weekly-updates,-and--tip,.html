@@ -1,0 +1,95 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<!--[if gte mso 15]>
+  <xml>
+      <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+  </xml>
+  <![endif]--><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laravel Shift Newsletter</title>
+<style>
+    body {
+      font-family: Helvetica,Arial,sans-serif;
+      font-size: 16px;
+      color:#333333;
+    }
+    a {
+      color: #f4645f;
+      text-decoration: underline;
+    }
+    hr {
+      border-top: 1px dashed #888;
+      margin: 2em 0;
+    }
+    p, ul {
+      margin-bottom:1em;
+      line-height:1.5em;
+    }
+    h2 {
+      color:#444;
+      font-family:'Helvetica Neue',sans-serif;
+      font-weight:600;
+      font-size:20px;
+      line-height:1.5;
+      margin-top:2em;
+    }
+  </style>
+</head>
+<body style="font-family: Helvetica,Arial,sans-serif; font-size: 16px; color: #333333;">
+<div style="max-width:600px;margin:0 0 0 1em;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">Heyo! JMac here again in the weekly newsletter with highlights from the Laravel patch release, Shift updates, and a 🔥 tip.</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Laravel 9.2</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">More new features in this week's release of <strong>Laravel 9.2</strong>. Here are the highlights:</p>
+<ul style="margin-bottom: 1em; line-height: 1.5em;">
+<li>Fix <code>firstWhere</code> to return <code>null</code> in <a href="https://github.com/laravel/framework/pull/41099" style="color: #f4645f; text-decoration: underline;">#41099</a>
+</li>
+<li>Add <code>Attribute::with</code> in <a href="https://github.com/laravel/framework/pull/41014" style="color: #f4645f; text-decoration: underline;">#41014</a>
+</li>
+<li>Add <code>Arr::keyBy</code> in <a href="https://github.com/laravel/framework/pull/41029" style="color: #f4645f; text-decoration: underline;">#41029</a>
+</li>
+<li>Adds <code>expectsOutputToContain</code> to the <code>PendingCommand</code> in <a href="https://github.com/laravel/framework/pull/40984" style="color: #f4645f; text-decoration: underline;">#40984</a>
+</li>
+<li>Support for enum in <code>Builder::whereRelation</code> in <a href="https://github.com/laravel/framework/pull/41091" style="color: #f4645f; text-decoration: underline;">#41091</a>
+</li>
+<li>Add <code>X-*</code> headers when using <code>Mail::alwaysTo</code> in <a href="https://github.com/laravel/framework/pull/41101" style="color: #f4645f; text-decoration: underline;">#41101</a>
+</li>
+<li>Added <code>betweenFirst</code> to Stringable in <a href="https://github.com/laravel/framework/pull/41144" style="color: #f4645f; text-decoration: underline;">#41144</a>
+</li>
+<li>Allow specifying custom messages for <code>Rule</code> objects in <a href="https://github.com/laravel/framework/pull/41145" style="color: #f4645f; text-decoration: underline;">#41145</a>
+</li>
+</ul>
+<p style="margin-bottom: 1em; line-height: 1.5em;">You may review the <a href="https://github.com/laravel/framework/compare/v9.1.0...v9.2.0" style="color: #f4645f; text-decoration: underline;">full branch diff on GitHub</a> for a complete list of changes.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This version bump and update is automated for subscribers to a <a href="https://laravelshift.com/shifty-plans" style="color: #f4645f; text-decoration: underline;">Shifty Plan</a>. If you don't have one of those, be sure to bump your constraint and run <code>composer update</code> to get the latest features.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Weekly Journal</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I spent most of last week working on <a href="https://laravelshift.com/human-shifts" style="color: #f4645f; text-decoration: underline;">Human Shifts</a>. One was all the way back from Laravel 4.2. Another was from Laravel 5.2 and one to upgrade between LTS versions (6.x - 9.x). All of them are now in review.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I also spent some time making tweaks to the <a href="https://laravelshift.com/upgrade-laravel-8-to-laravel-9" style="color: #f4645f; text-decoration: underline;">Laravel 9.x Shift</a>. At this point I feel it's pretty solid. But I'll continue to monitor the <em>Upgrade Guide</em> and <a href="https://github.com/laravel/laravel/tree/9.x" style="color: #f4645f; text-decoration: underline;">default project</a> for any updates.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I also recorded using Shift to upgrade another one of my own projects - <a href="https://confidentlaravel.com" style="color: #f4645f; text-decoration: underline;">Confident Laravel</a>. This time it took just <a href="https://www.youtube.com/watch?v=O-2SmijjqEo" style="color: #f4645f; text-decoration: underline;">under 5 minutes</a>. Jess also dogfooded Shift on her <a href="https://rocketlog.app/" style="color: #f4645f; text-decoration: underline;">RocketLog</a> app. Even though she helped build the <em>Laravel 9.x Shift</em>, she was still pretty impressed.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">With everything in a good place, we're going to shift (no pun) our focus back to the <a href="https://laravelshift.com/workbench" style="color: #f4645f; text-decoration: underline;">Workbench</a>. We want to make some Laravel 9 specific tasks. There are also a lot of <a href="https://github.com/laravel-shift/workbench-issues/issues" style="color: #f4645f; text-decoration: underline;">outstanding issues</a> reported over the last few months that we didn't get to.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">🔥 Tip</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">With each new Laravel release comes more user feedback. Often from new users. I review all of the feedback emails for a chance to improve Shift. So over the next few newsletters, I'm going to turn this section into 🔥 tips for Shift.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Aside from package compatibility, a common bit of feedback is the amount of changed files to review.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">First, Shift makes all changes in nice, atomic commits. So you may review individual commits to focus in on a set of changes and limit the noise of a large PR.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Second, since the automation is repetitive, Shift may change a lot of files for large applications. As such, large diffs are unavoidable. One of the common changes relate to code style.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Shift may be <a href="https://laravelshift.com/videos/shift-code-style" style="color: #f4645f; text-decoration: underline;">configured to use your custom code style</a>. If you forget to configure this for a Shift, you may apply it afterward and push up those changes. This should effectively revert any code style changes by Shift and reduce the overall number of files changed.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Alternatively, you may, of course, request a rerun.</p>
+
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">As always, I welcome your feedback. <a href="https://laravelshift.com/" style="color: #f4645f; text-decoration: underline;">Keep Shifting!</a></p>
+
+<p style="margin-bottom: 1em; line-height: 1.5em;">~ JMac</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Don't want to receive these updates? No problem, simply <a href="https://laravelshift.com/mailcoach/unsubscribe/c54bdd24-145c-42fe-a238-d0ba0eee4961/154de44e-83dd-4a81-bbeb-d2509d5a490d" style="color: #f4645f; text-decoration: underline;">unsubscribe</a> or sign into Shift and <a href="https://laravelshift.com/account/preferences" style="color: #f4645f; text-decoration: underline;">update your preferences</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Proudly sent with <em>Mailcoach</em> from Louisville, Kentucky.</p>
+</div>
+<img width="1px" height="1px" alt="" src="http://email.mg.laravelshift.com/o/eJwNzDsOwyAMANDTlDEyYBAMHMb4kyKFRKJRe_1mfcOTFgNWdaMR9QBWjERqfYyzskIOkghCR_9C-PyG3duupy66Vdy7SU0I5DNr6WZBqKAn8bEgR-6c3GqTFl9rfOcT7JPGsfE1_2YHJTU"></body>
+</html>
+
