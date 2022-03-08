@@ -1,0 +1,123 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<!--[if gte mso 15]>
+  <xml>
+      <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+  </xml>
+  <![endif]--><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laravel Shift Newsletter</title>
+<style>
+    body {
+      font-family: Helvetica,Arial,sans-serif;
+      font-size: 16px;
+      color:#333333;
+    }
+    a {
+      color: #f4645f;
+      text-decoration: underline;
+    }
+    hr {
+      border-top: 1px dashed #888;
+      margin: 2em 0;
+    }
+    p, ul {
+      margin-bottom:1em;
+      line-height:1.5em;
+    }
+    h2 {
+      color:#444;
+      font-family:'Helvetica Neue',sans-serif;
+      font-weight:600;
+      font-size:20px;
+      line-height:1.5;
+      margin-top:2em;
+    }
+  </style>
+</head>
+<body style="font-family: Helvetica,Arial,sans-serif; font-size: 16px; color: #333333;">
+<div style="max-width:600px;margin:0 0 0 1em;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">Heyo! JMac here again in the weekly newsletter with highlights from the Laravel patch release, Shift updates, and a 🔥 tip.</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Laravel 9.4</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">There was a patch release last week. This week we have minor release with new features, quickly followed by another patch release. This brings us to <strong>Laravel 9.4.1</strong>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Here are the highlights:</p>
+<ul style="margin-bottom: 1em; line-height: 1.5em;">
+<li>Allow overriding transport type on Mailgun transporter in <a href="https://github.com/laravel/framework/pull/41309" style="color: #f4645f; text-decoration: underline;">#41309</a>
+</li>
+<li>Do not prepend <code>baseUrl</code> to absolute urls in <a href="https://github.com/laravel/framework/pull/41307" style="color: #f4645f; text-decoration: underline;">#41307</a>
+</li>
+<li>Optionally cascade thrown <code>Flysystem</code> exceptions in <a href="https://github.com/laravel/framework/pull/41308" style="color: #f4645f; text-decoration: underline;">#41308</a>
+</li>
+<li>Fix getting the trusted proxies IPs from the configuration file in <a href="https://github.com/laravel/framework/pull/41322" style="color: #f4645f; text-decoration: underline;">#41322</a>
+</li>
+<li>Allow chaining of <code>-&gt;newLine()</code> for Commands in <a href="https://github.com/laravel/framework/pull/41327" style="color: #f4645f; text-decoration: underline;">#41327</a>
+</li>
+<li>Support for modifying a <code>char</code> column type in <a href="https://github.com/laravel/framework/pull/41320" style="color: #f4645f; text-decoration: underline;">#41320</a>
+</li>
+<li>Allow <code>whereNot()</code> and <code>orWhereNot()</code> to work on column/value in <a href="https://github.com/laravel/framework/pull/41296" style="color: #f4645f; text-decoration: underline;">#41296</a>
+</li>
+<li>Allow <code>VerifyCsrfToken</code> CSRF cookie to be extended in <a href="https://github.com/laravel/framework/pull/41342" style="color: #f4645f; text-decoration: underline;">#41342</a>
+</li>
+<li>Add <code>Str::lcfirst</code> in <a href="https://github.com/laravel/framework/pull/41384" style="color: #f4645f; text-decoration: underline;">#41384</a>
+</li>
+<li>Add <code>retryUntil</code> method to queued Mailables in <a href="https://github.com/laravel/framework/pull/41393" style="color: #f4645f; text-decoration: underline;">#41393</a>
+</li>
+</ul>
+<p style="margin-bottom: 1em; line-height: 1.5em;">You may review the <a href="https://github.com/laravel/framework/compare/v9.3.0...v9.4.1" style="color: #f4645f; text-decoration: underline;">full branch diff on GitHub</a> for a complete list of changes.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This version bump and update is automated for subscribers to a <a href="https://laravelshift.com/shifty-plans" style="color: #f4645f; text-decoration: underline;">Shifty Plan</a>. If you don't have one of those, be sure to bump your constraint and run <code>composer update</code> to get the latest features.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Weekly Journal</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Last week I made a few more tweaks to the <a href="https://laravelshift.com/upgrade-laravel-8-to-laravel-9" style="color: #f4645f; text-decoration: underline;">Laravel 9.x Shift</a> based on user feedback. Mostly boundary case kind of stuff and improving the comments.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Also finished the outstanding <a href="https://laravelshift.com/human-shifts" style="color: #f4645f; text-decoration: underline;">Human Shifts</a>. I’m all caught up on those. However, looks like my man <a href="https://twitter.com/jacobbennett" style="color: #f4645f; text-decoration: underline;">Jacob Bennett</a> is about to purchase one. He loves these things.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Jess and I crushed it last week by adding several new tasks to the <a href="https://laravelshift.com/workbench" style="color: #f4645f; text-decoration: underline;">Workbench</a>. These include: adopting Laravel 9 helpers (<code>str</code> and <code>to_route</code>), removing guessable <code>$model</code> properties from factories, using <code>Illuminate\Support\Carbon</code>, converting to <code>latest</code>/<code>oldest</code>, expanding <em>resource</em> routes, and adopting the new single method for model accessors and mutators.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I go into more detail on these tasks in this <a href="https://twitter.com/laravelshift/status/1499445960178610185" style="color: #f4645f; text-decoration: underline;">Twitter thread</a>. But probably more fun to just try them out in your own projects. A majority of these tasks are free to run.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Jess and I will continue adding more this week. But the pace will probably slow down as some of these additional tasks are complicated. For example, adopting <em>stringables</em> and removing "dead" routes.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">🔥 Tip</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">On the topic of the <em>Workbench</em> here are some of the tasks I like to run.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Whenever I complete a <em>Human Shift</em>, I like to run the following tasks to clean up any outdated practices, either in Laravel or PHP.</p>
+<ul style="margin-bottom: 1em; line-height: 1.5em;">
+<li>Short array syntax</li>
+<li>Use <code>::class</code> constant</li>
+<li>Fix PHPUnit methods</li>
+<li>Global Facades references</li>
+<li>Adopt common <em>helpers</em>
+</li>
+<li>Model <code>$table</code> property</li>
+<li>Model <em>date</em> casts</li>
+<li>Convert <code>$dates</code> property</li>
+<li>Streamline <code>orderBy</code> methods</li>
+<li>Convert <code>env</code> to <code>config</code>
+</li>
+<li>Adopt class based routes</li>
+</ul>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I like to run the following tasks periodically, even on my own projects. Again, to keep them following the conventions I prefer.</p>
+<ul style="margin-bottom: 1em; line-height: 1.5em;">
+<li>Format code</li>
+<li>
+<code>switch</code> to <code>match</code>
+</li>
+<li>Adopt type hints</li>
+<li>Use Laravel Carbon</li>
+<li>Remove Laravel DocBlocks</li>
+<li>Compare core files</li>
+</ul>
+<p style="margin-bottom: 1em; line-height: 1.5em;">A friendly reminder, most of tasks are part of the <a href="https://laravelshift.com/laravel-code-fixer" style="color: #f4645f; text-decoration: underline;">Laravel Fixer</a>. You may run that as an alternative if you didn't want to purchase a <em>Workbench</em> license or subscribe to a <a href="https://laravelshift.com/shifty-plans" style="color: #f4645f; text-decoration: underline;">Shifty Plan</a>.</p>
+
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">As always, I welcome your feedback. <a href="https://laravelshift.com/" style="color: #f4645f; text-decoration: underline;">Keep Shifting!</a></p>
+
+<p style="margin-bottom: 1em; line-height: 1.5em;">~ JMac</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Don't want to receive these updates? No problem, simply <a href="https://laravelshift.com/mailcoach/unsubscribe/c54bdd24-145c-42fe-a238-d0ba0eee4961/e3211849-f4ce-49f3-ab6e-53bd4ea7fbdc" style="color: #f4645f; text-decoration: underline;">unsubscribe</a> or sign into Shift and <a href="https://laravelshift.com/account/preferences" style="color: #f4645f; text-decoration: underline;">update your preferences</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Proudly sent with <em>Mailcoach</em> from Louisville, Kentucky.</p>
+</div>
+<img width="1px" height="1px" alt="" src="http://email.mg.laravelshift.com/o/eJwVzMkNwyAQAMBqwjNargUeFLPeI0YCWSKR609SwIz0GFJTN3oOUAokaVQtpoyKUbSgJDZh5vpIMGnTrfN9Dvs8-Vru7CjNgjZrlWoBg-y9hioHsOHhs7ndF22-9rjXb3gtGvNPv1iZJRA"></body>
+</html>
