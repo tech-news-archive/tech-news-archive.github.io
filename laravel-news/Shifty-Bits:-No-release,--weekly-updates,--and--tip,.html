@@ -1,0 +1,74 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<!--[if gte mso 15]>
+  <xml>
+      <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+  </xml>
+  <![endif]--><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laravel Shift Newsletter</title>
+<style>
+    body {
+      font-family: Helvetica,Arial,sans-serif;
+      font-size: 16px;
+      color:#333333;
+    }
+    a {
+      color: #f4645f;
+      text-decoration: underline;
+    }
+    hr {
+      border-top: 1px dashed #888;
+      margin: 2em 0;
+    }
+    p, ul {
+      margin-bottom:1em;
+      line-height:1.5em;
+    }
+    h2 {
+      color:#444;
+      font-family:'Helvetica Neue',sans-serif;
+      font-weight:600;
+      font-size:20px;
+      line-height:1.5;
+      margin-top:2em;
+    }
+  </style>
+</head>
+<body style="font-family: Helvetica,Arial,sans-serif; font-size: 16px; color: #333333;">
+<div style="max-width:600px;margin:0 0 0 1em;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">Heyo! JMac here again in the weekly newsletter with highlights from the Laravel patch release, Shift updates, and a 🔥 tip.</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">No release</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">No release this week.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">A reminder subscribers to a <a href="https://laravelshift.com/shifty-plans" style="color: #f4645f; text-decoration: underline;">Shifty Plan</a> automatically receive a <em>PR</em> bumping Laravel, as well as other packages, anytime there is a new release.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This automation is a nice way stay up-to-date and periodically kick-off your CI builds. However, they're really just a bonus for subscribers. The main value of a <em>Shifty Plan</em> are the included Shifts, access to the <em>Workbench</em>, and webhooks.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Weekly Journal</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Last week I finished up another <a href="https://laravelshift.com/human-shifts" style="color: #f4645f; text-decoration: underline;">Human Shift</a>. This one was pretty straightforward upgrading a Laravel 6 application to Laravel 9. Also bumping Cashier along the way.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I toyed with the idea of making some <em>Cashier Shifts</em>. But it <a href="https://twitter.com/gonedark/status/1500823124107042818?s=20&amp;t=Z63hlCL8STml-PeouNZgpA" style="color: #f4645f; text-decoration: underline;">seems projects are running the latest version</a>. Really the most annoying path is upgrading to Cashier 9.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I also recorded an episode with <a href="https://twitter.com/fideloper" style="color: #f4645f; text-decoration: underline;">Chris Fidao</a> last week. He has a new podcast, <a href="https://pushing-boulders.transistor.fm/" style="color: #f4645f; text-decoration: underline;">Pushing Boulders</a>, where he talks to other creators in the community.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">With the remaining time I made a few bug fixes and tweaks to the <a href="https://laravelshift.com/upgrade-laravel-8-to-laravel-9" style="color: #f4645f; text-decoration: underline;">Laravel 9.x Shift</a>. The most notable was <a href="https://twitter.com/laravelshift/status/1504861492620972035" style="color: #f4645f; text-decoration: underline;">merging the new core Facades</a> in the app configuration.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Yesterday I gave some attention to Shift's <em>webbooks</em>. There had been a long-standing bug where it would inspect additional files outside of those changed in the PR. I pushed up a patch. So we'll see if that fixes it.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This week I'll continue to work on more improvements for the webhooks, as well as continue developing the pending <a href="https://laravelshift.com/workbench" style="color: #f4645f; text-decoration: underline;">Workbench</a> tasks.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">🔥 Tip</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">You may not have known, but <strong>Shift offers webhooks</strong>. These are included with any <a href="https://laravelshift.com/shifty-plans" style="color: #f4645f; text-decoration: underline;">Shifty Plan</a>. By default it runs the tasks from the <a href="https://laravelshift.com/laravel-code-fixer" style="color: #f4645f; text-decoration: underline;">Laravel Fixer</a> against the changed files within a PR. You may also create a <em>Workbench</em> build to trigger your own custom automation for the webhook to run.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">The webhooks may be set up to run on GitHub, Bitbucket, or GitLab any time a pull request is opened. They effectively behave like a code formatter, code reviewer, and automatic refactorer all in one.</p>
+
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">As always, I welcome your feedback. <a href="https://laravelshift.com/" style="color: #f4645f; text-decoration: underline;">Keep Shifting!</a></p>
+
+<p style="margin-bottom: 1em; line-height: 1.5em;">~ JMac</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Don't want to receive these updates? No problem, simply <a href="https://laravelshift.com/mailcoach/unsubscribe/c54bdd24-145c-42fe-a238-d0ba0eee4961/0a382641-f5fb-44c2-89e9-f6b4e51d12b4" style="color: #f4645f; text-decoration: underline;">unsubscribe</a> or sign into Shift and <a href="https://laravelshift.com/account/preferences" style="color: #f4645f; text-decoration: underline;">update your preferences</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Proudly sent with <em>Mailcoach</em> from Louisville, Kentucky.</p>
+</div>
+<img width="1px" height="1px" alt="" src="http://email.mg.laravelshift.com/o/eJwVzMENwyAMAMBpyrMyjmPwg2EcYxokUCRaZf62A9zVsiGJh14QxE3bkaKkaILNUAiyuZD7ofQgGLr09vE-e_s87ZrhLAwa65Y1JSQTVkKsjLRD5iw7x7DK1GXX6vf8Da-pffzpF0IAI-A"></body>
+</html>
