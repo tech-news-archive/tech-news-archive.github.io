@@ -1,0 +1,107 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<!--[if gte mso 15]>
+  <xml>
+      <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+  </xml>
+  <![endif]--><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laravel Shift Newsletter</title>
+<style>
+    body {
+      font-family: Helvetica,Arial,sans-serif;
+      font-size: 16px;
+      color:#333333;
+    }
+    a {
+      color: #f4645f;
+      text-decoration: underline;
+    }
+    hr {
+      border-top: 1px dashed #888;
+      margin: 2em 0;
+    }
+    p, ul {
+      margin-bottom:1em;
+      line-height:1.5em;
+    }
+    h2 {
+      color:#444;
+      font-family:'Helvetica Neue',sans-serif;
+      font-weight:600;
+      font-size:20px;
+      line-height:1.5;
+      margin-top:2em;
+    }
+  </style>
+</head>
+<body style="font-family: Helvetica,Arial,sans-serif; font-size: 16px; color: #333333;">
+<div style="max-width:600px;margin:0 0 0 1em;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">Heyo! JMac here again in the weekly newsletter with highlights from the Laravel patch release, Shift updates, and a 🔥 tip.</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Laravel 9.6</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Lots this week in <strong>Laravel 9.6</strong> since there was no release last week. Since there's so much, I'll highlight the additions:</p>
+<ul style="margin-bottom: 1em; line-height: 1.5em;">
+<li>Show Closure and Job references in the <code>schedule:list</code> in <a href="https://github.com/laravel/framework/pull/41494" style="color: #f4645f; text-decoration: underline;">#41494</a> and <a href="https://github.com/laravel/framework/pull/41535" style="color: #f4645f; text-decoration: underline;">#41535</a>
+</li>
+<li>Add <code>whenTableHasColumn</code> and <code>whenTableDoesntHaveColumn</code> to <code>Schema</code> builder in <a href="https://github.com/laravel/framework/pull/41517" style="color: #f4645f; text-decoration: underline;">#41517</a>
+</li>
+<li>Make throttle lock acquisition retry time configurable in <a href="https://github.com/laravel/framework/pull/41516" style="color: #f4645f; text-decoration: underline;">#41516</a>
+</li>
+<li>Allow object, instead of array, when adding to <code>PendingBatch</code> in <a href="https://github.com/laravel/framework/pull/41475" style="color: #f4645f; text-decoration: underline;">#41475</a>
+</li>
+<li>Add <code>hasSubject</code> method to Mailables in <a href="https://github.com/laravel/framework/pull/41575" style="color: #f4645f; text-decoration: underline;">#41575</a>
+</li>
+<li>Add <code>hasSameHash</code> to compare file hashes in filesystem in <a href="https://github.com/laravel/framework/pull/41586" style="color: #f4645f; text-decoration: underline;">#41586</a>
+</li>
+<li>Add <code>newLine</code> to Stringable in <a href="https://github.com/laravel/framework/pull/41622" style="color: #f4645f; text-decoration: underline;">#41622</a>
+</li>
+<li>Add <code>excludeIf</code> and <code>prohibitedIf</code> validation methods in <a href="https://github.com/laravel/framework/pull/41617" style="color: #f4645f; text-decoration: underline;">#41617</a>
+</li>
+<li>Add <code>exclude_with</code> validation rule in <a href="https://github.com/laravel/framework/pull/41691" style="color: #f4645f; text-decoration: underline;">#41691</a>
+</li>
+<li>Allow model accessors to cache any value in <a href="https://github.com/laravel/framework/pull/41673" style="color: #f4645f; text-decoration: underline;">#41673</a>
+</li>
+<li>Add <code>countedSequence</code> to model factory in <a href="https://github.com/laravel/framework/pull/41699" style="color: #f4645f; text-decoration: underline;">#41699</a>
+</li>
+<li>Add <code>previousPath</code> to <code>UrlGenerator</code> in <a href="https://github.com/laravel/framework/pull/41661" style="color: #f4645f; text-decoration: underline;">#41661</a>
+</li>
+<li>Make <code>JsonResponse</code> macroable in <a href="https://github.com/laravel/framework/pull/41723" style="color: #f4645f; text-decoration: underline;">#41723</a>
+</li>
+</ul>
+<p style="margin-bottom: 1em; line-height: 1.5em;">You may review the <a href="https://github.com/laravel/framework/compare/v9.5.1...v9.6.0" style="color: #f4645f; text-decoration: underline;">full branch diff on GitHub</a> for a complete list of changes.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This version bump and update is automated for subscribers to a <a href="https://laravelshift.com/shifty-plans" style="color: #f4645f; text-decoration: underline;">Shifty Plan</a>. If you don't have one of those, be sure to bump your constraint and run <code>composer update</code> to get the latest features.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Weekly Journal</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Last week I finished up another <a href="https://laravelshift.com/human-shifts" style="color: #f4645f; text-decoration: underline;">Human Shift</a>. This time from Laravel 5.6 to 9.x. I also had a few pairing sessions with fellow Laravel devs reviewing parts of their application.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Jess and I also returned to pairing after a week off. We were able to complete adopting <em>Stringables</em> in blade files. This proved to be a bit of a challenge since there is no formal Blade parser. Blade can't be parser as PHP or HTML.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">We came up with a simple solution. It works well and has already proven to be helpful in other tasks, like converting <code>env()</code> helpers.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This week I need merge a backlog of open PR's from Saurabh. He has been helping with work on <a href="https://laravelshift.com/" style="color: #f4645f; text-decoration: underline;">laravelshift.com</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">After that, I hope to return to the <em>Remove dead routes</em> task by the end of the week.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">🔥 Tip</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Over the last few years I've focused on expanding Shift's services to encompass <strong>maintaining</strong> Laravel apps rather than just <em>upgrading</em> Laravel apps.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This was the motivation behind the <em>Laravel Fixer</em> and <em>Tests Generator</em>, and more recently the <em>CI Generator</em> and <em>Workbench</em>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">So, inline with the content of this section over the past few newsletters, here's how I'd incorporate each of these into my development workflow.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">If my application didn't have a test suite, or an incomplete test suite, I'd start by running the <a href="https://laravelshift.com/laravel-test-generator" style="color: #f4645f; text-decoration: underline;">Tests Generator</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Once I had the test suite set up, I'd run the <a href="https://laravelshift.com/ci-generator" style="color: #f4645f; text-decoration: underline;">CI Generator</a> to ensure my test suite ran anytime I opened a PR. As well as run any additional automation, like <code>phplint</code>, <code>phpstan</code>, etc.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I'd also enable Shift's webhooks to automatically apply the Laravel conventions I like to follow, as well as apply my code style.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This would automate a lot of my development workflow. Ideally freeing up time to write more tests or refactor more code by periodically runnings the tasks within the <a href="https://laravelshift.com/workbench" style="color: #f4645f; text-decoration: underline;">Workbench</a> or the <a href="https://laravelshift.com/laravel-code-fixer" style="color: #f4645f; text-decoration: underline;">Laravel Fixer</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">All of this creates a positive feedback loop. The more tests you have the more confident you feel in refactoring. The more you refactor the better you feel about your code. The better you feel about your code the more likely you are to keep it up-to-date.</p>
+
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">As always, I welcome your feedback. <a href="https://laravelshift.com/" style="color: #f4645f; text-decoration: underline;">Keep Shifting!</a></p>
+
+<p style="margin-bottom: 1em; line-height: 1.5em;">~ JMac</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Don't want to receive these updates? No problem, simply <a href="https://laravelshift.com/mailcoach/unsubscribe/c54bdd24-145c-42fe-a238-d0ba0eee4961/ed25a8e0-1df0-4a10-bad6-6bdd5c5bdbeb" style="color: #f4645f; text-decoration: underline;">unsubscribe</a> or sign into Shift and <a href="https://laravelshift.com/account/preferences" style="color: #f4645f; text-decoration: underline;">update your preferences</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Proudly sent with <em>Mailcoach</em> from Louisville, Kentucky.</p>
+</div>
+<img width="1px" height="1px" alt="" src="http://email.mg.laravelshift.com/o/eJwVzMsNwyAMANBpyrHiY4NzYBjXxgkSKBKpMn_TAd7TmiJszfVKSrH5lkQMKYMkD-i1sGFh0phf4Acvvtu4jm7ft5zTHVVziKkgWCBrrIg5Bw38AQEj2MCtOnnJufo9n2Gf3Mef_gBCUCRw"></body>
+</html>
