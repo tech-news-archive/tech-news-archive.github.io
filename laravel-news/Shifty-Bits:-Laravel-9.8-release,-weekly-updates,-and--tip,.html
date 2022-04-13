@@ -1,0 +1,98 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<!--[if gte mso 15]>
+  <xml>
+      <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+  </xml>
+  <![endif]--><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laravel Shift Newsletter</title>
+<style>
+    body {
+      font-family: Helvetica,Arial,sans-serif;
+      font-size: 16px;
+      color:#333333;
+    }
+    a {
+      color: #f4645f;
+      text-decoration: underline;
+    }
+    hr {
+      border-top: 1px dashed #888;
+      margin: 2em 0;
+    }
+    p, ul {
+      margin-bottom:1em;
+      line-height:1.5em;
+    }
+    h2 {
+      color:#444;
+      font-family:'Helvetica Neue',sans-serif;
+      font-weight:600;
+      font-size:20px;
+      line-height:1.5;
+      margin-top:2em;
+    }
+  </style>
+</head>
+<body style="font-family: Helvetica,Arial,sans-serif; font-size: 16px; color: #333333;">
+<div style="max-width:600px;margin:0 0 0 1em;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">Heyo! JMac here again in the weekly newsletter with highlights from the Laravel patch release, Shift updates, and a 🔥 tip.</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Laravel 9.8</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Minor release this week with a fast-follow patch brings us to <strong>Laravel 9.8.1</strong>. Here are highlights:</p>
+<ul style="margin-bottom: 1em; line-height: 1.5em;">
+<li>Add <code>DB::scalar()</code> to retrieve the first column of the first row from a query in <a href="https://github.com/laravel/framework/pull/41858" style="color: #f4645f; text-decoration: underline;">#41858</a>
+</li>
+<li>Allow model to be passed into <code>old</code> in <a href="https://github.com/laravel/framework/pull/41842" style="color: #f4645f; text-decoration: underline;">#41842</a>
+</li>
+<li>Make <code>DatabaseManager</code> macroable in <a href="https://github.com/laravel/framework/pull/41868" style="color: #f4645f; text-decoration: underline;">#41868</a>
+</li>
+<li>Fix seeder property for in-memory tests in <a href="https://github.com/laravel/framework/pull/41869" style="color: #f4645f; text-decoration: underline;">#41869</a>
+</li>
+<li>Add option to disable cached view in <a href="https://github.com/laravel/framework/pull/41859" style="color: #f4645f; text-decoration: underline;">#41859</a>
+</li>
+<li>Make <code>Connection</code> macroable in <a href="https://github.com/laravel/framework/pull/41865" style="color: #f4645f; text-decoration: underline;">#41865</a>
+</li>
+<li>Discover anonymous Blade components in other folders in <a href="https://github.com/laravel/framework/pull/41637" style="color: #f4645f; text-decoration: underline;">#41637</a>
+</li>
+<li>Add <code>set</code> to model factory in <a href="https://github.com/laravel/framework/pull/41890" style="color: #f4645f; text-decoration: underline;">#41890</a>
+</li>
+<li>Add multibyte support to string methods in <a href="https://github.com/laravel/framework/pull/41899" style="color: #f4645f; text-decoration: underline;">#41899</a>
+</li>
+<li>Allow setting custom log level in exception handler in <a href="https://github.com/laravel/framework/pull/41925" style="color: #f4645f; text-decoration: underline;">#41925</a>
+</li>
+</ul>
+<p style="margin-bottom: 1em; line-height: 1.5em;">You may review the <a href="https://github.com/laravel/framework/compare/v9.7.0...v9.8.1" style="color: #f4645f; text-decoration: underline;">full branch diff on GitHub</a> for a complete list of changes.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This version bump and update is automated for subscribers to a <a href="https://laravelshift.com/shifty-plans" style="color: #f4645f; text-decoration: underline;">Shifty Plan</a>. If you don't have one of those, be sure to bump your constraint and run <code>composer update</code> to get the latest features.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Weekly Journal</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Last week I finished up the remaining <a href="https://laravelshift.com/human-shifts" style="color: #f4645f; text-decoration: underline;">Human Shifts</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">We left for vacation Friday, so it was a bit of a short week. I always do a bit of work on vacation. Normally while traveling or on a rainy day.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This time I'm working on improving the abandonment emails for <a href="https://laravelshift.com" style="color: #f4645f; text-decoration: underline;">laravelshift.com</a> as well as reviewing the content on the <a href="https://laravelshift.com/shifty-plans" style="color: #f4645f; text-decoration: underline;">Shifty Plans</a> page.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Next week I'll return to working on the <a href="https://laravelshift.com/workbench" style="color: #f4645f; text-decoration: underline;">Workbench</a>.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">🔥 Tip</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Every few years, I revisit some of my educational products. Many of these I made to fill gaps relating Shift.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;"><a href="https://gettinggit.com/" style="color: #f4645f; text-decoration: underline;">Getting Git</a> aimed to share my knowledge of Git from the command line after fielding support emails around Git.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;"><a href="https://confidentlaravel.com/" style="color: #f4645f; text-decoration: underline;">Confident Laravel</a> aimed to build awareness around testing Laravel applications after noticing less than 20% of applications contained tests.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;"><a href="https://baselaravel.com/" style="color: #f4645f; text-decoration: underline;">BaseLaravel</a> aimed to demonstrate some of the ways to use native Laravel features to streamline applications consulting on hundreds of Laravel applications.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">The exception is <a href="https://basecodefieldguide.com/" style="color: #f4645f; text-decoration: underline;">BaseCode</a>. I wrote <em>BaseCode</em> to standalone. It's a collection of 10 simple coding practices I distilled down after 20 years of programming. All aimed at writing more readable code.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">It's something I want everyone to read. So I decided to make the book <em>free</em>. 🔥</p>
+
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">As always, I welcome your feedback. <a href="https://laravelshift.com/" style="color: #f4645f; text-decoration: underline;">Keep Shifting!</a></p>
+
+<p style="margin-bottom: 1em; line-height: 1.5em;">~ JMac</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Don't want to receive these updates? No problem, simply <a href="https://laravelshift.com/mailcoach/unsubscribe/c54bdd24-145c-42fe-a238-d0ba0eee4961/41e41c78-22c9-43f3-b6b6-9b64aece9b9d" style="color: #f4645f; text-decoration: underline;">unsubscribe</a> or sign into Shift and <a href="https://laravelshift.com/account/preferences" style="color: #f4645f; text-decoration: underline;">update your preferences</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Proudly sent with <em>Mailcoach</em> from Louisville, Kentucky.</p>
+</div>
+<img width="1px" height="1px" alt="" src="http://email.mg.laravelshift.com/o/eJwVzEEKxCAMQNHTjMshiVV04WGiSVpBKdih558W_vZ9KZ62rK4XnzlUJAjC4gHYKkK0qiacEWv7bDB48a3jOrr9vu2c7iiUtHFMhKJmHAnIY0qewlOOWdwqk1c7V7_nc9gn9_HSP2syJKg"></body>
+</html>
