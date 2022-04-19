@@ -1,0 +1,100 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<!--[if gte mso 15]>
+  <xml>
+      <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+  </xml>
+  <![endif]--><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laravel Shift Newsletter</title>
+<style>
+    body {
+      font-family: Helvetica,Arial,sans-serif;
+      font-size: 16px;
+      color:#333333;
+    }
+    a {
+      color: #f4645f;
+      text-decoration: underline;
+    }
+    hr {
+      border-top: 1px dashed #888;
+      margin: 2em 0;
+    }
+    p, ul {
+      margin-bottom:1em;
+      line-height:1.5em;
+    }
+    h2 {
+      color:#444;
+      font-family:'Helvetica Neue',sans-serif;
+      font-weight:600;
+      font-size:20px;
+      line-height:1.5;
+      margin-top:2em;
+    }
+  </style>
+</head>
+<body style="font-family: Helvetica,Arial,sans-serif; font-size: 16px; color: #333333;">
+<div style="max-width:600px;margin:0 0 0 1em;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">Heyo! JMac here again in the weekly newsletter with highlights from the Laravel patch release, Shift updates, and a 🔥 tip.</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Laravel 9.9</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Not too much this week. Just a few fixes and additions. This brings us to <strong>Laravel 9.9</strong>.</p>
+<ul style="margin-bottom: 1em; line-height: 1.5em;">
+<li>Add <code>getAllTables</code> support for SQLite and SQLServer schema builder in <a href="https://github.com/laravel/framework/pull/41896" style="color: #f4645f; text-decoration: underline;">#41896</a>
+</li>
+<li>Add <code>withoutEagerLoads</code> to query builder in <a href="https://github.com/laravel/framework/pull/41950" style="color: #f4645f; text-decoration: underline;">#41950</a>
+</li>
+<li>Use configured session domain for maintenance cookie in <a href="https://github.com/laravel/framework/pull/41961" style="color: #f4645f; text-decoration: underline;">#41961</a>
+</li>
+<li>Add <code>throw</code> to PendingRequest in <a href="https://github.com/laravel/framework/pull/41953" style="color: #f4645f; text-decoration: underline;">#41953</a>
+</li>
+<li>Fix replacements for nested localization arrays in <a href="https://github.com/laravel/framework/pull/42022" style="color: #f4645f; text-decoration: underline;">#42022</a>
+</li>
+<li>Configurable pluralizer language and uncountables in <a href="https://github.com/laravel/framework/pull/41941" style="color: #f4645f; text-decoration: underline;">#41941</a>
+</li>
+</ul>
+<p style="margin-bottom: 1em; line-height: 1.5em;">You may review the <a href="https://github.com/laravel/framework/compare/v9.8.1...v9.9.0" style="color: #f4645f; text-decoration: underline;">full branch diff on GitHub</a> for a complete list of changes.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This version bump and update is automated for subscribers to a <a href="https://laravelshift.com/shifty-plans" style="color: #f4645f; text-decoration: underline;">Shifty Plan</a>. If you don't have one of those, be sure to bump your constraint and run <code>composer update</code> to get the latest features.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Weekly Journal</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Last week we were on vacation. However, that didn't stop me from working a little bit. I always need to answer support emails, which I do in the morning and again in the evening.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">But I also worked on a feature I had been putting off for years - cart abandonment emails.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I went deeper into this decision in <a href="https://twitter.com/gonedark/status/1516107042783744004" style="color: #f4645f; text-decoration: underline;">this Twitter thread</a>, but the <em>tl;dr;</em> version is I felt it might help reach the <em>skeptics</em>. Shift has a very high reuse rate. So I know if I can get them to try Shift, it's likely they'll use Shift again.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Yesterday, I focused on making tweaks to the automation from the support emails which came in last week. I also had a quick <a href="https://laravelshift.com/human-shifts" style="color: #f4645f; text-decoration: underline;">Pairing</a> session.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This week I'll continue making tweaks and merging PR's from Saurabh's work. I may try to do some live-streams later this week too.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">🔥 Tip</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I noticed a pattern in some of the feedback emails last week. Some dependencies weren't getting bumped by Shift.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">At first these seemed like <em>unpopular</em> packages. So maybe Shift wasn't tracking them. But then some of Spatie's packages appeared.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">In digging deeper, I found there was a narrow timeframe after deployment that some Shifts reported an error within the <code>foreach</code> loop over third-party packages.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Apparently I was not updating the package cache after deployment. So Shift was either loading stale package versions or none at all.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I considered updating my deploy script. But I actually don't want to update the cache on <em>every</em> deploy. Only when I update the <code>vendor</code> folder, i.e. by running <code>composer update</code>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Enter <a href="https://getcomposer.org/doc/articles/scripts.md#what-is-a-script-" style="color: #f4645f; text-decoration: underline;">Composer scripts</a>. Specifically, the <code>post-update-cmd</code> event.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Much like how <a href="https://github.com/laravel/laravel/blob/19272e0bd3a321ec38d8633ab661ff7948f8a157/composer.json#L40" style="color: #f4645f; text-decoration: underline;">Laravel uses this</a> to republish package assets, I decided to use it to refresh the cache.</p>
+<pre><code>"scripts": {
+    "post-update-cmd": [
+        "@php scripts/download-registry-data.php"
+    ]
+}
+</code></pre>
+<p style="margin-bottom: 1em; line-height: 1.5em;">It always felt a bit weird to have Composer run scripts. Like, "That's not Composer's job."</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">However, Composer is the tool I'm using and it governs when this script should run. So it really is the perfect place. 🔥</p>
+
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">As always, I welcome your feedback. <a href="https://laravelshift.com/" style="color: #f4645f; text-decoration: underline;">Keep Shifting!</a></p>
+
+<p style="margin-bottom: 1em; line-height: 1.5em;">~ JMac</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Don't want to receive these updates? No problem, simply <a href="https://laravelshift.com/mailcoach/unsubscribe/c54bdd24-145c-42fe-a238-d0ba0eee4961/d132516e-a94a-4dee-bd60-1eeeaf183b38" style="color: #f4645f; text-decoration: underline;">unsubscribe</a> or sign into Shift and <a href="https://laravelshift.com/account/preferences" style="color: #f4645f; text-decoration: underline;">update your preferences</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Proudly sent with <em>Mailcoach</em> from Louisville, Kentucky.</p>
+</div>
+<img width="1px" height="1px" alt="" src="http://email.mg.laravelshift.com/o/eJwVzMENwyAMBdBpyrEiGCf-B4ZxwTRIoEikyvxNBnivJAoR5lrCRzb4WtQDxuyrGpFKiJEirSiv6LtOvayfe6u_dz6G2xNBAAVzyLRkZb8QSZG72WASiptp6MzHbNe4h-_Q1h_6BxjMI_Y"></body>
+</html>
