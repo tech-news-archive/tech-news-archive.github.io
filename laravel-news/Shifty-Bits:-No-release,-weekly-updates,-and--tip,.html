@@ -1,0 +1,83 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<!--[if gte mso 15]>
+  <xml>
+      <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+  </xml>
+  <![endif]--><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laravel Shift Newsletter</title>
+<style>
+    body {
+      font-family: Helvetica,Arial,sans-serif;
+      font-size: 16px;
+      color:#333333;
+    }
+    a {
+      color: #f4645f;
+      text-decoration: underline;
+    }
+    hr {
+      border-top: 1px dashed #888;
+      margin: 2em 0;
+    }
+    p, ul {
+      margin-bottom:1em;
+      line-height:1.5em;
+    }
+    h2 {
+      color:#444;
+      font-family:'Helvetica Neue',sans-serif;
+      font-weight:600;
+      font-size:20px;
+      line-height:1.5;
+      margin-top:2em;
+    }
+  </style>
+</head>
+<body style="font-family: Helvetica,Arial,sans-serif; font-size: 16px; color: #333333;">
+<div style="max-width:600px;margin:0 0 0 1em;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">Heyo! JMac here again in the weekly newsletter with highlights from the Laravel patch release, Shift updates, and a 🔥 tip.</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">No release</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">No release this week with most of the team being out.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">A reminder subscribers to a <a href="https://laravelshift.com/shifty-plans" style="color: #f4645f; text-decoration: underline;">Shifty Plan</a> automatically receive a <em>PR</em> bumping Laravel, as well as other packages, anytime there is a new release.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This automation is a nice way to stay up-to-date and periodically kick-off your CI builds. However, they're really just a bonus for subscribers. The main value of a <em>Shifty Plan</em> are the included Shifts, access to the <em>Workbench</em>, and webhooks.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Weekly Journal</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Last week I continued to make some tweaks to both Shift and <a href="https://laravelshift.com" style="color: #f4645f; text-decoration: underline;">laravelshift.com</a>. All of which are now in production.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">While working on the abandoned cart emails, I was doing a lot of date math. This led me to the idea of adding some expressive <code>wherePast</code> and <code>whereFuture</code> query builder methods.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">So Thursday I did a <a href="https://www.youtube.com/watch?v=zN8n0Ts9xvQ" style="color: #f4645f; text-decoration: underline;">quick live stream</a> to develop these and ultimately <a href="https://github.com/laravel/framework/pull/42081" style="color: #f4645f; text-decoration: underline;">opened a PR</a>. We'll see if it gets merged.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Friday (and over the weekend cause I got excited) I hacked on a quick task for the <a href="https://laravelshift.com/workbench" style="color: #f4645f; text-decoration: underline;">Workbench</a>. I didn't plan on building this task. I really just wanted to see if I could do such a refactor with Shift. Anyway, more on the actual task below, but I deployed it to the cloud-based Workbench yesterday and an in-app update today.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">With the rest of the week I will update the additional Laravel Shifts to require Laravel 9. This is to not only push the community forward, but also lower the maintenance required to support older (now dead) versions of Laravel.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">🔥 Tip</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Here's some more back-story on this new <em>Workbench</em> task. A few years ago Jess starting using the <code>abort_if</code> and <code>throw_if</code> helpers within the <a href="https://laravelshift.com" style="color: #f4645f; text-decoration: underline;">laravelshift.com</a> code base.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I didn't really like them at first. But late last year, I actually used one. Then, last week, I saw <a href="https://twitter.com/TheLaravelDev/status/1516998716342685697" style="color: #f4645f; text-decoration: underline;">this tweet</a>. The comments which ensued seemed to followed my same path: dislike, try it, try it again, always use it.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Anyway, I've grown pretty fond of these helpers. I like them especially for simple conditions, such as:</p>
+<pre><code>if (is_null($subscription)) {
+    abort(403);
+}
+</code></pre>
+<p style="margin-bottom: 1em; line-height: 1.5em;">As I discuss in <a href="https://basecodefieldguide.com/" style="color: #f4645f; text-decoration: underline;">BaseCode</a>, I don't believe one-linters immediately make code more readable.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">But within the context of Laravel, which commonly uses helper functions, I do believe they can be:</p>
+<pre><code>abort_if(is_null($subscription), 403);
+</code></pre>
+<p style="margin-bottom: 1em; line-height: 1.5em;">So, that's what the new "Adopt <code>if</code> helpers" task does. 🔥</p>
+
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">As always, I welcome your feedback. <a href="https://laravelshift.com/" style="color: #f4645f; text-decoration: underline;">Keep Shifting!</a></p>
+
+<p style="margin-bottom: 1em; line-height: 1.5em;">~ JMac</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Don't want to receive these updates? No problem, simply <a href="https://laravelshift.com/mailcoach/unsubscribe/c54bdd24-145c-42fe-a238-d0ba0eee4961/719c79cc-416a-4dc9-827c-7e3a8c799a70" style="color: #f4645f; text-decoration: underline;">unsubscribe</a> or sign into Shift and <a href="https://laravelshift.com/account/preferences" style="color: #f4645f; text-decoration: underline;">update your preferences</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Proudly sent with <em>Mailcoach</em> from Louisville, Kentucky.</p>
+</div>
+<img width="1px" height="1px" alt="" src="http://email.mg.laravelshift.com/o/eJwVzMENwyAMBdBpyrEKwYA5MMw3mAQJFIlUmb_tAO_V7HZKanquKtI4FXhrESs4EIkg7l6VIP5F28DCo-M-e_u8yzXNmX2wjTm5GNUXEHSrLSTLZMUljWxWnljlWv2Zv-GY6ONPv5SZJTg"></body>
+</html>
