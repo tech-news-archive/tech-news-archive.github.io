@@ -1,0 +1,118 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<!--[if gte mso 15]>
+  <xml>
+      <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+  </xml>
+  <![endif]--><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laravel Shift Newsletter</title>
+<style>
+    body {
+      font-family: Helvetica,Arial,sans-serif;
+      font-size: 16px;
+      color:#333333;
+    }
+    a {
+      color: #f4645f;
+      text-decoration: underline;
+    }
+    hr {
+      border-top: 1px dashed #888;
+      margin: 2em 0;
+    }
+    p, ul {
+      margin-bottom:1em;
+      line-height:1.5em;
+    }
+    h2 {
+      color:#444;
+      font-family:'Helvetica Neue',sans-serif;
+      font-weight:600;
+      font-size:20px;
+      line-height:1.5;
+      margin-top:2em;
+    }
+  </style>
+</head>
+<body style="font-family: Helvetica,Arial,sans-serif; font-size: 16px; color: #333333;">
+<div style="max-width:600px;margin:0 0 0 1em;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">Heyo! JMac here again in the weekly newsletter with highlights from the Laravel patch release, Shift updates, and a 🔥 tip.</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Laravel 9.11</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Looks like Laravel ended up tagging a release last week on Wednesday instead of Tuesday. As well as a patch release Thursday. Combined with today's release it brings us to <strong>Laravel 9.11</strong>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Here are some highlights from both:</p>
+<ul style="margin-bottom: 1em; line-height: 1.5em;">
+<li>Add the ability to use alias when performing <code>upsert</code> via MySQL in <a href="https://github.com/laravel/framework/pull/42053" style="color: #f4645f; text-decoration: underline;">#42053</a>
+</li>
+<li>Add <code>beforeRefreshingDatabase</code> callback to the <code>RefreshDatabase</code> trait in <a href="https://github.com/laravel/framework/pull/42073" style="color: #f4645f; text-decoration: underline;">#42073</a>
+</li>
+<li>Add <code>doesntExpectOutputToContain</code> assertion in <a href="https://github.com/laravel/framework/pull/42096" style="color: #f4645f; text-decoration: underline;">#42096</a>
+</li>
+<li>Add <code>findOr</code> to Eloquent in <a href="https://github.com/laravel/framework/pull/42092" style="color: #f4645f; text-decoration: underline;">#42092</a>
+</li>
+<li>Support 'IS' and 'IS NOT' PostgreSQL operators in <a href="https://github.com/laravel/framework/pull/42123" style="color: #f4645f; text-decoration: underline;">#42123</a>
+</li>
+<li>Add <code>string</code> to <code>Illuminate/Http/Request</code> in <a href="https://github.com/laravel/framework/commit/c9d34b7be0611d26f3e46669934cf542cc5e9e21" style="color: #f4645f; text-decoration: underline;">c9d34b7</a>
+</li>
+<li>Add methods to append and prepend jobs to existing chain in <a href="https://github.com/laravel/framework/pull/42138" style="color: #f4645f; text-decoration: underline;">#42138</a>
+</li>
+<li>Add <code>has</code> and <code>missing</code> to <code>ValidatedInput</code> in <a href="https://github.com/laravel/framework/pull/42184" style="color: #f4645f; text-decoration: underline;">#42184</a>
+</li>
+<li>Add <code>join</code> to <code>Arr</code> class in <a href="https://github.com/laravel/framework/pull/42197" style="color: #f4645f; text-decoration: underline;">#42197</a>
+</li>
+<li>Accept nested objects in <code>Arr::forget()</code> in <a href="https://github.com/laravel/framework/pull/42142" style="color: #f4645f; text-decoration: underline;">#42142</a>
+</li>
+<li>Add <code>incrementQuietly</code> and <code>decrementQuietly</code> database methods in <a href="https://github.com/laravel/framework/pull/42132" style="color: #f4645f; text-decoration: underline;">#42132</a>
+</li>
+</ul>
+<p style="margin-bottom: 1em; line-height: 1.5em;">You may review the <a href="https://github.com/laravel/framework/compare/v9.9.0...v9.11.0" style="color: #f4645f; text-decoration: underline;">full branch diff on GitHub</a> for a complete list of changes.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This version bump and update is automated for subscribers to a <a href="https://laravelshift.com/shifty-plans" style="color: #f4645f; text-decoration: underline;">Shifty Plan</a>. If you don't have one of those, be sure to bump your constraint and run <code>composer update</code> to get the latest features.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Weekly Journal</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Last week I began updating the <a href="https://laravelshift.com/laravel-code-fixer" style="color: #f4645f; text-decoration: underline;">Laravel Fixer</a>, <a href="https://laravelshift.com/laravel-upgrade-checker" style="color: #f4645f; text-decoration: underline;">Upgrade Checker</a>, and <a href="https://laravelshift.com/laravel-test-generator" style="color: #f4645f; text-decoration: underline;">Tests Generator</a> to require Laravel 9 as a minimum. It's a bit more work than I thought. So I'll continue on that this week.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I also met with a copywriter to review <a href="https://laravelshift.com/" style="color: #f4645f; text-decoration: underline;">Shift's home page</a>. She helped point out some inconsistent wording and areas to emphasize.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I also added the demo video to the page. But realized it has the previous design. So I'll likely work to refresh that this week as well.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Finally, a few <a href="https://laravelshift.com/human-shifts" style="color: #f4645f; text-decoration: underline;">Human Shifts</a> came in. I finished one yesterday taking an application from Laravel 6.x to Laravel 9.x. The other I'll be upgrading from Laravel 5.5 to Laravel 6.x.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">🔥 Tip</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Within the Shift codebase I create rather complex objects. For example, a custom syntax parser. Often this parser may or may not get used depending on if any instances of code were found.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">To optimize this, I use memoization. A common memoization method in PHP might be:</p>
+<pre><code>public function finder()
+{
+    static $finder;
+
+    if (is_null($finder)) {
+        $finder = new NikicParser(new CustomFinder());
+    }
+
+    return $finder;
+}
+</code></pre>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Since 7.4, you may use null coalesce assignment to refactor this <code>if</code> statement:</p>
+<pre><code>public function finder()
+{
+    static $finder;
+
+    $finder ??= new NikicParser(new CustomFinder());
+
+    return $finder;
+}
+</code></pre>
+
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">As always, I welcome your feedback. <a href="https://laravelshift.com/" style="color: #f4645f; text-decoration: underline;">Keep Shifting!</a></p>
+
+<p style="margin-bottom: 1em; line-height: 1.5em;">~ JMac</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Don't want to receive these updates? No problem, simply <a href="https://laravelshift.com/mailcoach/unsubscribe/c54bdd24-145c-42fe-a238-d0ba0eee4961/33975db1-1eb1-4476-a75e-75f40de6b3d7" style="color: #f4645f; text-decoration: underline;">unsubscribe</a> or sign into Shift and <a href="https://laravelshift.com/account/preferences" style="color: #f4645f; text-decoration: underline;">update your preferences</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Proudly sent with <em>Mailcoach</em> from Louisville, Kentucky.</p>
+</div>
+<img width="1px" height="1px" alt="" src="http://email.mg.laravelshift.com/o/eJwVzE0OhCAMQOHTDMtJ5cfSBYdpS1USiAlOPP_o_n2vluAjmWsFk_ooERVMUtYslhQJiEBiXSl_InSefFu_jrb9vnoOd5T1LRFzFQ_BHkRYARbjAJ7rRm6WwVPP2e7xHPbBrb_0D0L_JKo"></body>
+</html>
