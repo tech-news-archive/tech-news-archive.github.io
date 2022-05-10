@@ -1,0 +1,92 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<!--[if gte mso 15]>
+  <xml>
+      <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+  </xml>
+  <![endif]--><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laravel Shift Newsletter</title>
+<style>
+    body {
+      font-family: Helvetica,Arial,sans-serif;
+      font-size: 16px;
+      color:#333333;
+    }
+    a {
+      color: #f4645f;
+      text-decoration: underline;
+    }
+    hr {
+      border-top: 1px dashed #888;
+      margin: 2em 0;
+    }
+    p, ul {
+      margin-bottom:1em;
+      line-height:1.5em;
+    }
+    h2 {
+      color:#444;
+      font-family:'Helvetica Neue',sans-serif;
+      font-weight:600;
+      font-size:20px;
+      line-height:1.5;
+      margin-top:2em;
+    }
+  </style>
+</head>
+<body style="font-family: Helvetica,Arial,sans-serif; font-size: 16px; color: #333333;">
+<div style="max-width:600px;margin:0 0 0 1em;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">Heyo! JMac here again in the weekly newsletter with highlights from the Laravel patch release, Shift updates, and a 🔥 tip.</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Laravel 9.12</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Back to our regular Tuesday release this week bringing us to <strong>Laravel 9.12</strong>. Here are some highlights:</p>
+<ul style="margin-bottom: 1em; line-height: 1.5em;">
+<li>Add <code>assertThrows</code> for testing exceptions in <a href="https://github.com/laravel/framework/pull/42155" style="color: #f4645f; text-decoration: underline;">#42155</a>
+</li>
+<li>Ability to require all <code>Http</code> requests be faked in <a href="https://github.com/laravel/framework/pull/42230" style="color: #f4645f; text-decoration: underline;">#42230</a>
+</li>
+<li>Defer expanding callables on Factories in <a href="https://github.com/laravel/framework/pull/42241" style="color: #f4645f; text-decoration: underline;">#42241</a>
+</li>
+<li>Added <code>throwIf</code> to <code>PendingRequest</code> in <a href="https://github.com/laravel/framework/pull/42260" style="color: #f4645f; text-decoration: underline;">#42260</a>
+</li>
+<li>Allow passing key/value arrays to <code>getArguments</code> and <code>getOptions</code> in <a href="https://github.com/laravel/framework/pull/42268" style="color: #f4645f; text-decoration: underline;">#42268</a>
+</li>
+<li>Add <code>whereNotMorphedTo</code> and <code>orWhereNotMorphedTo</code> to <code>Eloquent</code> in <a href="https://github.com/laravel/framework/pull/42264" style="color: #f4645f; text-decoration: underline;">#42264</a>
+</li>
+<li>Add <code>onLastPage</code> to <code>CursorPaginator</code> in <a href="https://github.com/laravel/framework/pull/42301" style="color: #f4645f; text-decoration: underline;">#42301</a>
+</li>
+<li>Enable to modify <code>Http</code> request headers with <code>beforeSending</code> callback in <a href="https://github.com/laravel/framework/pull/42244" style="color: #f4645f; text-decoration: underline;">#42244</a>
+</li>
+</ul>
+<p style="margin-bottom: 1em; line-height: 1.5em;">You may review the <a href="https://github.com/laravel/framework/compare/v9.11.0...v9.12.0" style="color: #f4645f; text-decoration: underline;">full branch diff on GitHub</a> for a complete list of changes.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This version bump and update is automated for subscribers to a <a href="https://laravelshift.com/shifty-plans" style="color: #f4645f; text-decoration: underline;">Shifty Plan</a>. If you don't have one of those, be sure to bump your constraint and run <code>composer update</code> to get the latest features.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Weekly Journal</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Last week I finished updating the <a href="https://laravelshift.com/opinionated-laravel-way-shift" style="color: #f4645f; text-decoration: underline;">Laravel Linter</a>, <a href="https://laravelshift.com/laravel-code-fixer" style="color: #f4645f; text-decoration: underline;">Laravel Fixer</a>, <a href="https://laravelshift.com/laravel-upgrade-checker" style="color: #f4645f; text-decoration: underline;">Upgrade Checker</a>, and <a href="https://laravelshift.com/laravel-test-generator" style="color: #f4645f; text-decoration: underline;">Tests Generator</a> to require Laravel 9 as a minimum. This allows me to use all the latest conventions and drop some of the older detections which, at this point, likely added noise to the PR.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I finished up the <a href="https://laravelshift.com/human-shifts" style="color: #f4645f; text-decoration: underline;">Human Shifts</a> which came in last week. Of course, I have a new one which came in yesterday. So later this week I update that from Laravel 5.6 to Laravel 9.x.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Today I spent some time upgrading my additional projects still running Laravel 8.x. I <a href="https://www.youtube.com/watch?v=2c2s8QHuHi8" style="color: #f4645f; text-decoration: underline;">live-streamed using Shift</a> to do so. Now that everything is running Laravel 9.x, I'll upgrade all my servers to PHP 8.1.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I also paired with <a href="https://twitter.com/jessarchercodes" style="color: #f4645f; text-decoration: underline;">Jess Archer</a> this morning on some outstanding Shift bugs. It's been a while since she joined the Laravel team. So it was nice to pair again. I'll work to finish squashing those this week as well.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">🔥 Tip</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I was glad to see the <code>preventStrayRequests</code> addition from <a href="https://twitter.com/timacdonald87" style="color: #f4645f; text-decoration: underline;">Tim McDonald</a> got added to the <code>Http</code> testing layer.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I learned this the hard way when I actually had an additional (errant) request in my code. Unfortunately my tests passed.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Of course, I found out otherwise pretty quickly in production. The test, in this case, gave my false confidence. I assumed the <code>Http</code> fake would only work for the requests I <em>faked</em>. While true, <strong>it also worked for the requests I didn't fake</strong>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I advocate for being strict in tests for this exact reason. It takes a little more work sometimes, but is often worth it. So I'll be adding <code>Http::preventStrayRequests();</code> to my test cases from here on. 🔥</p>
+
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">As always, I welcome your feedback. <a href="https://laravelshift.com/" style="color: #f4645f; text-decoration: underline;">Keep Shifting!</a></p>
+
+<p style="margin-bottom: 1em; line-height: 1.5em;">~ JMac</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Don't want to receive these updates? No problem, simply <a href="https://laravelshift.com/mailcoach/unsubscribe/c54bdd24-145c-42fe-a238-d0ba0eee4961/95b96232-e88a-4f3b-bb7c-f168390d3166" style="color: #f4645f; text-decoration: underline;">unsubscribe</a> or sign into Shift and <a href="https://laravelshift.com/account/preferences" style="color: #f4645f; text-decoration: underline;">update your preferences</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Proudly sent with <em>Mailcoach</em> from Louisville, Kentucky.</p>
+</div>
+<img width="1px" height="1px" alt="" src="http://email.mg.laravelshift.com/o/eJwVzMsNwyAMANBpyrEyGAv7wDA2nwYJFIlEmb_tAO_VjCFKcyN35YQg2AnBmKRUSmCCjcnXFOgVYerWp83rGP1-l3O5I5tY6RLZs1fzESRS4BC0qWhlKG7npbucezzrN3yWjvmnXxe-JA4"></body>
+</html>
