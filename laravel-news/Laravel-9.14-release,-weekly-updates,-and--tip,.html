@@ -1,0 +1,102 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<!--[if gte mso 15]>
+  <xml>
+      <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+  </xml>
+  <![endif]--><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laravel Shift Newsletter</title>
+<style>
+    body {
+      font-family: Helvetica,Arial,sans-serif;
+      font-size: 16px;
+      color:#333333;
+    }
+    a {
+      color: #f4645f;
+      text-decoration: underline;
+    }
+    hr {
+      border-top: 1px dashed #888;
+      margin: 2em 0;
+    }
+    p, ul {
+      margin-bottom:1em;
+      line-height:1.5em;
+    }
+    h2 {
+      color:#444;
+      font-family:'Helvetica Neue',sans-serif;
+      font-weight:600;
+      font-size:20px;
+      line-height:1.5;
+      margin-top:2em;
+    }
+  </style>
+</head>
+<body style="font-family: Helvetica,Arial,sans-serif; font-size: 16px; color: #333333;">
+<div style="max-width:600px;margin:0 0 0 1em;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">Heyo! JMac here again in the weekly newsletter with highlights from the Laravel patch release, Shift updates, and a 🔥 tip.</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Laravel 9.14</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Couple new features and fixes in today's release of <strong>Laravel 9.14</strong>. Here are some highlights:</p>
+<ul style="margin-bottom: 1em; line-height: 1.5em;">
+<li>Attach a concise error message to SES exceptions in <a href="https://github.com/laravel/framework/pull/42426" style="color: #f4645f; text-decoration: underline;">#42426</a>
+</li>
+<li>Fix route parameter not explicity specified in custom binding in in <a href="https://github.com/laravel/framework/pull/42425" style="color: #f4645f; text-decoration: underline;">#42425</a>
+</li>
+<li>Add dynamic <code>trashed</code> factory state in <a href="https://github.com/laravel/framework/pull/42414" style="color: #f4645f; text-decoration: underline;">#42414</a>
+</li>
+<li>Add <code>Arr::prependKeysWith()</code> in <a href="https://github.com/laravel/framework/pull/42448" style="color: #f4645f; text-decoration: underline;">#42448</a>
+</li>
+<li>Support passing Eloquent collections to <code>assertViewHas</code> in <a href="https://github.com/laravel/framework/pull/42428" style="color: #f4645f; text-decoration: underline;">#42428</a>
+</li>
+<li>Add bootable traits to <code>TestCase</code> in <a href="https://github.com/laravel/framework/pull/42394" style="color: #f4645f; text-decoration: underline;">#42394</a>
+</li>
+<li>Use route parameters in view in <a href="https://github.com/laravel/framework/pull/42461" style="color: #f4645f; text-decoration: underline;">#42461</a>
+</li>
+<li>Support passing callback to <code>Eloquent::whereRelation()</code> in <a href="https://github.com/laravel/framework/pull/42491" style="color: #f4645f; text-decoration: underline;">#42491</a>
+</li>
+</ul>
+<p style="margin-bottom: 1em; line-height: 1.5em;">You may review the <a href="https://github.com/laravel/framework/compare/v9.13.0...v9.14.0" style="color: #f4645f; text-decoration: underline;">full branch diff on GitHub</a> for a complete list of changes.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This version bump and update is automated for subscribers to a <a href="https://laravelshift.com/shifty-plans" style="color: #f4645f; text-decoration: underline;">Shifty Plan</a>. If you don't have one of those, be sure to bump your constraint and run <code>composer update</code> to get the latest features.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Weekly Journal</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Last week I had a little more <a href="https://laravelshift.com/human-shifts" style="color: #f4645f; text-decoration: underline;">Human Shifts</a>. I ended up helping with deployment and shaking out some of the inevitable bugs during a multi-version upgrade.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">As you may have seen in the release highlights, I also opened some PR's for Laravel. These were for long-standing paper cuts which finally annoyed me enough to resolve.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I was reminded of these while TDDing device management for <a href="https://laravelshift.com/workbench" style="color: #f4645f; text-decoration: underline;">Shift Workbench</a> licenses. This is something we called <a href="https://www.youtube.com/watch?v=rpE3Z62FHaY" style="color: #f4645f; text-decoration: underline;">YAGNI</a> on for the initial release. But with renewals coming up, we need it.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I also had to quickly patch a change within the GitLab API. Apparently their access tokens now expire after 2 hours. I'm still resolving some issues related to this.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This week I hope to continue on some of the Workbench issues as Jess and I work towards releasing v1.0 of the desktop app in late June.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">🔥 Tip</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">While coding I also ran into a bit of a "gotcha" with PHP's null safe operator (<code>?-&gt;</code>) - the variable has to be defined.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I, mistakenly, assumed I could use it for both potentially <code>null</code> values as well as <em>undefined</em> variables.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">However, the following throws an error due to the variable being undefined.</p>
+<pre><code>$tmp = $undefined?-&gt;property;
+</code></pre>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Laravel's <code>optional()</code> helper also throws an error for undefined variables.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Digging a bit deeper, the null coalesce operator (<code>??</code>) does work if you're attempting to access a property. But not if you're invoking a method.</p>
+<pre><code>// works for properties
+$tmp = $undefined-&gt;property ?? null;
+
+// throws an error for methods
+$tmp = $undefined-&gt;method() ?? null;
+</code></pre>
+
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">As always, I welcome your feedback. <a href="https://laravelshift.com/" style="color: #f4645f; text-decoration: underline;">Keep Shifting!</a></p>
+
+<p style="margin-bottom: 1em; line-height: 1.5em;">~ JMac</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Don't want to receive these updates? No problem, simply <a href="https://laravelshift.com/mailcoach/unsubscribe/c54bdd24-145c-42fe-a238-d0ba0eee4961/cec0b53e-ea53-4dd4-bcb8-a9626d3312d7" style="color: #f4645f; text-decoration: underline;">unsubscribe</a> or sign into Shift and <a href="https://laravelshift.com/account/preferences" style="color: #f4645f; text-decoration: underline;">update your preferences</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Proudly sent with <em>Mailcoach</em> from Louisville, Kentucky.</p>
+</div>
+<img width="1px" height="1px" alt="" src="http://email.mg.laravelshift.com/o/eJwVzDEOwyAMQNHTlLEi2Bg8cBgDJkECRSJVzt9k-8v7NYFDVtNTA4zixVO05DwXVwCfdpFIkcF-0A5Zcuu4jt5-33JOc6SNmUOQrdYM0CgjltBIo1LO2iKalaascq5-z-ewT-njpX_wQiP4"></body>
+</html>
