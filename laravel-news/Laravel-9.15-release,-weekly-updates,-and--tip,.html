@@ -1,0 +1,106 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<!--[if gte mso 15]>
+  <xml>
+      <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+  </xml>
+  <![endif]--><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laravel Shift Newsletter</title>
+<style>
+    body {
+      font-family: Helvetica,Arial,sans-serif;
+      font-size: 16px;
+      color:#333333;
+    }
+    a {
+      color: #f4645f;
+      text-decoration: underline;
+    }
+    hr {
+      border-top: 1px dashed #888;
+      margin: 2em 0;
+    }
+    p, ul {
+      margin-bottom:1em;
+      line-height:1.5em;
+    }
+    h2 {
+      color:#444;
+      font-family:'Helvetica Neue',sans-serif;
+      font-weight:600;
+      font-size:20px;
+      line-height:1.5;
+      margin-top:2em;
+    }
+  </style>
+</head>
+<body style="font-family: Helvetica,Arial,sans-serif; font-size: 16px; color: #333333;">
+<div style="max-width:600px;margin:0 0 0 1em;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">Heyo! JMac here again in the weekly newsletter with highlights from the Laravel patch release, Shift updates, and a 🔥 tip.</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Laravel 9.15</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Had a patch release mid-week and a minor release today, bringing us to <strong>Laravel 9.15</strong>. Here are some highlights:</p>
+<ul style="margin-bottom: 1em; line-height: 1.5em;">
+<li>Add callback to <code>Model::whereRelation</code> in <a href="https://github.com/laravel/framework/pull/42491" style="color: #f4645f; text-decoration: underline;">#42491</a>
+</li>
+<li>Add <code>Conditionable</code> trait to <code>Illuminate\Support\Carbon</code> in <a href="https://github.com/laravel/framework/pull/42500" style="color: #f4645f; text-decoration: underline;">#42500</a>
+</li>
+<li>Allow bootable test traits to tear down in <a href="https://github.com/laravel/framework/pull/42521" style="color: #f4645f; text-decoration: underline;">#42521</a>
+</li>
+<li>Make <code>Model::updateTimestamps()</code> chainable in <a href="https://github.com/laravel/framework/pull/42533" style="color: #f4645f; text-decoration: underline;">#42533</a>
+</li>
+<li>Add <code>--only-vendor</code> to route:list command in <a href="https://github.com/laravel/framework/pull/42549" style="color: #f4645f; text-decoration: underline;">#42549</a>
+</li>
+<li>Add counts to <code>route:list</code> command in <a href="https://github.com/laravel/framework/pull/42551" style="color: #f4645f; text-decoration: underline;">#42551</a>
+</li>
+<li>Add <code>throwUnless()</code> to HTTP request in <a href="https://github.com/laravel/framework/pull/42556" style="color: #f4645f; text-decoration: underline;">#42556</a>
+</li>
+<li>Add <code>Str::isJson()</code> in <a href="https://github.com/laravel/framework/pull/42545" style="color: #f4645f; text-decoration: underline;">#42545</a>
+</li>
+<li>Add <code>File::isDirectoryEmpty()</code> and <code>File::isDirectoryNotEmpty()</code> in <a href="https://github.com/laravel/framework/pull/42559" style="color: #f4645f; text-decoration: underline;">#42559</a>
+</li>
+</ul>
+<p style="margin-bottom: 1em; line-height: 1.5em;">You may review the <a href="https://github.com/laravel/framework/compare/v9.14.0...v9.15.0" style="color: #f4645f; text-decoration: underline;">full branch diff on GitHub</a> for a complete list of changes.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This version bump and update is automated for subscribers to a <a href="https://laravelshift.com/shifty-plans" style="color: #f4645f; text-decoration: underline;">Shifty Plan</a>. If you don't have one of those, be sure to bump your constraint and run <code>composer update</code> to get the latest features.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Weekly Journal</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Last week I continued making tweaks for the GitLab refresh token change. Apparently GitLab not only rotates the refresh token, but also invalidates all refresh tokens if an old one is used.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This led to a race condition in cases where parallel jobs were running for the same connection. Fortunately Laravel has a built-in feature which can solve this - <a href="https://laravel.com/docs/9.x/cache#atomic-locks" style="color: #f4645f; text-decoration: underline;">atomic locks</a>. I'll continue to keep an eye on this issue.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I also had a <a href="https://laravelshift.com/human-shifts" style="color: #f4645f; text-decoration: underline;">Human Shift</a> come in last week. A quick upgrade from LTS - Laravel 6.x to Laravel 9.x. I should be finishing that today.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Jess and I also had the opportunity to pair again today. Will be doing so for the month of June as we work towards the v1.0 release of the <a href="https://laravelshift.com/workbench" style="color: #f4645f; text-decoration: underline;">Workbench desktop app</a> (finally).</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">On a personal note, Izzy starts daycare tomorrow. I mention this because it means I'll get my "workday" back. I hope to be able to do more live-streams with this "extra" time. If you have a preference for the type of content you like seeing in my live-streams, please <a href="https://twitter.com/gonedark/status/1531634020123136007" style="color: #f4645f; text-decoration: underline;">vote on Twitter</a>.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">🔥 Tip</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Something which <a href="https://github.com/laravel/framework/pull/42428" style="color: #f4645f; text-decoration: underline;">got merged in the 9.14 release</a> was the ability to use <code>assertViewHas</code> on Eloquent Collections.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This may seem odd on the surface, but a quick example demonstrates it value.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Previously the following test case would fail. Underneath <code>assertViewHas</code> performs an array comparison. This meant all of the underlying properties were compared, which led to inconsistencies with arbitrary properties like <code>wasRecentlyUpdated</code>.</p>
+<pre><code>public function testExample()
+{
+    $posts = Post::factory()-&gt;times(3)-&gt;create();
+
+    $response = $this-&gt;get(route('posts.index'));
+
+    $response-&gt;assertViewHas('posts', $posts);
+}
+</code></pre>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Even calling <code>refresh</code> didn't always solve the issue.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Starting with Laravel 9.14, the above test case passes, as expected. Underneath, the assertion performs the same comparison as it would when passing a model (calling <code>is()</code>).</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This means you may now strengthen your assertions on view data. 🔥</p>
+
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">As always, I welcome your feedback. <a href="https://laravelshift.com/" style="color: #f4645f; text-decoration: underline;">Keep Shifting!</a></p>
+
+<p style="margin-bottom: 1em; line-height: 1.5em;">~ JMac</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Don't want to receive these updates? No problem, simply <a href="https://laravelshift.com/mailcoach/unsubscribe/c54bdd24-145c-42fe-a238-d0ba0eee4961/69cab1d9-ba8e-4e00-aa6a-0993425efb73" style="color: #f4645f; text-decoration: underline;">unsubscribe</a> or sign into Shift and <a href="https://laravelshift.com/account/preferences" style="color: #f4645f; text-decoration: underline;">update your preferences</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Proudly sent with <em>Mailcoach</em> from Louisville, Kentucky.</p>
+</div>
+<img width="1px" height="1px" alt="" src="http://email.mg.laravelshift.com/o/eJwVzMsNAyEMBcBqwjHiZ1gfKOYBdhYJtBKJtv4kBcz0EnxkMaMclRJ8byBiIbI1IVQ4VPbBJ5VHtBMbt8z3OfTzbNcyZ4nduWBz56ox65GBbMVnZe7CMcHssrDbtce9fsNrYcw__QJkGST7"></body>
+</html>
