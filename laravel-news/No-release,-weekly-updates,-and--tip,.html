@@ -1,0 +1,79 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<!--[if gte mso 15]>
+  <xml>
+      <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+  </xml>
+  <![endif]--><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laravel Shift Newsletter</title>
+<style>
+    body {
+      font-family: Helvetica,Arial,sans-serif;
+      font-size: 16px;
+      color:#333333;
+    }
+    a {
+      color: #f4645f;
+      text-decoration: underline;
+    }
+    hr {
+      border-top: 1px dashed #888;
+      margin: 2em 0;
+    }
+    p, ul {
+      margin-bottom:1em;
+      line-height:1.5em;
+    }
+    h2 {
+      color:#444;
+      font-family:'Helvetica Neue',sans-serif;
+      font-weight:600;
+      font-size:20px;
+      line-height:1.5;
+      margin-top:2em;
+    }
+  </style>
+</head>
+<body style="font-family: Helvetica,Arial,sans-serif; font-size: 16px; color: #333333;">
+<div style="max-width:600px;margin:0 0 0 1em;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">Heyo! JMac here again in the weekly newsletter with highlights from the Laravel patch release, Shift updates, and a 🔥 tip.</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">No release</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">No release today with Taylor and Dries on vacation. There may be one later in the week when they return. If so, I'll highlight the updates in next week's post.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">A reminder subscribers to a <a href="https://laravelshift.com/shifty-plans" style="color: #f4645f; text-decoration: underline;">Shifty Plan</a> automatically receive a <em>PR</em> bumping Laravel, as well as other packages, anytime there is a new release.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This automation is a nice way to stay up-to-date and periodically kick-off your CI builds. However, they're really just a bonus for subscribers. The main value of a <em>Shifty Plan</em> are the included Shifts, access to the <em>Workbench</em>, and webhooks.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Weekly Journal</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Last week I had more <a href="https://laravelshift.com/human-shifts" style="color: #f4645f; text-decoration: underline;">Human Shifts</a>. In the process of upgrading those applications, I found a bug in the <a href="https://laravelshift.com/upgrade-laravel-8-to-laravel-9" style="color: #f4645f; text-decoration: underline;">Laravel 9.x Shift</a>. Apparently for some projects the conversion to anonymous migrations was being skipped.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Over the weekend, I pushed a patch for this. However, since there's no way to rerun this for affected projects, I decided to make the automated task within the Workbench free.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">So, if you're reading this, and you recently ran the <em>Laravel 9.x Shift</em> (or have a project you'd like run this automation on) you may run the <em>Adopt anonymous migrations</em> task within the <a href="https://laravelshift.com/workbench" style="color: #f4645f; text-decoration: underline;">cloud-based Workbench</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I also finished and deployed the code I worked on during <a href="https://youtu.be/nJhvJSPIscU" style="color: #f4645f; text-decoration: underline;">my live stream last week</a>. I plan to continue development on a related feature in <a href="https://www.youtube.com/watch?v=9YD3qEOfK4w" style="color: #f4645f; text-decoration: underline;">my live stream tomorrow</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Yesterday, Saurabh and I finally finished adding a "team view" to the Shifty Plan dashboard. This allows any team member to see Shifts run by other team members. This was the last long-standing feature request from subscribers.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This week I'll continue squashing any additional tweaks I noticed during the recent <em>Human Shifts</em>, as well as pair with Jess to finish v1.0 of the Workbench desktop app.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">🔥 Tip</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">During the recent <em>Human Shifts</em> I came across an interesting bug. An application was using policies with a <code>before</code> filter. However, I noticed the policy method being called did not exist.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">What was confusing was the application was known to be running in its current version (Laravel 5.4). So I read the documentation which stated the <code>before</code> filter would not call the policy method if it returned <code>true</code> or <code>false</code>. Which it did.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">After going down the rabbit hole of digging through the source code, I finally read the <a href="https://laravel.com/docs/9.x/authorization#policy-filters" style="color: #f4645f; text-decoration: underline;">latest Policy documentation</a>. For the most part, its content and example code were exactly the same. With the exception of the following note, which perfectly addressed my bug.</p>
+<blockquote>
+<p style="margin-bottom: 1em; line-height: 1.5em;">The <code>before</code> method of a policy class will not be called if the class doesn't contain a method with a name matching the name of the ability being checked.</p>
+</blockquote>
+<p style="margin-bottom: 1em; line-height: 1.5em;">So, when faced with an odd bug in Laravel, it's worth scrolling the respective documentation page and reading any of these important notes.</p>
+
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">As always, I welcome your feedback. <a href="https://laravelshift.com/" style="color: #f4645f; text-decoration: underline;">Keep Shifting!</a></p>
+
+<p style="margin-bottom: 1em; line-height: 1.5em;">~ JMac</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Don't want to receive these updates? No problem, simply <a href="https://laravelshift.com/mailcoach/unsubscribe/c54bdd24-145c-42fe-a238-d0ba0eee4961/5e30c2e3-a7bf-4ceb-a7a4-d203b1142bcd" style="color: #f4645f; text-decoration: underline;">unsubscribe</a> or sign into Shift and <a href="https://laravelshift.com/account/preferences" style="color: #f4645f; text-decoration: underline;">update your preferences</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Proudly sent with <em>Mailcoach</em> from Louisville, Kentucky.</p>
+</div>
+<img width="1px" height="1px" alt="" src="http://email.mg.laravelshift.com/o/eJwVzMENwyAMBdBpyrFy8sGJDwzjgt0ggSLRKvM3HeC9mrFGsdAy3JB8t4rFqyQwUSGhLcIVKPqI1HXqZf1zNP8-yznCkWWFWN3opVIsRXbw7oLKxkvc2cLMQ2c5Z7vGPbyHtv6nP0R8JH0"></body>
+</html>
