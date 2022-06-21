@@ -1,0 +1,95 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<!--[if gte mso 15]>
+  <xml>
+      <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+  </xml>
+  <![endif]--><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laravel Shift Newsletter</title>
+<style>
+    body {
+      font-family: Helvetica,Arial,sans-serif;
+      font-size: 16px;
+      color:#333333;
+    }
+    a {
+      color: #f4645f;
+      text-decoration: underline;
+    }
+    hr {
+      border-top: 1px dashed #888;
+      margin: 2em 0;
+    }
+    p, ul {
+      margin-bottom:1em;
+      line-height:1.5em;
+    }
+    h2 {
+      color:#444;
+      font-family:'Helvetica Neue',sans-serif;
+      font-weight:600;
+      font-size:20px;
+      line-height:1.5;
+      margin-top:2em;
+    }
+  </style>
+</head>
+<body style="font-family: Helvetica,Arial,sans-serif; font-size: 16px; color: #333333;">
+<div style="max-width:600px;margin:0 0 0 1em;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">Heyo! JMac here again in the weekly newsletter with highlights from the Laravel patch release, Shift updates, and a 🔥 tip.</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Laravel 9.18</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">With no release last week, there's a lot today in <strong>Laravel 9.18</strong>. Here are some highlights with a shoutout to <a href="https://twitter.com/timacdonald87" style="color: #f4645f; text-decoration: underline;">Tim MacDonald</a> (aka <em>TimMac</em>) for crushing it.</p>
+<ul style="margin-bottom: 1em; line-height: 1.5em;">
+<li>Improve file attachment for mail and notifications in <a href="https://github.com/laravel/framework/pull/42563" style="color: #f4645f; text-decoration: underline;">#42563</a>
+</li>
+<li>Introduce invokable validation classes in <a href="https://github.com/laravel/framework/pull/42689" style="color: #f4645f; text-decoration: underline;">#42689</a>
+</li>
+<li>Add <code>@readonly</code> Blade directive in <a href="https://github.com/laravel/framework/pull/42717" style="color: #f4645f; text-decoration: underline;">#42717</a>
+</li>
+<li>Add nested array syntax for <code>with</code> relations in <a href="https://github.com/laravel/framework/pull/42690" style="color: #f4645f; text-decoration: underline;">#42690</a>
+</li>
+<li>Add <code>backoff</code> in broadcast events in <a href="https://github.com/laravel/framework/pull/42737" style="color: #f4645f; text-decoration: underline;">#42737</a>
+</li>
+<li>Add <code>host()</code>, <code>httpHost()</code>, <code>schemeAndHttpHost()</code> to Request in <a href="https://github.com/laravel/framework/pull/42797" style="color: #f4645f; text-decoration: underline;">#42797</a>
+</li>
+<li>Add <code>@pushIf</code> Blade directive in <a href="https://github.com/laravel/framework/pull/42762" style="color: #f4645f; text-decoration: underline;">#42762</a>
+</li>
+<li>Allow removing token during tests in <a href="https://github.com/laravel/framework/pull/42841" style="color: #f4645f; text-decoration: underline;">#42841</a>
+</li>
+<li>Allow for nullable morphs in <code>whereNotMorphedTo</code> in <a href="https://github.com/laravel/framework/pull/42878" style="color: #f4645f; text-decoration: underline;">#42878</a>
+</li>
+<li>Introduce <code>fake()</code> helper which resolves Faker singleton in <a href="https://github.com/laravel/framework/pull/42844" style="color: #f4645f; text-decoration: underline;">#42844</a>
+</li>
+</ul>
+<p style="margin-bottom: 1em; line-height: 1.5em;">You may review the <a href="https://github.com/laravel/framework/compare/v9.17.0...v9.18.0" style="color: #f4645f; text-decoration: underline;">full branch diff on GitHub</a> for a complete list of changes.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This version bump and update is automated for subscribers to a <a href="https://laravelshift.com/shifty-plans" style="color: #f4645f; text-decoration: underline;">Shifty Plan</a>. If you don't have one of those, be sure to bump your constraint and run <code>composer update</code> to get the latest features.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Weekly Journal</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Last week Jess and I finalized the v1.0 release of the <a href="https://laravelshift.com/workbench" style="color: #f4645f; text-decoration: underline;">Workbench desktop app</a>. I'll probably soft launch it over the weekend and promote it early next week.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I also <a href="https://www.youtube.com/watch?v=9YD3qEOfK4w" style="color: #f4645f; text-decoration: underline;">live streamed Wednesday</a> refactoring some old tests for Stripe webhooks and events. I'll do another related <a href="https://www.youtube.com/watch?v=OQBjVEASkLM" style="color: #f4645f; text-decoration: underline;">live stream tomorrow</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Lastly, I finished up the outstanding <a href="https://laravelshift.com/human-shifts" style="color: #f4645f; text-decoration: underline;">Human Shifts</a>, as well as made more tweaks to their automation.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This week I'll continue to make more tweaks to any areas I felt could be more automated. I'll also probably start to work on some new Workbench tasks.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">🔥 Tip</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Last week <a href="https://twitter.com/gonedark/status/1537448033830555648" style="color: #f4645f; text-decoration: underline;">I tweeted</a> about my preference for giving invokable controllers action oriented names, versus the traditional <em>object</em> + <code>Controller</code> names.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">One of the replies suggested using "actions". Actions have popped up a few time within the Laravel community over the last several months. The purpose of these objects is to encapsulate potentially common code. Often code within a controller action.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I haven't adopted these objects personally. I find the existing objects within Laravel to be a "good enough" place to encapsulate much of this logic. Furthermore, these "action" objects remind me too much of the "command" objects from Laravel 4. 🙃</p>
+
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">As always, I welcome your feedback. <a href="https://laravelshift.com/" style="color: #f4645f; text-decoration: underline;">Keep Shifting!</a></p>
+
+<p style="margin-bottom: 1em; line-height: 1.5em;">~ JMac</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Don't want to receive these updates? No problem, simply <a href="https://laravelshift.com/mailcoach/unsubscribe/c54bdd24-145c-42fe-a238-d0ba0eee4961/957055ee-b3a1-48e7-a256-27b0d9095e06" style="color: #f4645f; text-decoration: underline;">unsubscribe</a> or sign into Shift and <a href="https://laravelshift.com/account/preferences" style="color: #f4645f; text-decoration: underline;">update your preferences</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Proudly sent with <em>Mailcoach</em> from Louisville, Kentucky.</p>
+</div>
+<img width="1px" height="1px" alt="" src="http://email.mg.laravelshift.com/o/eJwVzMENwyAMAMBpyrMyNnbCg2GMgQQJFIlUmb_tAHclEYZYXU9EDUwEUVANNvF-8yCUmSLuUO0VYOjSp4777O3ztmu6M8UWOZfdK7E1RsBikcGyaiihVnErTV12rf7M33BM7eNPv_g8JB8"></body>
+</html>
