@@ -1,0 +1,86 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<!--[if gte mso 15]>
+  <xml>
+      <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+  </xml>
+  <![endif]--><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laravel Shift Newsletter</title>
+<style>
+    body {
+      font-family: Helvetica,Arial,sans-serif;
+      font-size: 16px;
+      color:#333333;
+    }
+    a {
+      color: #f4645f;
+      text-decoration: underline;
+    }
+    hr {
+      border-top: 1px dashed #888;
+      margin: 2em 0;
+    }
+    p, ul {
+      margin-bottom:1em;
+      line-height:1.5em;
+    }
+    h2 {
+      color:#444;
+      font-family:'Helvetica Neue',sans-serif;
+      font-weight:600;
+      font-size:20px;
+      line-height:1.5;
+      margin-top:2em;
+    }
+  </style>
+</head>
+<body style="font-family: Helvetica,Arial,sans-serif; font-size: 16px; color: #333333;">
+<div style="max-width:600px;margin:0 0 0 1em;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">Heyo! JMac here again in the weekly newsletter with highlights from the Laravel patch release, Shift updates, and a 🔥 tip.</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Laravel 9.19</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Mostly fixes this week with one main feature bumping us to <strong>Laravel 9.19</strong>.</p>
+<ul style="margin-bottom: 1em; line-height: 1.5em;">
+<li>Add <code>allowMaxRedirects()</code> to <code>PendingRequest</code> in <a href="https://github.com/laravel/framework/pull/42902" style="color: #f4645f; text-decoration: underline;">#42902</a>
+</li>
+<li>Add support to detect dirty encrypted model attributes in <a href="https://github.com/laravel/framework/pull/42888" style="color: #f4645f; text-decoration: underline;">#42888</a>
+</li>
+<li>Handle cursor pagination when no items are found in <a href="https://github.com/laravel/framework/pull/42963" style="color: #f4645f; text-decoration: underline;">#42963</a>
+</li>
+<li>First-party support for Vite in <a href="https://github.com/laravel/framework/pull/42785" style="color: #f4645f; text-decoration: underline;">#42785</a>
+</li>
+</ul>
+<p style="margin-bottom: 1em; line-height: 1.5em;">You may review the <a href="https://github.com/laravel/framework/compare/v9.18.0...v9.19.0" style="color: #f4645f; text-decoration: underline;">full branch diff on GitHub</a> for a complete list of changes.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This version bump and update is automated for subscribers to a <a href="https://laravelshift.com/shifty-plans" style="color: #f4645f; text-decoration: underline;">Shifty Plan</a>. If you don't have one of those, be sure to bump your constraint and run <code>composer update</code> to get the latest features.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Weekly Journal</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Last week Jess and I paired up a few times to finish version 1.0 of the <a href="https://laravelshift.com/workbench" style="color: #f4645f; text-decoration: underline;">Shift Workbench</a> desktop app.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">We got everything in a pretty good place by Thursday. So I spent Friday adding some polish like <em>Dark Mode</em> and the ability to kill potentially rogue builds.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I soft launched over the weekend and did some preliminary testing. Once I felt things were in a good place, I took the rest of the weekend off (cause it's the weekend).</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Yesterday I made a few more tweaks to Shift's automation. This morning, Jess and I broke ground on a <em>Vite Converter</em>. Vite will become the default frontend build tool as of today's release. Since Jess was working on this, I got a first-hand review of the necessary changes. I hope to release the <em>Vite Converter</em> for FREE later in the week.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I'll also do another <a href="https://youtu.be/NI4DqKB1oUs" style="color: #f4645f; text-decoration: underline;">live stream Wednesday</a>. This time I'll switch gears and work on the Shift codebase to add some automation for converting common ternary expressions to use the null-safe operator.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">🔥 Tip</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I saw a <a href="https://twitter.com/themsaid/status/1540285614590926850" style="color: #f4645f; text-decoration: underline;">tweet from Mohamed</a> last week about following Laravel conventions. I couldn't agree with this more.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Similar to the <em>actions</em> I mentioned in <a href="https://shiftybits.news/update-laravel-9-18/" style="color: #f4645f; text-decoration: underline;">last weeks tip</a>, you hear a lot of new patterns for writing Laravel. But you don't hear enough about following the conventions.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">The truth is most of these things you hear about are the exception. There are not many applications adopting things like modules, DDD, or whatever.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Laravel's structure is well thought out and proven across thousands of applications over nearly a decade.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Of course, everything is a trade-off. So, the point is, you should have a very compelling reason to structure your code differently or follow your own conventions.</p>
+
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">As always, I welcome your feedback. <a href="https://laravelshift.com/" style="color: #f4645f; text-decoration: underline;">Keep Shifting!</a></p>
+
+<p style="margin-bottom: 1em; line-height: 1.5em;">~ JMac</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Don't want to receive these updates? No problem, simply <a href="https://laravelshift.com/mailcoach/unsubscribe/c54bdd24-145c-42fe-a238-d0ba0eee4961/31b63d5f-4525-4e13-b430-085004dc1d72" style="color: #f4645f; text-decoration: underline;">unsubscribe</a> or sign into Shift and <a href="https://laravelshift.com/account/preferences" style="color: #f4645f; text-decoration: underline;">update your preferences</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Proudly sent with <em>Mailcoach</em> from Louisville, Kentucky.</p>
+</div>
+<img width="1px" height="1px" alt="" src="http://email.mg.laravelshift.com/o/eJwVzFsOwiAQBdDVyKcB5mH5YDHXYbQkkCZoun7rAs5plTIXD72KQzdCSyWKOqSAJEczTlwyQW4cBxZOH5-9v753O2bY6xPNLJOlR8wqXhjsbWNiVTEWCqtOLDtWP-c1vCf6-NMfJEUj9Q"></body>
+</html>
