@@ -1,0 +1,92 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<!--[if gte mso 15]>
+  <xml>
+      <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+  </xml>
+  <![endif]--><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laravel Shift Newsletter</title>
+<style>
+    body {
+      font-family: Helvetica,Arial,sans-serif;
+      font-size: 16px;
+      color:#333333;
+    }
+    a {
+      color: #f4645f;
+      text-decoration: underline;
+    }
+    hr {
+      border-top: 1px dashed #888;
+      margin: 2em 0;
+    }
+    p, ul {
+      margin-bottom:1em;
+      line-height:1.5em;
+    }
+    h2 {
+      color:#444;
+      font-family:'Helvetica Neue',sans-serif;
+      font-weight:600;
+      font-size:20px;
+      line-height:1.5;
+      margin-top:2em;
+    }
+  </style>
+</head>
+<body style="font-family: Helvetica,Arial,sans-serif; font-size: 16px; color: #333333;">
+<div style="max-width:600px;margin:0 0 0 1em;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">Heyo! JMac here again in the weekly newsletter with highlights from the Laravel patch release, Shift updates, and a 🔥 tip.</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Laravel 9.24</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Lots of new features this week and more commands, bringing us to <strong>Laravel 9.24</strong>. Here are the highlights:</p>
+<ul style="margin-bottom: 1em; line-height: 1.5em;">
+<li>New <code>db:show</code>, <code>db:table</code>, and <code>db:monitor</code> commands in <a href="https://github.com/laravel/framework/pull/43367" style="color: #f4645f; text-decoration: underline;">#43367</a>
+</li>
+<li>Add validation <code>doesnt_end_with</code> rule in <a href="https://github.com/laravel/framework/pull/43518" style="color: #f4645f; text-decoration: underline;">#43518</a>
+</li>
+<li>Fix unique locking on broadcast events in <a href="https://github.com/laravel/framework/pull/43516" style="color: #f4645f; text-decoration: underline;">#43516</a>
+</li>
+<li>Allow <code>@class()</code> for component tags in <a href="https://github.com/laravel/framework/pull/43140" style="color: #f4645f; text-decoration: underline;">#43140</a>
+</li>
+<li>Add <code>mergeUnless</code> to <code>ConditionallyLoadsAttributes</code> trait in <a href="https://github.com/laravel/framework/pull/43567" style="color: #f4645f; text-decoration: underline;">#43567</a>
+</li>
+<li>Add <code>whenNull</code> to <code>ConditionallyLoadsAtrributes</code> trait in <a href="https://github.com/laravel/framework/pull/43600" style="color: #f4645f; text-decoration: underline;">#43600</a>
+</li>
+<li>Make <code>Config</code> repository macroable in <a href="https://github.com/laravel/framework/pull/43598" style="color: #f4645f; text-decoration: underline;">#43598</a>
+</li>
+</ul>
+<p style="margin-bottom: 1em; line-height: 1.5em;">You may review the <a href="https://github.com/laravel/framework/compare/v9.23.0...v9.24.0" style="color: #f4645f; text-decoration: underline;">full branch diff on GitHub</a> for a complete list of changes.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This version bump and update is automated for subscribers to a <a href="https://laravelshift.com/shifty-plans" style="color: #f4645f; text-decoration: underline;">Shifty Plan</a>. If you don't have one of those, be sure to bump your constraint and run <code>composer update</code> to get the latest features.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Weekly Journal</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Last week I live streamed <a href="https://youtu.be/nw_Fb5UKyHs" style="color: #f4645f; text-decoration: underline;">spawning new workers dynamically</a> based on queue workload. I completed the proof of concept during the stream. So Thursday I spend time looking into shutting down the extra workers once the queues emptied.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I ended up diving into the Horizon source for some tips. Along the way I found a few features I'd like to add to make things like this a little easier. Hopefully I'll open some PRs this week.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I also had a <a href="https://laravelshift.com/human-shifts" style="color: #f4645f; text-decoration: underline;">Human Shift</a> come in last week. This time upgrading a Laravel application from 5.1 to 9.x. Since they were not using many packages and followed Laravel conventions, it only took me about 6 hours.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I also launched the first <a href="https://laravelshift.com/shifts?category=django" style="color: #f4645f; text-decoration: underline;">Django Shift</a>. A few months ago <a href="https://twitter.com/brycethornton" style="color: #f4645f; text-decoration: underline;">Bryce Thornton</a> reached out to me with the idea after reading my article about <a href="https://jasonmccreary.me/articles/grinding-to-million-dollar-revenue-saas/" style="color: #f4645f; text-decoration: underline;">grinding on Shift for the last 6 years</a>. He presented the opportunity to make Shifts for Django and we agreed to try one for the upcoming Django 4.1 release.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">As noted in the article, building Shifts for other frameworks is something I had passed on. Admittedly Django would not be my top choice. But he was interested in it and created an MVP for the automation. So Friday I quietly released the <a href="https://laravelshift.com/upgrade-django-4-to-django-41" style="color: #f4645f; text-decoration: underline;">Django 4.1 Shift</a> to upgrade an Django application from 4.0 to 4.1 for free. We plan to build Django Shifts working our way back down to more common versions, like Django 3.2.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">We're traveling the rest of this week since Izzy's daycare is closed. So I will likely be working on those Horizon PRs and pairing to finish the Human Shift.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">🔥 Tip</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I've said this before, but I'll say it again with a little more 🌶: <b>You should follow the Laravel conventions.</b></p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This means not only the coding practices, but the structure and principles too. Jess once said if there's not an <code>artisan make</code> command for it or example code in the docs, it's not a Laravel convention.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I understand there are sometimes exceptions. But they are exactly that, exceptions. Some might share their different way of doing something. But <em>you</em> do not need to do it that way. If you did, you'd know it and have your own exceptions to their exceptions.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I say, YAGNI. You should kick any unconventional change down the road as far as you possibly can. Then when you think you really need it, keep kicking it. Eventually you'll arrive at the same conclusion, YAGNI. 🔥</p>
+
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">As always, I welcome your feedback. <a href="https://laravelshift.com/" style="color: #f4645f; text-decoration: underline;">Keep Shifting!</a></p>
+
+<p style="margin-bottom: 1em; line-height: 1.5em;">~ JMac</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Don't want to receive these updates? No problem, simply <a href="https://laravelshift.com/mailcoach/unsubscribe/c54bdd24-145c-42fe-a238-d0ba0eee4961/996a88b1-cfe3-4b99-81af-f32dbe094b01" style="color: #f4645f; text-decoration: underline;">unsubscribe</a> or sign into Shift and <a href="https://laravelshift.com/account/preferences" style="color: #f4645f; text-decoration: underline;">update your preferences</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Proudly sent with <em>Mailcoach</em> from Louisville, Kentucky.</p>
+</div>
+<img width="1px" height="1px" alt="" src="http://email.mg.laravelshift.com/o/eJwVzMENwyAMAMBpyrMytuPAg2EM2A1SUCRaZf62A9xZiSIAmxDn0AshZwujVGzRUxLILASJSXulhLt7BzVLD4ZTl952vo_hn2e7ZjgK8Y6RTQRrj26sXDdFycxk7sJhlamrXWvc8ze8po7zT7-bqyc5"></body>
+</html>
