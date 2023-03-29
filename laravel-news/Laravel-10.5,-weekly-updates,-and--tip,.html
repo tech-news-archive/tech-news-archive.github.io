@@ -1,0 +1,87 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<!--[if gte mso 15]>
+  <xml>
+      <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+  </xml>
+  <![endif]--><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laravel Shift Newsletter</title>
+<style>
+    body {
+      font-family: Helvetica,Arial,sans-serif;
+      font-size: 16px;
+      color:#333333;
+    }
+    a {
+      color: #f4645f;
+      text-decoration: underline;
+    }
+    hr {
+      border-top: 1px dashed #888;
+      margin: 2em 0;
+    }
+    p, ul {
+      margin-bottom:1em;
+      line-height:1.5em;
+    }
+    h2 {
+      color:#444;
+      font-family:'Helvetica Neue',sans-serif;
+      font-weight:600;
+      font-size:20px;
+      line-height:1.5;
+      margin-top:2em;
+    }
+  </style>
+</head>
+<body style="font-family: Helvetica,Arial,sans-serif; font-size: 16px; color: #333333;">
+<div style="max-width:600px;margin:0 0 0 1em;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">Heyo! JMac here again in the weekly newsletter with highlights from the Laravel patch release, Shift updates, and a 🔥 tip.</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Laravel 10.5</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">There have been some off schedule releases over the past few weeks as some of the Laravel team members have been on vacation. Today it looks like we've returned to the regularly scheduled Tuesday releases with the tag of <strong>Laravel 10.5.0</strong>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Here are the highlights from the last few releases:</p>
+<ul style="margin-bottom: 1em; line-height: 1.5em;">
+<li>Add <code>assertUnsupportedMediaType</code> to assert status code in <a href="https://github.com/laravel/framework/pull/46426" style="color: #f4645f; text-decoration: underline;">#46426</a>
+</li>
+<li>Add <code>File::json()</code> to get json decoded data from a file in <a href="https://github.com/laravel/framework/pull/46481" style="color: #f4645f; text-decoration: underline;">#46481</a>
+</li>
+<li>Add <code>Storage::json()</code> to read and decode a json file in <a href="https://github.com/laravel/framework/pull/46548" style="color: #f4645f; text-decoration: underline;">#46548</a>
+</li>
+<li>Custom encoding/decoding for JSON cast in <a href="https://github.com/laravel/framework/pull/46552" style="color: #f4645f; text-decoration: underline;">#46552</a>
+</li>
+<li>Add ability to set custom <code>on_stats</code> function for the <code>Http</code> facade in <a href="https://github.com/laravel/framework/pull/46569" style="color: #f4645f; text-decoration: underline;">#46569</a>
+</li>
+</ul>
+<p style="margin-bottom: 1em; line-height: 1.5em;">You may review the <a href="https://github.com/laravel/framework/compare/v10.3.0...v10.5.0" style="color: #f4645f; text-decoration: underline;">full branch diff on GitHub</a> for a complete list of changes.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This version bump and update is automated for subscribers to a <a href="https://laravelshift.com/shifty-plans" style="color: #f4645f; text-decoration: underline;">Shifty Plan</a>. If you don't have one of those, be sure to bump your constraint and run <code>composer update</code> to get the latest features.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Weekly Journal</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Over the last few weeks I've been adjusting to <em>Daddy Daycare</em> with Emma. I have two 90 minute windows during the day. So I've been treating that time like <em>sprints</em>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">During those sprints I have updated the <a href="https://laravelshift.com/laravel-upgrade-checker" style="color: #f4645f; text-decoration: underline;">Upgrade Checker</a>, <a href="https://laravelshift.com/opinionated-laravel-way-shift" style="color: #f4645f; text-decoration: underline;">Laravel Linter</a>, and <a href="https://laravelshift.com/laravel-code-fixer" style="color: #f4645f; text-decoration: underline;">Laravel Fixer</a> for Laravel 10.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I also built the <a href="https://laravelshift.com/upgrade-phpunit-10" style="color: #f4645f; text-decoration: underline;">PHPUnit 10 Shift</a>. After which, I updated the <a href="https://laravelshift.com/laravel-test-generator" style="color: #f4645f; text-decoration: underline;">Tests Generator</a> and <a href="https://laravelshift.com/phpunit-to-pest-converter" style="color: #f4645f; text-decoration: underline;">Pest Converter</a> to generate PHPUnit 10 test cases and convert PHPUnit 10 test cases, respectively.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">So, in the last few weeks, I've pretty much updated each of the additional Laravel Shifts. Of course, I also continued to tweak the Laravel 10.x Shift based on user feedback and weekly release updates (to the config files of course).</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This week I am working on a special project. I hope to fit it into my sprints for the rest of the week. As it is a time sensitive project. More on that next week. I need to make sure I get it done first.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">🔥 Tip</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Most of the coding I've done over the last few weeks has been pretty straightforward. Build new automation is really just taking bits and pieces from the existing Shift tasks.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">To that point if you're interested in how I build some of the automation, check out my <a href="https://Laracasts.com/series/automated-laravel-upgrades" style="color: #f4645f; text-decoration: underline;">Laracasts CreatorSeries</a>. It's more than halfway through and I'm starting to get to some of the code where I build tasks.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Eventually what I started in this series will become the new <a href="https://github.com/laravel-shift/shift-cli" style="color: #f4645f; text-decoration: underline;">Shift CLI</a>.</p>
+
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">As always, I welcome your feedback. <a href="https://laravelshift.com/" style="color: #f4645f; text-decoration: underline;">Keep Shifting!</a></p>
+
+<p style="margin-bottom: 1em; line-height: 1.5em;">~ JMac</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Don't want to receive these updates? No problem, simply <a href="https://laravelshift.com/mailcoach/unsubscribe/c54bdd24-145c-42fe-a238-d0ba0eee4961/51be6a8f-c0d4-46d2-8e86-827b95d23c3a" style="color: #f4645f; text-decoration: underline;">unsubscribe</a> or sign into Shift and <a href="https://laravelshift.com/account/preferences" style="color: #f4645f; text-decoration: underline;">update your preferences</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Proudly sent with <em>Mailcoach</em> from Louisville, Kentucky.</p>
+</div>
+<img width="1px" height="1px" alt="" src="http://email.mg.laravelshift.com/o/eJwUyFEOwyAIANDT1M8FBUQ_PAxQu5rUNHFLz7_s9-0NE9Ueeou5AFABSOFsXTxzpopsxq4FBBNHAVRNKNnCaIhQfRdIxaMciFgBs0XajTgZy0Zw6dKnX59zHN-X3zOsNnX5vcYzN4L31HH9_RcAAP__Bzsl-g"></body>
+</html>
