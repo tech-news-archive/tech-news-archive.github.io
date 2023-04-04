@@ -1,0 +1,85 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<!--[if gte mso 15]>
+  <xml>
+      <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+  </xml>
+  <![endif]--><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laravel Shift Newsletter</title>
+<style>
+    body {
+      font-family: Helvetica,Arial,sans-serif;
+      font-size: 16px;
+      color:#333333;
+    }
+    a {
+      color: #f4645f;
+      text-decoration: underline;
+    }
+    hr {
+      border-top: 1px dashed #888;
+      margin: 2em 0;
+    }
+    p, ul {
+      margin-bottom:1em;
+      line-height:1.5em;
+    }
+    h2 {
+      color:#444;
+      font-family:'Helvetica Neue',sans-serif;
+      font-weight:600;
+      font-size:20px;
+      line-height:1.5;
+      margin-top:2em;
+    }
+  </style>
+</head>
+<body style="font-family: Helvetica,Arial,sans-serif; font-size: 16px; color: #333333;">
+<div style="max-width:600px;margin:0 0 0 1em;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">Heyo! JMac here again in the weekly newsletter with highlights from the Laravel patch release, Shift updates, and a 🔥 tip.</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Laravel 10.6</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This week brings us to <strong>Laravel 10.6.0</strong>. Here are the highlights:</p>
+<ul style="margin-bottom: 1em; line-height: 1.5em;">
+<li>Add <code>caseSensitive</code> flag to Stringable <code>replace</code> in <a href="https://github.com/laravel/framework/pull/46578" style="color: #f4645f; text-decoration: underline;">#46578</a>
+</li>
+<li>Add <code>selectResultsets</code> to database Connection in <a href="https://github.com/laravel/framework/pull/46592" style="color: #f4645f; text-decoration: underline;">#46592</a>
+</li>
+<li>Support contextual binding on first class callables in <a href="https://github.com/laravel/framework/commit/de8d515fc6d1fabc8f14450342554e0eb67df725" style="color: #f4645f; text-decoration: underline;">de8d515f</a>
+</li>
+<li>Ability to set a custom class for the <code>AsCollection</code> and <code>AsEncryptedCollection</code> casts in <a href="https://github.com/laravel/framework/pull/46619" style="color: #f4645f; text-decoration: underline;">#46619</a>
+</li>
+</ul>
+<p style="margin-bottom: 1em; line-height: 1.5em;">You may review the <a href="https://github.com/laravel/framework/compare/v10.5.0...v10.6.0" style="color: #f4645f; text-decoration: underline;">full branch diff on GitHub</a> for a complete list of changes.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This version bump and update is automated for subscribers to a <a href="https://laravelshift.com/shifty-plans" style="color: #f4645f; text-decoration: underline;">Shifty Plan</a>. If you don't have one of those, be sure to bump your constraint and run <code>composer update</code> to get the latest features.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Weekly Journal</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I hijacked <a href="https://www.youtube.com/watch?v=HyUOB_VzOcE" style="color: #f4645f; text-decoration: underline;">last week's live stream</a> to kick off a project I've wanted to build for a while. It was an <a href="https://laravelshift.com/laravel-shift-april-fools" style="color: #f4645f; text-decoration: underline;">April Fools' Shift</a>. It's effectively the <a href="https://laravelshift.com/laravel-code-fixer" style="color: #f4645f; text-decoration: underline;">Laravel Fixer</a>, but the tone of the <em>Shift bot</em> is more sarcastic. Something to give you that kick-in-the-butt to follow Laravel conventions.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Again this aimed at being fun. So I've made it free for everyone to try and see if their project is <em>zonda</em> or <em>nonda</em>. I'll make it available for the rest of the week, or potentially, the whole month of April.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I also spent time going through recent feedback emails. Lots of boundary cases and comment tweaks to improve the experience. In the process, I updated the <a href="https://laravelshift.com/upgrade-laravel-9-to-laravel-10" style="color: #f4645f; text-decoration: underline;">Laravel 10.x Shift</a>, <a href="https://laravelshift.com/convert-bootstrap-to-tailwind-css" style="color: #f4645f; text-decoration: underline;">Tailwind Converter</a>, <a href="https://laravelshift.com/upgrade-phpunit-10" style="color: #f4645f; text-decoration: underline;">PHPUnit 10 Shift</a>, <a href="https://laravelshift.com/phpunit-to-pest-converter" style="color: #f4645f; text-decoration: underline;">Pest Converter</a>, and <a href="https://laravelshift.com/convert-laravel-mix-to-vite" style="color: #f4645f; text-decoration: underline;">Vite Converter</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">The most notable change was adding support for <a href="https://phpstan.org/writing-php-code/phpdoc-types" style="color: #f4645f; text-decoration: underline;">PHPStan types</a>. Technically, these are outside the standard DocBlock types. However, with the growing popularity of these tools, more projects may use these types. So the <em>Laravel 10.x Shift</em> and <em>Workbench</em> task now properly add the underlying PHP type hints for DocBlock types such as <code>positive-int</code>, <code>non-empty-list&lt;Type&gt;</code>, <code>class-string</code>, etc.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I also got a lot of feedback around the adoption of type hints. I knew from the beginning this would be the biggest change in the <em>Laravel 10.x Shift</em>. That's one of the reasons Shift makes atomic commits. But what I learned from feedback is it's not the addition of the types for Laravel, but the addition of the types from existing DocBlocks.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">So to emphasize the difference I have returned to separating these two commits. This hopefully makes it a little more clear where the types are added from, and as such, demonstrates that it's not Shift, but the common situation where a comment is <em>wrong</em>.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">🔥 Tip</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Here's another PHP flag to the rescue. Want to append contents to a file? You can still use <code>file_put_contents</code>. Just pass it the <code>FILE_APPEND</code> flag. 🔥</p>
+<pre><code>file_put_contents('shift.log', $contents, FILE_APPEND);
+</code></pre>
+
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">As always, I welcome your feedback. <a href="https://laravelshift.com/" style="color: #f4645f; text-decoration: underline;">Keep Shifting!</a></p>
+
+<p style="margin-bottom: 1em; line-height: 1.5em;">~ JMac</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Don't want to receive these updates? No problem, simply <a href="https://laravelshift.com/mailcoach/unsubscribe/c54bdd24-145c-42fe-a238-d0ba0eee4961/8aad5aa8-1011-44e4-9e00-c5ca8aab4a9c" style="color: #f4645f; text-decoration: underline;">unsubscribe</a> or sign into Shift and <a href="https://laravelshift.com/account/preferences" style="color: #f4645f; text-decoration: underline;">update your preferences</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Proudly sent with <em>Mailcoach</em> from Louisville, Kentucky.</p>
+</div>
+<img width="1px" height="1px" alt="" src="http://email.mg.laravelshift.com/o/eJwUyF0KwyAMAODT1McRY5rog4eJP1kFpeBGzz_2-rUckFJ3PXuOwHiGKO7K0gIbGlYTD6ySTFrXakDoUwN0I6ualMCEJXKoWAw1trNHQyRitoNg6tanz8817Puq93I7L9313uNZB8F76Zh__wUAAP__mD0nzQ"></body>
+</html>
