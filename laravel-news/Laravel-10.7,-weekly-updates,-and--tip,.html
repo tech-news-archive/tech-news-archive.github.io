@@ -1,0 +1,90 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<!--[if gte mso 15]>
+  <xml>
+      <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+  </xml>
+  <![endif]--><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laravel Shift Newsletter</title>
+<style>
+    body {
+      font-family: Helvetica,Arial,sans-serif;
+      font-size: 16px;
+      color:#333333;
+    }
+    a {
+      color: #f4645f;
+      text-decoration: underline;
+    }
+    hr {
+      border-top: 1px dashed #888;
+      margin: 2em 0;
+    }
+    p, ul {
+      margin-bottom:1em;
+      line-height:1.5em;
+    }
+    h2 {
+      color:#444;
+      font-family:'Helvetica Neue',sans-serif;
+      font-weight:600;
+      font-size:20px;
+      line-height:1.5;
+      margin-top:2em;
+    }
+  </style>
+</head>
+<body style="font-family: Helvetica,Arial,sans-serif; font-size: 16px; color: #333333;">
+<div style="max-width:600px;margin:0 0 0 1em;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">Heyo! JMac here again in the weekly newsletter with highlights from the Laravel patch release, Shift updates, and a 🔥 tip.</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Laravel 10.7</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">A couple fixes and new features this week, and a fast follow patch release brings us to <strong>Laravel 10.7.1</strong>. Here are the highlights:</p>
+<ul style="margin-bottom: 1em; line-height: 1.5em;">
+<li>Allow <code>WithFaker</code> trait to be used outside Laravel <code>TestCase</code> in <a href="https://github.com/laravel/framework/pull/46529" style="color: #f4645f; text-decoration: underline;">#46529</a>
+</li>
+<li>Allow <code>Event::assertListening()</code> to check for invokable event listeners in <a href="https://github.com/laravel/framework/pull/46683" style="color: #f4645f; text-decoration: underline;">#46683</a>
+</li>
+<li>Add missing ignored methods to <code>ViewComponent</code> in <a href="https://github.com/laravel/framework/pull/46692" style="color: #f4645f; text-decoration: underline;">#46692</a>
+</li>
+<li>Fix <code>Cache::spy()</code> incompatibility with <code>Cache::get()</code> in <a href="https://github.com/laravel/framework/pull/46689" style="color: #f4645f; text-decoration: underline;">#46689</a>
+</li>
+<li>Return non-zero exit code for uncaught exceptions in <a href="https://github.com/laravel/framework/pull/46541" style="color: #f4645f; text-decoration: underline;">#46541</a>
+</li>
+<li>Add <code>pipe</code> method to <code>Process</code> in <a href="https://github.com/laravel/framework/pull/46527" style="color: #f4645f; text-decoration: underline;">#46527</a>
+</li>
+<li>Fix <code>whereBetween</code> for Carbon <code>DatePeriod</code> in <a href="https://github.com/laravel/framework/pull/46720" style="color: #f4645f; text-decoration: underline;">#46720</a>
+</li>
+<li>Add <code>setValue</code> to <code>Validator</code> in <a href="https://github.com/laravel/framework/pull/46716" style="color: #f4645f; text-decoration: underline;">#46716</a>
+</li>
+</ul>
+<p style="margin-bottom: 1em; line-height: 1.5em;">You may review the <a href="https://github.com/laravel/framework/compare/v10.6.0...v10.7.0" style="color: #f4645f; text-decoration: underline;">full branch diff on GitHub</a> for a complete list of changes.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This version bump and update is automated for subscribers to a <a href="https://laravelshift.com/shifty-plans" style="color: #f4645f; text-decoration: underline;">Shifty Plan</a>. If you don't have one of those, be sure to bump your constraint and run <code>composer update</code> to get the latest features.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Weekly Journal</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Last week I continued to make tweaks to Shifts based on user feedback. Nothing major. Just incremental changes to improve the automation for boundary cases. It's all about making Shift .01% better.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I also updated the UI for the Shifty Plan Repositories page. Particular around fetching the repository details. This is really just a display for the Laravel version the project is running. It is updated nightly and as such has some lag. Also due to repository access, the version may not be available immediately. I've updated it to add a little more messaging around the when this was last updated and when there is an issue. So we'll see if that lessens the support tickets.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Otherwise, I <a href="https://www.youtube.com/watch?v=_klAw0ztuLQ" style="color: #f4645f; text-decoration: underline;">live streamed</a> on the upcoming <em>Shift CLI</em>. I'll be giving this most of my focus in the coming weeks as Shift is pretty well buttoned up right now, and there are no new <a href="https://laravelshift.com/human-shifts" style="color: #f4645f; text-decoration: underline;">Human Shifts</a>.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">🔥 Tip</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I've been watching <a href="https://twitter.com/zepfietje/status/1645007959716511744" style="color: #f4645f; text-decoration: underline;">this poll on Twitter</a>. Unless you have a significant number of votes and a clear winner, these results don't mean anything. Nonetheless, here's my two cents on PHPUnit versus Pest.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">If I were just starting out with testing, I would probably use Pest. With Nuno being a core team member, it's likely Pest will become the out-of-the-box testing framework for Laravel.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">However, if I had an existing PHPUnit test suite, I wouldn't get caught up in the hype. It's probably not worth the effort to convert. Just keep writing tests. 🔥</p>
+
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">As always, I welcome your feedback. <a href="https://laravelshift.com/" style="color: #f4645f; text-decoration: underline;">Keep Shifting!</a></p>
+
+<p style="margin-bottom: 1em; line-height: 1.5em;">~ JMac</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Don't want to receive these updates? No problem, simply <a href="https://laravelshift.com/mailcoach/unsubscribe/c54bdd24-145c-42fe-a238-d0ba0eee4961/9f457640-965b-44b5-97dd-5bb68c61d79f" style="color: #f4645f; text-decoration: underline;">unsubscribe</a> or sign into Shift and <a href="https://laravelshift.com/account/preferences" style="color: #f4645f; text-decoration: underline;">update your preferences</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Proudly sent with <em>Mailcoach</em> from Louisville, Kentucky.</p>
+</div>
+<img width="1px" height="1px" alt="" src="http://email.mg.laravelshift.com/o/eJwUyEsKwyAQANDTxGUZR-Nn4WHmZyMoAVty_tLt0xYwVnPWfCoeQ0ypuKudSIrSzcCgUFZNQoElRAHuYN6NhiaqUIgzn0WAjBEhdPFZlKvUI8KkTY_NzzX69yX3crst2nLv8awjwnvRmH__BQAA__8LsSlR"></body>
+</html>
