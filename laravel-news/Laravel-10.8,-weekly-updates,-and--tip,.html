@@ -1,0 +1,86 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<!--[if gte mso 15]>
+  <xml>
+      <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+  </xml>
+  <![endif]--><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laravel Shift Newsletter</title>
+<style>
+    body {
+      font-family: Helvetica,Arial,sans-serif;
+      font-size: 16px;
+      color:#333333;
+    }
+    a {
+      color: #f4645f;
+      text-decoration: underline;
+    }
+    hr {
+      border-top: 1px dashed #888;
+      margin: 2em 0;
+    }
+    p, ul {
+      margin-bottom:1em;
+      line-height:1.5em;
+    }
+    h2 {
+      color:#444;
+      font-family:'Helvetica Neue',sans-serif;
+      font-weight:600;
+      font-size:20px;
+      line-height:1.5;
+      margin-top:2em;
+    }
+  </style>
+</head>
+<body style="font-family: Helvetica,Arial,sans-serif; font-size: 16px; color: #333333;">
+<div style="max-width:600px;margin:0 0 0 1em;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">Heyo! JMac here again in the weekly newsletter with highlights from the Laravel patch release, Shift updates, and a 🔥 tip.</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Laravel 10.8</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Some new features this week brings us to <strong>Laravel 10.8.0</strong>. Here are the highlights:</p>
+<ul style="margin-bottom: 1em; line-height: 1.5em;">
+<li>Add syntax sugar to <code>Process::pipe</code> in <a href="https://github.com/laravel/framework/pull/46745" style="color: #f4645f; text-decoration: underline;">#46745</a>
+</li>
+<li>Allow specifying index name for <code>constrained</code> column in <a href="https://github.com/laravel/framework/pull/46746" style="color: #f4645f; text-decoration: underline;">#46746</a>
+</li>
+<li>Allow customizing redirect URL in <code>AuthenticateSession</code> middleware in <a href="https://github.com/laravel/framework/pull/46752" style="color: #f4645f; text-decoration: underline;">#46752</a>
+</li>
+<li>Class based <code>after</code> validation rules in <a href="https://github.com/laravel/framework/pull/46757" style="color: #f4645f; text-decoration: underline;">#46757</a>
+</li>
+<li>Minor skeleton slimming in <a href="https://github.com/laravel/framework/pull/6159" style="color: #f4645f; text-decoration: underline;">#6159</a>
+</li>
+<li>Add <code>maxExceptions</code> to broadcast event in <a href="https://github.com/laravel/framework/pull/46800" style="color: #f4645f; text-decoration: underline;">#46800</a>
+</li>
+</ul>
+<p style="margin-bottom: 1em; line-height: 1.5em;">You may review the <a href="https://github.com/laravel/framework/compare/v10.7.1...v10.8.0" style="color: #f4645f; text-decoration: underline;">full branch diff on GitHub</a> for a complete list of changes.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This version bump and update is automated for subscribers to a <a href="https://laravelshift.com/shifty-plans" style="color: #f4645f; text-decoration: underline;">Shifty Plan</a>. If you don't have one of those, be sure to bump your constraint and run <code>composer update</code> to get the latest features.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Weekly Journal</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I made a few more tweaks last week based on user feedback, but mostly notably I <a href="https://www.youtube.com/watch?v=Ti4aBGzU7co" style="color: #f4645f; text-decoration: underline;">live streamed</a> and began shifting (no pun) my focus to the new Shift CLI. I will <a href="https://www.youtube.com/watch?v=U5VE25dAjdE" style="color: #f4645f; text-decoration: underline;">live stream tomorrow </a> to begin porting over the <em>Shift Workbench</em> tasks to the Shift CLI. This is a good opportunity for me to review the tasks and remove outdated tasks, as well as add new ones.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">That will be my focus this week and in the coming weeks, until it's done. But I'll finish out today by adding automation for the <a href="https://github.com/laravel/framework/pull/6159" style="color: #f4645f; text-decoration: underline;">skeleton slimming</a> in today's release.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">🔥 Tip</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">From my man <a href="https://twitter.com/michaeldyrynda/status/1648304944087457792" style="color: #f4645f; text-decoration: underline;">Dyrynda</a>:</p>
+<blockquote>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Nothing more productive than embracing the framework…</p>
+</blockquote>
+
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">As always, I welcome your feedback. <a href="https://laravelshift.com/" style="color: #f4645f; text-decoration: underline;">Keep Shifting!</a></p>
+
+<p style="margin-bottom: 1em; line-height: 1.5em;">~ JMac</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Don't want to receive these updates? No problem, simply <a href="https://laravelshift.com/mailcoach/unsubscribe/c54bdd24-145c-42fe-a238-d0ba0eee4961/699e8546-9efb-4b51-8a87-2fcb4d7aa27d" style="color: #f4645f; text-decoration: underline;">unsubscribe</a> or sign into Shift and <a href="https://laravelshift.com/account/preferences" style="color: #f4645f; text-decoration: underline;">update your preferences</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Proudly sent with <em>Mailcoach</em> from Louisville, Kentucky.</p>
+</div>
+<img width="1px" height="1px" alt="" src="http://email.mg.laravelshift.com/o/eJwUyFEOgzAIANDT2M8FBBU-ehhCYTaxMekWz7_s97VKK2uUqLgLCumOUs66Km1hCc57mK8kB-dBFOnqLCylV8NUYEBpLRMBFTkt0oEb4nZsC8Nl0564PmfP78vvUWYdNv2e_RkLw3tYv_7-CwAA__97bidv"></body>
+</html>
