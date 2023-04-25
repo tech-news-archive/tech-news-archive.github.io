@@ -1,0 +1,88 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<!--[if gte mso 15]>
+  <xml>
+      <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+  </xml>
+  <![endif]--><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laravel Shift Newsletter</title>
+<style>
+    body {
+      font-family: Helvetica,Arial,sans-serif;
+      font-size: 16px;
+      color:#333333;
+    }
+    a {
+      color: #f4645f;
+      text-decoration: underline;
+    }
+    hr {
+      border-top: 1px dashed #888;
+      margin: 2em 0;
+    }
+    p, ul {
+      margin-bottom:1em;
+      line-height:1.5em;
+    }
+    h2 {
+      color:#444;
+      font-family:'Helvetica Neue',sans-serif;
+      font-weight:600;
+      font-size:20px;
+      line-height:1.5;
+      margin-top:2em;
+    }
+  </style>
+</head>
+<body style="font-family: Helvetica,Arial,sans-serif; font-size: 16px; color: #333333;">
+<div style="max-width:600px;margin:0 0 0 1em;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">Heyo! JMac here again in the weekly newsletter with highlights from the Laravel patch release, Shift updates, and a 🔥 tip.</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Laravel 10.9</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Some new features this week brings us to <strong>Laravel 10.9.0</strong>. Here are the highlights:</p>
+<ul style="margin-bottom: 1em; line-height: 1.5em;">
+<li>Allow separate directory for locks on filestore in <a href="https://github.com/laravel/framework/pull/46811" style="color: #f4645f; text-decoration: underline;">#46811</a>
+</li>
+<li>Use pivot model <code>fromDateTime</code> instead of assuming Carbon in <a href="https://github.com/laravel/framework/pull/46822" style="color: #f4645f; text-decoration: underline;">#46822</a>
+</li>
+<li>New HTTP status assertions in <a href="https://github.com/laravel/framework/pull/46841" style="color: #f4645f; text-decoration: underline;">#46841</a>
+</li>
+<li>Allow pruning all cancelled and unfinished queue batches in <a href="https://github.com/laravel/framework/pull/46833" style="color: #f4645f; text-decoration: underline;">#46833</a>
+</li>
+<li>Make <code>rules()</code> optional in <code>FormRequest</code> in <a href="https://github.com/laravel/framework/pull/46846" style="color: #f4645f; text-decoration: underline;">#46846</a>
+</li>
+<li>New named static methods for middleware in <a href="https://github.com/laravel/framework/pull/46362" style="color: #f4645f; text-decoration: underline;">#46362</a>
+</li>
+<li>Allow job <code>release</code> to accept date instance in <a href="https://github.com/laravel/framework/pull/46854" style="color: #f4645f; text-decoration: underline;">#46854</a>
+</li>
+<li>Automatically use <code>foreignUlid</code> if model uses <code>HasUlids</code> in <a href="https://github.com/laravel/framework/pull/46876" style="color: #f4645f; text-decoration: underline;">#46876</a>
+</li>
+</ul>
+<p style="margin-bottom: 1em; line-height: 1.5em;">You may review the <a href="https://github.com/laravel/framework/compare/v10.8.0...v10.9.0" style="color: #f4645f; text-decoration: underline;">full branch diff on GitHub</a> for a complete list of changes.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This version bump and update is automated for subscribers to a <a href="https://laravelshift.com/shifty-plans" style="color: #f4645f; text-decoration: underline;">Shifty Plan</a>. If you don't have one of those, be sure to bump your constraint and run <code>composer update</code> to get the latest features.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Weekly Journal</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Last week I automated the recent <a href="https://github.com/laravel/laravel/pull/6159" style="color: #f4645f; text-decoration: underline;">skeleton slimming</a> in the <a href="https://laravelshift.com/upgrade-laravel-9-to-laravel-10" style="color: #f4645f; text-decoration: underline;">Laravel 10.x Shift</a>. I also made a few additional tweaks for PHPUnit dependencies, as well as tweaks to the <a href="https://laravelshift.com/laravel-test-generator" style="color: #f4645f; text-decoration: underline;">Tests Generator</a> for the latest version of Pest.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This week I'll continue my <a href="https://www.youtube.com/watch?v=qYg_kcfxWKo" style="color: #f4645f; text-decoration: underline;">live streams</a> to try and get the rest of the Workbench tasks ported over to the new Shift CLI. If I can manage that, then I'll prepare the README/docs for a beta release. Otherwise, most of my time is filled with support emails, minor tweaks to the website, and a bit of pairing.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">🔥 Tip</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">In last week's stream I copied a bunch of code from the Shift codebase into the Shift CLI codebase. I don't think a majority of developers would have done this. <strong>But you should.</strong></p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">There are all sorts of ways you might have abstracted this code to better share it. But even after 25 years of programming, I don't presume to know what those are at the outset. It's better to copy the code several times and get a feel for how it's really used. Then, maybe, maybe abstract it. But I still probably won't.</p>
+
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">As always, I welcome your feedback. <a href="https://laravelshift.com/" style="color: #f4645f; text-decoration: underline;">Keep Shifting!</a></p>
+
+<p style="margin-bottom: 1em; line-height: 1.5em;">~ JMac</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Don't want to receive these updates? No problem, simply <a href="https://laravelshift.com/mailcoach/unsubscribe/c54bdd24-145c-42fe-a238-d0ba0eee4961/f88fd84c-5d56-4b30-a293-2e0429fbc7a7" style="color: #f4645f; text-decoration: underline;">unsubscribe</a> or sign into Shift and <a href="https://laravelshift.com/account/preferences" style="color: #f4645f; text-decoration: underline;">update your preferences</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Proudly sent with <em>Mailcoach</em> from Louisville, Kentucky.</p>
+</div>
+<img width="1px" height="1px" alt="" src="http://email.mg.laravelshift.com/o/eJwUyF0KwyAMAODT1MdRY5Lqg4fR_KxCpeBGzz_2-mlNgMWC1cgZEAkJwlkZi7l4hMSdheXIAlGBzbzEw3sYVTmzk2hHLRkoJsJMEq3QnhR63nC_2mqPXZ9z-Pcl9wyrzrbkXuOZG-7v2cb1918AAAD__4j_J4I"></body>
+</html>
