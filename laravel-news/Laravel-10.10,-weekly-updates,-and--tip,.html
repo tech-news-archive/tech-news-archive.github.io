@@ -1,0 +1,93 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<!--[if gte mso 15]>
+  <xml>
+      <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+  </xml>
+  <![endif]--><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laravel Shift Newsletter</title>
+<style>
+    body {
+      font-family: Helvetica,Arial,sans-serif;
+      font-size: 16px;
+      color:#333333;
+    }
+    a {
+      color: #f4645f;
+      text-decoration: underline;
+    }
+    hr {
+      border-top: 1px dashed #888;
+      margin: 2em 0;
+    }
+    p, ul {
+      margin-bottom:1em;
+      line-height:1.5em;
+    }
+    h2 {
+      color:#444;
+      font-family:'Helvetica Neue',sans-serif;
+      font-weight:600;
+      font-size:20px;
+      line-height:1.5;
+      margin-top:2em;
+    }
+  </style>
+</head>
+<body style="font-family: Helvetica,Arial,sans-serif; font-size: 16px; color: #333333;">
+<div style="max-width:600px;margin:0 0 0 1em;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">Heyo! JMac here again in the weekly newsletter with highlights from the Laravel patch release, Shift updates, and a 🔥 tip.</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Laravel 10.10</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">More new features this week brings us to <strong>Laravel 10.10.0</strong>. Also more fun equations with the release numbers (10 - 10 = 0).</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Here are the highlights:</p>
+<ul style="margin-bottom: 1em; line-height: 1.5em;">
+<li>Gracefully handle invalid arguments for <code>e()</code> in <a href="https://github.com/laravel/framework/pull/46914" style="color: #f4645f; text-decoration: underline;">#46914</a>
+</li>
+<li>Mark commands as <em>isolatable</em> in <a href="https://github.com/laravel/framework/pull/46925" style="color: #f4645f; text-decoration: underline;">#46925</a>
+</li>
+<li>Add <code>UploadedFile::imageSize</code> to validate image dimensions in <a href="https://github.com/laravel/framework/pull/46912" style="color: #f4645f; text-decoration: underline;">#46912</a>
+</li>
+<li>Add ability to restore/set global scopes in <a href="https://github.com/laravel/framework/pull/46922" style="color: #f4645f; text-decoration: underline;">#46922</a>
+</li>
+<li>Expose <code>Js::json()</code> in <a href="https://github.com/laravel/framework/pull/46935" style="color: #f4645f; text-decoration: underline;">#46935</a>
+</li>
+<li>Add <code>Arr::sortRecursiveDesc()</code> in <a href="https://github.com/laravel/framework/pull/46945" style="color: #f4645f; text-decoration: underline;">#46945</a>
+</li>
+<li>New <code>Sleep</code> facade in <a href="https://github.com/laravel/framework/pull/46904" style="color: #f4645f; text-decoration: underline;">#46904</a>
+</li>
+<li>Add <code>hashed</code> cast in <a href="https://github.com/laravel/framework/pull/46947" style="color: #f4645f; text-decoration: underline;">#46947</a>
+</li>
+<li>Throw <code>timeoutException</code> instead of <code>maxAttemptsExceededException</code> when job times out in <a href="https://github.com/laravel/framework/pull/46968" style="color: #f4645f; text-decoration: underline;">#46968</a>
+</li>
+</ul>
+<p style="margin-bottom: 1em; line-height: 1.5em;">You may review the <a href="https://github.com/laravel/framework/compare/v10.9.0...v10.10.0" style="color: #f4645f; text-decoration: underline;">full branch diff on GitHub</a> for a complete list of changes.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This version bump and update is automated for subscribers to a <a href="https://laravelshift.com/shifty-plans" style="color: #f4645f; text-decoration: underline;">Shifty Plan</a>. If you don't have one of those, be sure to bump your constraint and run <code>composer update</code> to get the latest features.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Weekly Journal</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">The other week, I <a href="https://www.youtube.com/watch?v=qYg_kcfxWKo" style="color: #f4645f; text-decoration: underline;">live streamed</a> porting over more of the <em>Workbench</em> tasks to the new <em>Shift CLI</em>. I'm taking May off from live streaming. I have conferences and vacations this month which conflict. I'll continue to work on the Shift CLI to prepare it for a beta release in June.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Last week, I corrected one of the upsells on the Shift site. There is a "Run next Shift" link in the <code>...</code> menus. However, it was not appearing for latest <a href="https://laravelshift.com/upgrade-laravel-9-to-laravel-10" style="color: #f4645f; text-decoration: underline;">Laravel 10.x Shift</a>. I also discovered it didn't work for the <a href="https://tailwindshift.com/" style="color: #f4645f; text-decoration: underline;">Tailwind Shifts</a>. So, now it upsells the next Tailwind Shift as well.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">I also squashed a pesky bug that a few users had reported, but I was unable to determine. Fortunately the recent support email included the source file. After adding it to the test fixtures, I was able to reproduce the issue. You can see my <a href="https://twitter.com/gonedark/status/1653017242739646465" style="color: #f4645f; text-decoration: underline;">full thread on Twitter</a>, but it turned out to be line endings.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This week I'm going to try to PR another handy feature for Laravel Pint. Then, work on my talks for <a href="https://tek.phparch.com/" style="color: #f4645f; text-decoration: underline;">PHP[tek]</a> next week.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">🔥 Tip</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;"><em>Do the simple thing.</em></p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">It seems so obvious, but with all the latest drama, I felt the need to remind everyone. I don't want to add to it. I'll simply reiterate <em>do the simple thing</em>, don't worry about what people think. Write the simplest code that works and move on with your life.</p>
+
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">As always, I welcome your feedback. <a href="https://laravelshift.com/" style="color: #f4645f; text-decoration: underline;">Keep Shifting!</a></p>
+
+<p style="margin-bottom: 1em; line-height: 1.5em;">~ JMac</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Don't want to receive these updates? No problem, simply <a href="https://laravelshift.com/mailcoach/unsubscribe/c54bdd24-145c-42fe-a238-d0ba0eee4961/ce20c2ec-cef4-4daf-98bc-8d8ff25219c9" style="color: #f4645f; text-decoration: underline;">unsubscribe</a> or sign into Shift and <a href="https://laravelshift.com/account/preferences" style="color: #f4645f; text-decoration: underline;">update your preferences</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Proudly sent with <em>Mailcoach</em> from Louisville, Kentucky.</p>
+</div>
+<img width="1px" height="1px" alt="" src="http://email.mg.laravelshift.com/o/eJwUyFEOwyAIANDT1M8FFGz74WFAcDXRNHFLz7_s91lJkU4PXjAfKXPa6QxXyaoxkZmSsNHhUrU1YCZvcUeH0ItKdGCgbKjq0Komsx0ZzU-rhhvBkCWPj8_V2_dV7xlWmbLqvfozN4L3lD7-_gsAAP__64Mo-w"></body>
+</html>
