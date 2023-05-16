@@ -1,0 +1,85 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<!--[if gte mso 15]>
+  <xml>
+      <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+  </xml>
+  <![endif]--><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laravel Shift Newsletter</title>
+<style>
+    body {
+      font-family: Helvetica,Arial,sans-serif;
+      font-size: 16px;
+      color:#333333;
+    }
+    a {
+      color: #f4645f;
+      text-decoration: underline;
+    }
+    hr {
+      border-top: 1px dashed #888;
+      margin: 2em 0;
+    }
+    p, ul {
+      margin-bottom:1em;
+      line-height:1.5em;
+    }
+    h2 {
+      color:#444;
+      font-family:'Helvetica Neue',sans-serif;
+      font-weight:600;
+      font-size:20px;
+      line-height:1.5;
+      margin-top:2em;
+    }
+  </style>
+</head>
+<body style="font-family: Helvetica,Arial,sans-serif; font-size: 16px; color: #333333;">
+<div style="max-width:600px;margin:0 0 0 1em;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">Heyo! JMac here again in the weekly newsletter with highlights from the Laravel patch release, Shift updates, and a 🔥 tip.</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Laravel 10.11</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">A patch release last week and a few new features this week brings us to <strong>Laravel 10.11.0</strong>. Here are the highlights:</p>
+<ul style="margin-bottom: 1em; line-height: 1.5em;">
+<li>Add <code>Arr::mapWithKeys()</code> in <a href="https://github.com/laravel/framework/pull/47000" style="color: #f4645f; text-decoration: underline;">#47000</a>
+</li>
+<li>Add Carbon <code>dd()</code> and <code>dump()</code> methods in <a href="https://github.com/laravel/framework/pull/47002" style="color: #f4645f; text-decoration: underline;">#47002</a>
+</li>
+<li>File failed job storage driver in <a href="https://github.com/laravel/framework/pull/47007" style="color: #f4645f; text-decoration: underline;">#47007</a>
+</li>
+<li>Add arguments to the signed middleware to ignore properties in <a href="https://github.com/laravel/framework/pull/46987" style="color: #f4645f; text-decoration: underline;">#46987</a>
+</li>
+<li>Add timestamp retrieval as Carbon instance from UUID/ULID in <a href="https://github.com/laravel/framework/pull/47046" style="color: #f4645f; text-decoration: underline;">#47046</a>
+</li>
+<li>Remove workarounds for old Guzzle versions in <a href="https://github.com/laravel/framework/pull/47084" style="color: #f4645f; text-decoration: underline;">#47084</a>
+</li>
+<li>Add <code>Macroable</code> to <code>Sleep</code> in <a href="https://github.com/laravel/framework/pull/47099" style="color: #f4645f; text-decoration: underline;">#47099</a>
+</li>
+</ul>
+<p style="margin-bottom: 1em; line-height: 1.5em;">You may review the <a href="https://github.com/laravel/framework/compare/v10.10.0...v10.11.0" style="color: #f4645f; text-decoration: underline;">full branch diff on GitHub</a> for a complete list of changes.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">This version bump and update is automated for subscribers to a <a href="https://laravelshift.com/shifty-plans" style="color: #f4645f; text-decoration: underline;">Shifty Plan</a>. If you don't have one of those, be sure to bump your constraint and run <code>composer update</code> to get the latest features.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">Weekly Journal</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Had a few <a href="https://laravelshift.com/human-shifts" style="color: #f4645f; text-decoration: underline;">Human Shifts</a> come in last week. So I mostly focused on those, as well as preparing my talks for PHP[tek]. That has continued into this week. So between the conference today and tomorrow, and the remaining hours on the <em>Human Shifts</em>, this week is pretty full.</p>
+<h2 style="color: #444; font-family: 'Helvetica Neue',sans-serif; font-weight: 600; font-size: 20px; line-height: 1.5; margin-top: 2em;">🔥 Tip</h2>
+<p style="margin-bottom: 1em; line-height: 1.5em;">In preparing for my testing workshop, I came across a failing test due to some underlying events being fired when creating a model factory. As an aside, this is one of the reasons I am reluctant to use events, especially model events. They feel like these unknown side effects.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em;">Anyway, the common approach here might be to add <code>Event::fake()</code>. But this is a bit heavy handed. Especially if your code actually triggers an event you want to fire. In digging around, I came across the factory method <code>createQuietly</code> (and other methods), instead of simply <code>create</code>. This was perfect as it isolated the events to the area causing the test difficulty.</p>
+
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em;">As always, I welcome your feedback. <a href="https://laravelshift.com/" style="color: #f4645f; text-decoration: underline;">Keep Shifting!</a></p>
+
+<p style="margin-bottom: 1em; line-height: 1.5em;">~ JMac</p>
+
+<hr style="border-top: 1px dashed #888; margin: 2em 0;">
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Don't want to receive these updates? No problem, simply <a href="https://laravelshift.com/mailcoach/unsubscribe/c54bdd24-145c-42fe-a238-d0ba0eee4961/0437c5b7-a5f6-4ab6-b1b7-1c010436ec98" style="color: #f4645f; text-decoration: underline;">unsubscribe</a> or sign into Shift and <a href="https://laravelshift.com/account/preferences" style="color: #f4645f; text-decoration: underline;">update your preferences</a>.</p>
+<p style="margin-bottom: 1em; line-height: 1.5em; color: #aaa; font-size: 12px;">Proudly sent with <em>Mailcoach</em> from Louisville, Kentucky.</p>
+</div>
+<img width="1px" height="1px" alt="" src="http://email.mg.laravelshift.com/o/eJwUyEEKwyAQBdDTxGUZ9Rt14WHGcWwEJWBLzl-6fa14h6xGiz0TXIguneYqYGI4brlyzNxTzDZrjRUgpNCsGYUCVHqsHk7YqxXypEq--ybhlHCAJm9-dH6u0b8vuZfZZfGWe49nHaD34jH__gsAAP__i5knuQ"></body>
+</html>
